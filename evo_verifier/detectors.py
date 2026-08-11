@@ -10,9 +10,10 @@ should carry a joint that moves it.
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 
-from evo_verifier.asset import Asset
+from evo_verifier.asset import Articulation, Asset
 from evo_verifier.contract import Contract, ExpectedJoint, Source
 from evo_verifier.matching import matches
 from evo_verifier.report import Coverage, ItemResult
@@ -49,7 +50,13 @@ class Requirement:
         return bool(self.parts)
 
 
-def check_b8(asset: Asset, contract: Contract, *, use_priors: bool = True) -> ItemResult:
+def check_b8(
+    asset: Asset,
+    contract: Contract,
+    *,
+    use_priors: bool = True,
+    missing_is_failure: bool = True,
+) -> ItemResult:
     """Does every part that should move have a non-fixed joint?
 
     ``S_B8 = satisfied / expected``, weighted: a quoted requirement counts fully,
@@ -81,10 +88,15 @@ def check_b8(asset: Asset, contract: Contract, *, use_priors: bool = True) -> It
 
     moved = {joint.child for joint in asset.movable() if joint.child}
     requirements = [_requirement(joint, asset, moved) for joint in wanted]
-    score = _weighted(requirements)
 
     unresolved = [r for r in requirements if not r.resolved]
     still = [r for r in requirements if r.resolved and r.satisfied < r.wanted]
+    scored = requirements if missing_is_failure else [r for r in requirements if r.resolved]
+    if not scored:
+        return ItemResult.unsupported(
+            "B8", "no expected part was found in the asset", tools=["contract", "matching"]
+        )
+    score = _weighted(scored)
 
     quality = 1.0 - len(unresolved) / len(requirements)
     stated = sum(r.weight for r in requirements) / len(requirements)
@@ -98,9 +110,10 @@ def check_b8(asset: Asset, contract: Contract, *, use_priors: bool = True) -> It
         coverage=Coverage.FULL if not unresolved else Coverage.PARTIAL,
         tools=["contract", "parser", "matching"],
         raw_measurements={
-            "expected": round(sum(r.weight * r.wanted for r in requirements), 4),
-            "satisfied": round(sum(r.weight * r.satisfied for r in requirements), 4),
-            "score_explicit_only": round(_weighted([r for r in requirements if r.explicit]), 4),
+            "expected": round(sum(r.weight * r.wanted for r in scored), 4),
+            "satisfied": round(sum(r.weight * r.satisfied for r in scored), 4),
+            "missing_is_failure": missing_is_failure,
+            "score_explicit_only": round(_weighted([r for r in scored if r.explicit]), 4),
             "used_priors": use_priors,
             "requirements": [
                 {
@@ -117,6 +130,145 @@ def check_b8(asset: Asset, contract: Contract, *, use_priors: bool = True) -> It
         failure_reason=_reason(still, unresolved),
         repair_hint=_repair(still, unresolved, contract),
     )
+
+
+TAU_B9 = 0.70
+
+TYPE_AGREEMENT: dict[tuple[str, str], float] = {
+    ("revolute", "continuous"): 0.5,
+    ("continuous", "revolute"): 0.5,
+}
+"""Near misses. Both turn about an axis and differ only in whether it stops,
+which is a different mistake from turning where it should slide. Still below
+the threshold -- a knob that should spin freely but hits a stop is wrong."""
+
+
+@dataclass(frozen=True)
+class TypeCheck:
+    """One expected joint compared with the one the asset declares."""
+
+    child: str
+    expected: str
+    declared: str | None
+    joint: str
+    agreement: float
+    consistency: float
+    contradiction: str = ""
+
+    @property
+    def score(self) -> float:
+        return 0.6 * self.agreement + 0.4 * self.consistency
+
+
+def check_b9(asset: Asset, contract: Contract) -> ItemResult:
+    """Is each joint the kind of joint the prompt asked for?
+
+    ``S_B9 = 0.6 * declared type + 0.4 * self-consistency``.
+
+    The protocol's second term is a trajectory classifier -- run FK, watch the
+    child move, decide whether that was a rotation or a translation. Against a
+    declared graph with no meshes that term is circular: FK replays exactly what
+    the joint type says, so it can only ever agree. What is genuinely independent
+    is whether the declaration contradicts itself, and it often does: a
+    ``continuous`` joint carrying finite limits is not the free spin the word
+    promises, and a ``revolute`` with no limits is a continuous joint wearing the
+    wrong name. That is what the 0.4 measures here, and it is a deviation from
+    the written formula -- recorded, not hidden.
+
+    A part the asset never modelled is B8's finding, not a wrong type, so it
+    leaves this score and costs confidence instead.
+    """
+    wanted = [joint for joint in contract.joints if joint.kind]
+    if not wanted:
+        return ItemResult.not_applicable("B9", "the prompt names no joint type", tools=["contract"])
+
+    by_child = {joint.child: joint for joint in asset.articulations if joint.child}
+    checks, unresolved = [], []
+    for expected in wanted:
+        found = [match.name for match in matches(expected.child, asset.parts)]
+        declared = next((by_child[name] for name in found if name in by_child), None)
+        if declared is None:
+            unresolved.append(expected.child)
+            continue
+        checks.append(_type_check(expected.child, expected.kind or "", declared))
+
+    if not checks:
+        return ItemResult.unsupported(
+            "B9", "no expected joint was found in the asset", tools=["contract", "matching"]
+        )
+
+    score = sum(check.score for check in checks) / len(checks)
+    quality = len(checks) / len(wanted)
+    margin = min(1.0, abs(score - TAU_B9) / MARGIN)
+    wrong = [check for check in checks if check.score < 1.0]
+
+    return ItemResult.scored(
+        "B9",
+        round(score, 4),
+        threshold=TAU_B9,
+        confidence=round(quality * margin, 4),
+        coverage=Coverage.FULL if not unresolved else Coverage.PARTIAL,
+        tools=["contract", "parser", "matching"],
+        raw_measurements={
+            "declared_type_score": round(sum(check.agreement for check in checks) / len(checks), 4),
+            "consistency_score": round(sum(check.consistency for check in checks) / len(checks), 4),
+            "joints": [
+                {
+                    "child": check.child,
+                    "joint": check.joint,
+                    "expected": check.expected,
+                    "declared": check.declared,
+                    "agreement": check.agreement,
+                    "contradiction": check.contradiction,
+                }
+                for check in checks
+            ],
+            "unresolved_names": unresolved,
+        },
+        failure_reason="; ".join(
+            f"{check.child}: expected {check.expected}, declared {check.declared}"
+            + (f" ({check.contradiction})" if check.contradiction else "")
+            for check in wrong
+        ),
+        repair_hint="; ".join(
+            f"declare {check.child} as {check.expected} and revisit its axis, origin and limits"
+            for check in wrong
+            if check.agreement < 1.0
+        ),
+    )
+
+
+def _type_check(child: str, expected: str, declared: Articulation) -> TypeCheck:
+    kind = declared.kind or ""
+    agreement = 1.0 if kind == expected else TYPE_AGREEMENT.get((expected, kind), 0.0)
+    contradiction = _contradiction(declared)
+    return TypeCheck(
+        child=child,
+        expected=expected,
+        declared=declared.kind,
+        joint=declared.name,
+        agreement=agreement,
+        consistency=0.0 if contradiction else 1.0,
+        contradiction=contradiction,
+    )
+
+
+def _contradiction(joint: Articulation) -> str:
+    """Ways a declaration disagrees with itself. Empty when it holds together."""
+    travel = joint.limits.travel if joint.limits else None
+    if joint.kind == "continuous" and travel is not None:
+        return f"continuous but limited to {travel:.3f}"
+    if joint.kind == "revolute" and travel is None:
+        return "revolute with no limits"
+    if joint.kind == "revolute" and travel is not None and travel > 2 * math.pi:
+        return f"revolute travelling {travel:.3f} rad, past a full turn"
+    if joint.kind == "prismatic" and travel is not None and travel <= 0:
+        return "prismatic with no travel"
+    if joint.kind == "fixed" and joint.axis is not None:
+        return "fixed but carrying an axis"
+    if joint.axis is not None and not any(abs(component) > 1e-9 for component in joint.axis):
+        return "zero-length axis"
+    return ""
 
 
 def _weighted(requirements: list[Requirement]) -> float:
