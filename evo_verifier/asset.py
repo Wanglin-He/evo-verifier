@@ -238,6 +238,27 @@ class Asset:
         """The joint that moves this part. A tree gives each part at most one."""
         return next((j for j in self.articulations if j.child == part), None)
 
+    def descendants(self, part: str) -> set[str]:
+        """Everything that moves when this part moves, itself excluded.
+
+        The subtree a joint carries. B7 reads it: a drawer that hangs off the lid
+        travels with the lid, which is the wrong thing to be attached to even
+        though the drawer's own joint looks fine.
+        """
+        children: dict[str, list[str]] = {}
+        for joint in self.articulations:
+            if joint.parent and joint.child:
+                children.setdefault(joint.parent, []).append(joint.child)
+        seen: set[str] = set()
+        stack = list(children.get(part, ()))
+        while stack:
+            name = stack.pop()
+            if name in seen:
+                continue
+            seen.add(name)
+            stack.extend(children.get(name, ()))
+        return seen
+
     def roots(self) -> list[str]:
         """Parts that are nobody's child. A well-formed tree has exactly one."""
         children = {j.child for j in self.articulations}
