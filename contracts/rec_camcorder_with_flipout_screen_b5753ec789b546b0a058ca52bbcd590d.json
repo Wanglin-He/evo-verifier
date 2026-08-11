@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_camcorder_with_flipout_screen_b5753ec789b546b0a058ca52bbcd590d",
+  "prompt": "A family camcorder with a soft-edged body shell, a cylindrical objective, and a left-side screen door with a shallow finger notch. The screen door rotates open on a vertical side hinge, the internal screen panel rotates on a secondary swivel pivot for viewing, and a power mode dial rotates on the top rear corner of the housing. Familiar consumer-video scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body shell",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "soft-edged body shell"
+    },
+    {
+      "name": "cylindrical objective",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cylindrical objective"
+    },
+    {
+      "name": "left-side screen door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "left-side screen door"
+    },
+    {
+      "name": "internal screen panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal screen panel"
+    },
+    {
+      "name": "power mode dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "power mode dial"
+    },
+    {
+      "name": "housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "housing"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "screen door",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "side hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The screen door rotates open on a vertical side hinge"
+    },
+    {
+      "child": "internal screen panel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the internal screen panel rotates on a secondary swivel pivot for viewing"
+    },
+    {
+      "child": "power mode dial",
+      "parent": "housing",
+      "kind": null,
+      "axis_hint": "",
+      "location_hint": "top rear corner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a power mode dial rotates on the top rear corner of the housing"
+    }
+  ],
+  "notes": []
+}

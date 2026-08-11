@@ -1,0 +1,101 @@
+{
+  "version": "1",
+  "record_id": "rec_cash_register_a90a3eb4ec5a49c79034bac363111f2a",
+  "prompt": "A compact point-of-sale register with a rectangular drawer base, an angled control pod, and a rear operator screen on a swivel mount, plus a bank of menu keys and a numeric pad on the sloped console. the upper pod stays visibly separate from the drawer housing, and the keys sit in clear rows across the control face. The drawer translates prismatically on straight runners, the screen swivels on a vertical revolute joint, and the screen tilts on a horizontal hinge at the head of its mount, and the menu keys and number keys each depress independently along their own local axes. Small shop-counter scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "drawer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drawer"
+    },
+    {
+      "name": "screen",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "screen"
+    },
+    {
+      "name": "swivel mount",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "swivel mount"
+    },
+    {
+      "name": "menu keys",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "menu keys"
+    },
+    {
+      "name": "number keys",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "number keys"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drawer",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on straight runners",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The drawer translates prismatically on straight runners"
+    },
+    {
+      "child": "screen",
+      "parent": "swivel mount",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the screen swivels on a vertical revolute joint"
+    },
+    {
+      "child": "screen",
+      "parent": "mount",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the head of its mount",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the screen tilts on a horizontal hinge at the head of its mount"
+    },
+    {
+      "child": "menu keys",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "along their own local axes",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the menu keys and number keys each depress independently along their own local axes"
+    },
+    {
+      "child": "number keys",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "along their own local axes",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the menu keys and number keys each depress independently along their own local axes"
+    }
+  ],
+  "notes": []
+}

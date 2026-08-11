@@ -1,0 +1,82 @@
+{
+  "version": "1",
+  "record_id": "rec_create-a-realistic-articulated-3d-model-of-an-at_20260318_172037_db400e0e",
+  "prompt": "Create a realistic articulated 3D model of an ATV (quad bike) with four wheels, front steering, handlebars, seat, footrests, suspension, frame, fenders, and\n  mechanically plausible proportions. Prioritize realism, stable geometry, and clean articulation.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wheels",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four wheels"
+    },
+    {
+      "name": "handlebars",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "handlebars"
+    },
+    {
+      "name": "seat",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "seat"
+    },
+    {
+      "name": "footrests",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "footrests"
+    },
+    {
+      "name": "suspension",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "suspension"
+    },
+    {
+      "name": "frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "frame"
+    },
+    {
+      "name": "fenders",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fenders"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "handlebars",
+      "parent": "frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 0.9,
+      "quote": "front steering"
+    },
+    {
+      "child": "wheels",
+      "parent": "frame",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 4,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "notes": []
+}

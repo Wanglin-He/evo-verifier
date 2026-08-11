@@ -1,0 +1,104 @@
+{
+  "version": "1",
+  "record_id": "rec_blender_0002",
+  "prompt": "A personal single-serve blender with a compact tall motor base and a push-to-blend actuator on the base top, a narrow cylindrical jar threading onto the base on a bayonet collar, and a snap-lock lid with two side tab locks and a center push-release button. The bayonet collar and push-actuator geometry are clearly readable.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "motor base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "motor base"
+    },
+    {
+      "name": "push-to-blend actuator",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "push-to-blend actuator"
+    },
+    {
+      "name": "narrow cylindrical jar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "narrow cylindrical jar"
+    },
+    {
+      "name": "bayonet collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bayonet collar"
+    },
+    {
+      "name": "snap-lock lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "snap-lock lid"
+    },
+    {
+      "name": "side tab locks",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side tab locks"
+    },
+    {
+      "name": "center push-release button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center push-release button"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "push-to-blend actuator",
+      "parent": "motor base",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "base top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "push-to-blend actuator on the base top"
+    },
+    {
+      "child": "narrow cylindrical jar",
+      "parent": "motor base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on a bayonet collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "narrow cylindrical jar threading onto the base on a bayonet collar"
+    },
+    {
+      "child": "side tab locks",
+      "parent": "snap-lock lid",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "side",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side tab locks"
+    },
+    {
+      "child": "center push-release button",
+      "parent": "snap-lock lid",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "center",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center push-release button"
+    }
+  ],
+  "notes": []
+}

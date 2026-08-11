@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_stand_mixer_017fa6b21fa044e693c4bfd68e0c0112",
+  "prompt": "A tilt-head mixer with a rounded body, a polished bowl on a bayonet twist seat, and a rear lock lever behind the hinge. The head rotates upward on the rear hinge, the rear lock lever rotates on a short pivot at the pedestal, the bowl twists on its bayonet mount, and the attachment spins continuously on the drive axis. Domestic mixer scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The head rotates upward on the rear hinge"
+    },
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rounded body"
+    },
+    {
+      "name": "bowl",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "polished bowl"
+    },
+    {
+      "name": "rear lock lever",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear lock lever behind the hinge"
+    },
+    {
+      "name": "attachment",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "attachment spins continuously on the drive axis"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "head",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "upward",
+      "location_hint": "rear hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The head rotates upward on the rear hinge"
+    },
+    {
+      "child": "rear lock lever",
+      "parent": "pedestal",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the pedestal",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the rear lock lever rotates on a short pivot at the pedestal"
+    },
+    {
+      "child": "bowl",
+      "parent": "bayonet mount",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "bayonet mount",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the bowl twists on its bayonet mount"
+    },
+    {
+      "child": "attachment",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "drive axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the attachment spins continuously on the drive axis"
+    }
+  ],
+  "notes": []
+}

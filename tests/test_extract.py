@@ -128,3 +128,16 @@ def test_a_missing_key_says_how_to_supply_one(tmp_path, monkeypatch):
     (tmp_path / ".env").write_text("OTHER=1\n", encoding="utf-8")
     with pytest.raises(ExtractionError, match="not set"):
         read_api_key(tmp_path / ".env")
+
+
+def test_an_answer_wrapped_in_a_single_element_array_is_unwrapped():
+    """Seen once in 31 real calls: the object arrives inside a list."""
+    contract = contract_from_answer(
+        json.dumps([ANSWER]), record_id="rec_j", prompt=PROMPT, extractor="m"
+    )
+    assert len(contract.joints) == 2
+
+
+def test_an_answer_that_is_still_not_an_object_shows_what_arrived():
+    with pytest.raises(ExtractionError, match="not a JSON object"):
+        contract_from_answer(json.dumps(["a", "b"]), record_id="r", prompt=PROMPT, extractor="m")

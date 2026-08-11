@@ -1,0 +1,104 @@
+{
+  "version": "1",
+  "record_id": "rec_blimp_bfaae9ad267842f88c15e275a1effa76",
+  "prompt": "A sightseeing blimp with a streamlined main envelope, a long passenger cabin, and one propeller pod mounted on each side near the cabin, plus vectoring engine pylons beside the gondola. the tail keeps a real cruciform fin arrangement at the rear of the hull, and the engine pods stay visibly carried by those pylons. The two propellers spin continuously on their shaft axes, the rudder pivots on a vertical tail hinge, and the elevators pivot on horizontal hinges at the tailplane roots, and the engine pods rotate on short pivots at the pylon ends. Passenger airship scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "main envelope",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main envelope"
+    },
+    {
+      "name": "passenger cabin",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "passenger cabin"
+    },
+    {
+      "name": "vectoring engine pylons",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vectoring engine pylons"
+    },
+    {
+      "name": "engine pods",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "engine pods"
+    },
+    {
+      "name": "propellers",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two propellers"
+    },
+    {
+      "name": "rudder",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rudder"
+    },
+    {
+      "name": "elevators",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "elevators"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "propellers",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "shaft axes",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The two propellers spin continuously on their shaft axes"
+    },
+    {
+      "child": "rudder",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "vertical tail hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the rudder pivots on a vertical tail hinge"
+    },
+    {
+      "child": "elevators",
+      "parent": "tailplane roots",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "tailplane roots",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the elevators pivot on horizontal hinges at the tailplane roots"
+    },
+    {
+      "child": "engine pods",
+      "parent": "pylons",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "pylon ends",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the engine pods rotate on short pivots at the pylon ends"
+    }
+  ],
+  "notes": []
+}

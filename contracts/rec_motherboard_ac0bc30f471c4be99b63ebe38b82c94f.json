@@ -1,0 +1,108 @@
+{
+  "version": "1",
+  "record_id": "rec_motherboard_ac0bc30f471c4be99b63ebe38b82c94f",
+  "prompt": "A gaming motherboard with a primary PCIe slot, memory slots, and a hinged cover over one storage bay. The rigid PCB carries the socket, heatsinks, and connectors, while a small accessory cover is mounted on a tiny hinge near the board surface. The CPU retention arm rotates on its hinge pin, the memory-slot latches and PCIe retention clip rotate on their local pivots, and the storage cover rotates on its own small hinge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rigid PCB",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rigid PCB"
+    },
+    {
+      "name": "small accessory cover",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small accessory cover"
+    },
+    {
+      "name": "CPU retention arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "CPU retention arm"
+    },
+    {
+      "name": "memory-slot latches",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "memory-slot latches"
+    },
+    {
+      "name": "PCIe retention clip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "PCIe retention clip"
+    },
+    {
+      "name": "storage cover",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "storage cover"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "small accessory cover",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "near the board surface",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small accessory cover is mounted on a tiny hinge near the board surface"
+    },
+    {
+      "child": "CPU retention arm",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "CPU retention arm rotates on its hinge pin"
+    },
+    {
+      "child": "memory-slot latches",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "local pivots",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "memory-slot latches and PCIe retention clip rotate on their local pivots"
+    },
+    {
+      "child": "PCIe retention clip",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "local pivots",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "memory-slot latches and PCIe retention clip rotate on their local pivots"
+    },
+    {
+      "child": "storage cover",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "storage cover rotates on its own small hinge"
+    }
+  ],
+  "notes": []
+}

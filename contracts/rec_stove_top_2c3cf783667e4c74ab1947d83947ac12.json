@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_stove_top_2c3cf783667e4c74ab1947d83947ac12",
+  "prompt": "A professional kitchen range with six burners, a deep front rail, and a lower oven door spanning most of the body width. Four rotary knobs occupy the center of the control rail, with one shorter knob on each far end and two push-buttons tucked directly under the middle pair. The six knobs rotate continuously about front-to-back revolute axes, the buttons are short prismatic plungers, and the oven door rotates downward on a bottom-edge hinge axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "burners",
+      "count": 6,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "six burners"
+    },
+    {
+      "name": "control rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control rail"
+    },
+    {
+      "name": "oven door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower oven door"
+    },
+    {
+      "name": "knobs",
+      "count": 6,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "six knobs"
+    },
+    {
+      "name": "push-buttons",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two push-buttons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "knobs",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "front-to-back",
+      "location_hint": "",
+      "count": 6,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "six knobs rotate continuously about front-to-back revolute axes"
+    },
+    {
+      "child": "buttons",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "tucked directly under the middle pair",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "buttons are short prismatic plungers"
+    },
+    {
+      "child": "oven door",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "bottom-edge hinge axis",
+      "location_hint": "downward",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "oven door rotates downward on a bottom-edge hinge axis"
+    }
+  ],
+  "notes": []
+}

@@ -142,8 +142,12 @@ def contract_from_answer(
             raise ExtractionError(f"{record_id}: answer is not JSON: {error}") from None
     else:
         payload = answer
+    if isinstance(payload, list) and len(payload) == 1 and isinstance(payload[0], Mapping):
+        payload = payload[0]  # some answers wrap the object in a single-element array
     if not isinstance(payload, Mapping):
-        raise ExtractionError(f"{record_id}: answer is not a JSON object")
+        raise ExtractionError(
+            f"{record_id}: answer is not a JSON object: {json.dumps(payload)[:300]}"
+        )
     contract = Contract(
         record_id=record_id,
         prompt=prompt,

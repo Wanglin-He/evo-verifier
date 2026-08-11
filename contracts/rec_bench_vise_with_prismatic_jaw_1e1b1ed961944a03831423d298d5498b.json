@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_bench_vise_with_prismatic_jaw_1e1b1ed961944a03831423d298d5498b",
+  "prompt": "A clamp-on welding vise with a parallel C-clamp base that grips a workbench, a fixed rear jaw, and a prismatic sliding front jaw. The C-clamp base tightens on a revolute screw joint to clamp the bench. The front jaw slides prismatically on guide rods.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "parallel C-clamp base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "parallel C-clamp base"
+    },
+    {
+      "name": "fixed rear jaw",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed rear jaw"
+    },
+    {
+      "name": "prismatic sliding front jaw",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "prismatic sliding front jaw"
+    },
+    {
+      "name": "guide rods",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "guide rods"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rear jaw",
+      "parent": "",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed rear jaw"
+    },
+    {
+      "child": "C-clamp base",
+      "parent": "bench",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The C-clamp base tightens on a revolute screw joint to clamp the bench."
+    },
+    {
+      "child": "front jaw",
+      "parent": "guide rods",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The front jaw slides prismatically on guide rods."
+    }
+  ],
+  "notes": []
+}
