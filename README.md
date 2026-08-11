@@ -6,8 +6,9 @@
 零第三方依赖，Python 3.11+，可以整个目录搬到任何仓库。
 
 ```bash
-uv run --no-project --with pytest python -m pytest -q          # 35 passed
+uv run --no-project --with pytest python -m pytest -q          # 49 passed
 uv run --no-project python -m evo_verifier --group B7-B10 stats
+uv run --no-project python -m evo_verifier parse <articraft-data 克隆路径>
 uv run --no-project python -m evo_verifier --group B7-B10 evaluate <reports_dir>
 ```
 
@@ -17,9 +18,36 @@ uv run --no-project python -m evo_verifier --group B7-B10 evaluate <reports_dir>
 |---|---|
 | `items.py` | 14 项的冻结定义：项号、英文 key、CSV 列名、族、负责人分组、是否需要仿真器 |
 | `labels.py` | 读标注平台 `/api/export` 的 CSV → 类型化标签，任何不认识的值直接报错 |
+| `asset.py` | 静态解析 `model.py` → 零件、关节图、原点/轴向/限位；**不执行代码** |
 | `report.py` | `report.json` 的结构与校验、族分数与 `Score_full` 聚合 |
 | `evaluate.py` | 逐项 TP/FP/FN/TN、precision/recall/F1、平衡准确率、Cohen's κ、覆盖率 |
 | `data/annotations-2026-08-11.csv` | 标注导出的冻结快照（607 条，2026-08-11 下载） |
+
+## 资产从哪来
+
+数据集**没有任何 URDF**——`cache/record_materialization/` 没有提交到数据仓，10,788 条记录
+全部只有源码。要 URDF 就得执行生成出来的 CAD 代码。
+
+但 B7–B10 不需要 URDF：关节图直接声明在 `model.py` 里。`asset.py` 读它，不跑它。
+
+在 607 条标注资产上（2091 个关节）：
+
+| 字段 | 静态可解 |
+|---|---|
+| 关节类型 kind | 100.0% |
+| 轴向 axis | 99.9% |
+| 父 parent | 99.2% |
+| 原点 origin | 97.4% |
+| 子 child | 96.3% |
+| **B7–B10 需要的字段全齐** | **94.5%** |
+
+526/607 条资产解析时零遗留问题。剩下的是没法常量折叠的循环、条件分支和局部辅助函数——
+**它们进 `Asset.notes`，字段留 `None`，绝不猜**。这条决定了下游：解不出的原点是
+`coverage: partial`，不是 B10 失败。
+
+几何是短板：只有 **19/607** 条能算出包围盒对角线 `D`，因为一个零件只要有一个
+`mesh_from_cadquery` 元素就没有解析几何。B10 的 `d_anchor/D` 因此需要编译后的网格，
+或者接受部分覆盖。
 
 ## 已经敲定的契约
 

@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from collections.abc import Sequence
 from pathlib import Path
 
+from evo_verifier.asset import find_model_py, load_asset
 from evo_verifier.evaluate import evaluate, format_table
 from evo_verifier.items import ITEMS, items_in_group
 from evo_verifier.labels import AnnotatedCase, count_all, load_annotations
@@ -34,6 +36,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("stats", help="label distribution per item")
+    parsed = subparsers.add_parser("parse", help="how much of each model.py resolves statically")
+    parsed.add_argument("data_dir", type=Path, help="an articraft-data clone")
     scored = subparsers.add_parser("evaluate", help="agreement between reports and humans")
     scored.add_argument("reports", type=Path, help="directory of report JSON files")
 
@@ -45,6 +49,10 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if args.command == "stats":
         _print_stats(cases, items)
+        return 0
+
+    if args.command == "parse":
+        _print_parse(cases, args.data_dir)
         return 0
 
     reports = load_reports(args.reports)
@@ -70,6 +78,52 @@ def _print_stats(cases: list[AnnotatedCase], items: Sequence[object]) -> None:
             f"{counts.item_id:5} {counts.passed:6} {counts.failed:6} "
             f"{counts.not_applicable:5} {counts.missing:8} {rate:>10}"
         )
+
+
+def _print_parse(cases: list[AnnotatedCase], data_dir: Path) -> None:
+    """Report what the static reader recovers, and what it openly does not."""
+    assets, failures = [], []
+    for case in cases:
+        try:
+            assets.append(load_asset(find_model_py(data_dir, case.record_id), case.record_id))
+        except (OSError, SyntaxError, ValueError) as error:
+            failures.append((case.record_id, str(error)))
+    joints = [joint for asset in assets for joint in asset.articulations]
+    print(f"{len(assets)}/{len(cases)} records read, {len(failures)} unreadable")
+    for record_id, error in failures[:5]:
+        print(f"  {record_id}: {error}")
+    if not joints:
+        return
+
+    checks = (
+        ("name", lambda j: j.name != "<unnamed>"),
+        ("kind", lambda j: j.kind is not None),
+        ("parent", lambda j: j.parent is not None),
+        ("child", lambda j: j.child is not None),
+        ("origin", lambda j: j.origin.xyz is not None),
+        ("axis", lambda j: j.axis is not None or j.kind == "fixed"),
+    )
+    print(f"\n{len(joints)} joints")
+    for label, resolved in checks:
+        count = sum(1 for joint in joints if resolved(joint))
+        print(f"  {label:8} {count:5}  {count / len(joints):6.1%}")
+    ready = sum(
+        1
+        for joint in joints
+        if all(resolved(joint) for _, resolved in checks[1:])  # a name is cosmetic
+    )
+    print(f"  {'B7-B10':8} {ready:5}  {ready / len(joints):6.1%}  (every field those items read)")
+
+    clean = sum(1 for asset in assets if asset.complete)
+    scaled = sum(1 for asset in assets if asset.diagonal() is not None)
+    print(f"\n{clean}/{len(assets)} records read with nothing unresolved")
+    print(f"{scaled}/{len(assets)} records have a diagonal D -- the rest need the CAD run")
+
+    reasons = Counter(note.split(":")[0] for asset in assets for note in asset.notes)
+    if reasons:
+        print("\nunresolved, by cause")
+        for reason, count in reasons.most_common(8):
+            print(f"  {count:5}  {reason}")
 
 
 if __name__ == "__main__":  # pragma: no cover
