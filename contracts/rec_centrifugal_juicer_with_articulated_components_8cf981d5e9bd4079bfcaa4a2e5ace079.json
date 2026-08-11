@@ -1,0 +1,115 @@
+{
+  "version": "1",
+  "record_id": "rec_centrifugal_juicer_with_articulated_components_8cf981d5e9bd4079bfcaa4a2e5ace079",
+  "prompt": "A stainless steel juicer with a deep base, a clear upper chamber, and a tall feed pusher centered over the basket housing. Two short side clamps rotate up to secure the chamber lid, and a small drip tray sits under the front spout. The feed pusher slides prismatically through the chute, the lid rotates on a rear hinge, the two side clamps rotate on matched pivots at the chamber sides, the drip tray slides prismatically forward, and the internal basket rotates continuously on the vertical drive axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "deep base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "deep base"
+    },
+    {
+      "name": "clear upper chamber",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "clear upper chamber"
+    },
+    {
+      "name": "tall feed pusher",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall feed pusher"
+    },
+    {
+      "name": "side clamps",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two short side clamps"
+    },
+    {
+      "name": "chamber lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "chamber lid"
+    },
+    {
+      "name": "small drip tray",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small drip tray"
+    },
+    {
+      "name": "internal basket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal basket"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "feed pusher",
+      "parent": "chute",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "through the chute",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The feed pusher slides prismatically through the chute"
+    },
+    {
+      "child": "lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the lid rotates on a rear hinge"
+    },
+    {
+      "child": "side clamps",
+      "parent": "chamber",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the chamber sides",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the two side clamps rotate on matched pivots at the chamber sides"
+    },
+    {
+      "child": "drip tray",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "forward",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the drip tray slides prismatically forward"
+    },
+    {
+      "child": "internal basket",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the internal basket rotates continuously on the vertical drive axis"
+    }
+  ],
+  "notes": []
+}
