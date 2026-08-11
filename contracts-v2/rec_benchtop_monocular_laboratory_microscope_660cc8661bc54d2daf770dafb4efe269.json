@@ -1,0 +1,111 @@
+{
+  "version": "1",
+  "record_id": "rec_benchtop_monocular_laboratory_microscope_660cc8661bc54d2daf770dafb4efe269",
+  "prompt": "A metal-bodied monocular microscope with a deep base, an upright arm, a revolving objective nosepiece, and a rectangular slide stage with two guide controls, plus coarse and fine focus knobs on the arm side. the instrument stays compact enough for a real desk or lab bench, and the two knobs are visibly independent controls rather than a fused drum. The nosepiece rotates continuously about the main optical axis, the body carriage slides prismatically for focusing, and the stage carriage slides prismatically along one stage axis, and the coarse and fine focus knobs both rotate continuously on their own axes. Laboratory bench scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "deep base"
+    },
+    {
+      "name": "arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upright arm"
+    },
+    {
+      "name": "nosepiece",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "revolving objective nosepiece"
+    },
+    {
+      "name": "stage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular slide stage"
+    },
+    {
+      "name": "guide controls",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two guide controls"
+    },
+    {
+      "name": "coarse and fine focus knobs",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "coarse and fine focus knobs"
+    },
+    {
+      "name": "body carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "body carriage"
+    },
+    {
+      "name": "stage carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stage carriage"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "nosepiece",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "about the main optical axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The nosepiece rotates continuously about the main optical axis"
+    },
+    {
+      "child": "body carriage",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the body carriage slides prismatically for focusing"
+    },
+    {
+      "child": "stage carriage",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "along one stage axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the stage carriage slides prismatically along one stage axis"
+    },
+    {
+      "child": "coarse and fine focus knobs",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "on their own axes",
+      "location_hint": "on the arm side",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "coarse and fine focus knobs both rotate continuously on their own axes"
+    }
+  ],
+  "notes": []
+}

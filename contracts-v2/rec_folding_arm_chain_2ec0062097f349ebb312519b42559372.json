@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_folding_arm_chain_2ec0062097f349ebb312519b42559372",
+  "prompt": "A folding support arm like the linkage on a task light or small gate stay. A base bracket carries three flat bar links in series and ends in a small attachment pad. The chain has three revolute joints about parallel axes in one plane so the arm can collapse near the base and extend outward.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base bracket"
+    },
+    {
+      "name": "flat bar links",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three flat bar links"
+    },
+    {
+      "name": "attachment pad",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "attachment pad"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "flat bar links",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "parallel axes in one plane",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three revolute joints about parallel axes in one plane"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,125 @@
+{
+  "version": "1",
+  "record_id": "rec_air_pump_with_t_handle_e8da4b31a9314391aa0f7dd65013359f",
+  "prompt": "A service-station pump with a tubular barrel, a straight T-handle, and a side-mounted gauge housing above the foot pads, plus a folding handle grip around the top bar. the hose remains clipped to the lower body when not in use, and the grip remains a supported sleeve on the crossbar. The handle and piston rod translate prismatically along the pump axis and the gauge needle rotates continuously on its local pivot, and the grip rotates continuously about the crossbar axis. Service-bay pump scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tubular barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tubular barrel"
+    },
+    {
+      "name": "straight T-handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "straight T-handle"
+    },
+    {
+      "name": "side-mounted gauge housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side-mounted gauge housing"
+    },
+    {
+      "name": "foot pads",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "foot pads"
+    },
+    {
+      "name": "folding handle grip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "folding handle grip"
+    },
+    {
+      "name": "top bar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top bar"
+    },
+    {
+      "name": "hose",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hose"
+    },
+    {
+      "name": "crossbar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "crossbar"
+    },
+    {
+      "name": "piston rod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "piston rod"
+    },
+    {
+      "name": "gauge needle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "gauge needle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "handle",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "along the pump axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The handle and piston rod translate prismatically along the pump axis"
+    },
+    {
+      "child": "piston rod",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "along the pump axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The handle and piston rod translate prismatically along the pump axis"
+    },
+    {
+      "child": "gauge needle",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on its local pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the gauge needle rotates continuously on its local pivot"
+    },
+    {
+      "child": "grip",
+      "parent": "crossbar",
+      "kind": "continuous",
+      "axis_hint": "about the crossbar axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the grip rotates continuously about the crossbar axis"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,101 @@
+{
+  "version": "1",
+  "record_id": "rec_top_load_washing_machine_with_hinged_lid_edd9109be75e4ef6a1bcf51f2b050268",
+  "prompt": "A family top-load washer with a glass lid, a wide drum opening, and two flip-up dispenser lids set into the rear corners of the top deck behind a selector knob and a start button. The main lid rotates upward on a rear hinge, the wash tub rotates continuously on the vertical center axis, and the two dispenser lids rotate on small hinges in the top deck. The selector knob rotates continuously, and the start button is a separate small prismatic push control. The drum opening should remain deep and hollow rather than reading as a shallow recess. Large domestic washer scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "main lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main lid"
+    },
+    {
+      "name": "dispenser lids",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two flip-up dispenser lids"
+    },
+    {
+      "name": "wash tub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wash tub"
+    },
+    {
+      "name": "selector knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "selector knob"
+    },
+    {
+      "name": "start button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "start button"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "main lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main lid rotates upward on a rear hinge"
+    },
+    {
+      "child": "wash tub",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "vertical center axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wash tub rotates continuously on the vertical center axis"
+    },
+    {
+      "child": "dispenser lids",
+      "parent": "top deck",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "top deck",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two dispenser lids rotate on small hinges in the top deck"
+    },
+    {
+      "child": "selector knob",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "selector knob rotates continuously"
+    },
+    {
+      "child": "start button",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "start button is a separate small prismatic push control"
+    }
+  ],
+  "notes": []
+}

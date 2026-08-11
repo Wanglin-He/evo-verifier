@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_branching_tree_with_two_independent_rotary_branches_7d0df2cc7e68406894acc519f0816f11",
+  "prompt": "A bench fixture tree with a narrow backbone, a lower cantilever arm, and a higher offset arm that projects from a side-mounted hub cartridge. The two branches should differ in length and tip geometry so the silhouette stays asymmetric and clearly category-correct. The structure should read as real machine-fixture hardware with stout hub blocks, shoulder collars, plate reinforcements, and grounded mechanical proportions. The lower arm rotates on its own supported shaft and the upper arm rotates on a separate supported shaft, giving two independent revolute joints on different branch supports. Keep every part mechanically grounded with no floating members, and make sure the articulation paths stay clear so nothing clips through covers, stops, housings, rails, or neighboring links.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "backbone",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "backbone"
+    },
+    {
+      "name": "lower cantilever arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower cantilever arm"
+    },
+    {
+      "name": "higher offset arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "higher offset arm"
+    },
+    {
+      "name": "side-mounted hub cartridge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side-mounted hub cartridge"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lower arm",
+      "parent": "supported shaft",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower arm rotates on its own supported shaft"
+    },
+    {
+      "child": "upper arm",
+      "parent": "separate supported shaft",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper arm rotates on a separate supported shaft"
+    }
+  ],
+  "notes": []
+}

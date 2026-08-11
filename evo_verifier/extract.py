@@ -54,9 +54,12 @@ Rules:
 
 1. `quote` must be copied VERBATIM from the description -- an exact substring, not \
 a paraphrase. A requirement whose quote is not found in the description is thrown away.
-2. `source` is "explicit" when the description says it. If you add something the \
-description only implies by common sense, use "prior", set confidence at most 0.7, \
-and leave the quote empty. Prefer explicit; do not pad the contract with priors.
+2. `source` is "explicit" when the description says it, with the quote. Use "prior" \
+for a part that any real object of this kind must have and must move even though the \
+description never says so -- a quad bike has wheels that roll and a suspension that \
+travels; a microscope has a stage that moves. Give priors confidence at most 0.7 and \
+an empty quote. Be strict about what earns a prior: the object would not work as the \
+thing it is named without it. Do not add decoration, fasteners, or cosmetic parts.
 3. `child` is the part that moves. `parent` is what it moves against -- the hinge \
 plate, the column, the chute, the post. Name both the way the description names \
 them. If the description does not say what it attaches to, leave `parent` empty \

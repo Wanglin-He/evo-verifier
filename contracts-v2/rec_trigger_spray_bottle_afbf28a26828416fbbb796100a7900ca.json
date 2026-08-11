@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_trigger_spray_bottle_afbf28a26828416fbbb796100a7900ca",
+  "prompt": "Build a precision professional Trigger spray bottle tuned for calibration and repeatable alignment. Use a bottle plus trigger head with visible trigger-to-pump linkage with datum-friendly surfaces, index marks, adjustment features, and controlled gap language. Visual style can be minimal, but kinematics must be explicit. Trigger stroke should transmit through a visible lever-and-pump path. Keep a fully connected mechanical stack with no free-floating parts. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "bottle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bottle"
+    },
+    {
+      "name": "trigger head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "trigger head"
+    },
+    {
+      "name": "trigger-to-pump linkage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "trigger-to-pump linkage"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "trigger-to-pump linkage",
+      "parent": "trigger head",
+      "kind": null,
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Trigger stroke should transmit through a visible lever-and-pump path."
+    }
+  ],
+  "notes": []
+}

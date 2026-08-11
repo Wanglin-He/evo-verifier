@@ -1,0 +1,82 @@
+{
+  "version": "1",
+  "record_id": "rec_office_chair_0004",
+  "prompt": "A mesh-backed office chair with a five-wheel base and a simple tilt mechanism. The seat sits above a central pedestal, the back frame rises from the rear bracket, and paired armrests flank the seat. The caster wheels rotate continuously on their axles, and the seat-back assembly tilts about a transverse revolute axis through roughly 15 degrees.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "caster wheels",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "five-wheel base"
+    },
+    {
+      "name": "seat",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "seat"
+    },
+    {
+      "name": "central pedestal",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central pedestal"
+    },
+    {
+      "name": "back frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "back frame"
+    },
+    {
+      "name": "rear bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear bracket"
+    },
+    {
+      "name": "armrests",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "paired armrests"
+    },
+    {
+      "name": "seat-back assembly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "seat-back assembly"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "caster wheels",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "on their axles",
+      "location_hint": "",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "caster wheels rotate continuously on their axles"
+    },
+    {
+      "child": "seat-back assembly",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "transverse",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "seat-back assembly tilts about a transverse revolute axis through roughly 15 degrees"
+    }
+  ],
+  "notes": []
+}

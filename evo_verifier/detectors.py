@@ -35,6 +35,9 @@ class Requirement:
     """Asset parts the name matched."""
     moving: tuple[str, ...]
     """Of those, the ones a non-fixed joint actually moves."""
+    weight: float = 1.0
+    """1.0 for a quoted requirement, the prior's own confidence otherwise."""
+    explicit: bool = True
 
     @property
     def satisfied(self) -> int:
@@ -46,74 +49,93 @@ class Requirement:
         return bool(self.parts)
 
 
-def check_b8(asset: Asset, contract: Contract) -> ItemResult:
-    """Does every part the prompt says moves have a non-fixed joint?
+def check_b8(asset: Asset, contract: Contract, *, use_priors: bool = True) -> ItemResult:
+    """Does every part that should move have a non-fixed joint?
 
-    ``S_B8 = matched / expected``.
+    ``S_B8 = satisfied / expected``, weighted: a quoted requirement counts fully,
+    a category prior counts at its own confidence.
+
+    Priors are in the sum because the humans put them there. Asked why they
+    failed B8 on assets whose every stated motion had a joint, the annotator
+    said the parts a real object needs were never modelled at all -- a quad bike
+    with no suspension. That judgement is not in the prompt, so a contract
+    holding only quoted requirements cannot reach it. ``use_priors=False`` scores
+    the prompt-grounded subset instead, and the difference between the two is
+    itself a result worth reporting: it measures how much of the human standard
+    the prompt actually carries.
 
     An expected part with no counterpart in the asset counts as unmet -- a part
-    that is not there certainly has no joint -- but it also means the name never
-    resolved, and a name that never resolved might be the matcher's fault rather
-    than the asset's. That doubt lands on the confidence, and enough of it makes
-    the item abstain instead of accusing the asset.
+    that is not there certainly has no joint -- but a name that never resolved
+    might be the matcher's fault rather than the asset's. That doubt lands on the
+    confidence, and enough of it makes the item abstain rather than accuse.
     """
-    wanted = [joint for joint in contract.explicit_joints() if joint.kind != "fixed"]
+    wanted = [
+        joint
+        for joint in contract.joints
+        if joint.kind != "fixed" and (use_priors or joint.source is Source.EXPLICIT)
+    ]
     if not wanted:
         return ItemResult.not_applicable(
-            "B8", "the prompt names no moving part", tools=["contract"]
+            "B8", "nothing in the contract is required to move", tools=["contract"]
         )
 
     moved = {joint.child for joint in asset.movable() if joint.child}
     requirements = [_requirement(joint, asset, moved) for joint in wanted]
-
-    expected = sum(requirement.wanted for requirement in requirements)
-    satisfied = sum(requirement.satisfied for requirement in requirements)
-    score = satisfied / expected if expected else 0.0
+    score = _weighted(requirements)
 
     unresolved = [r for r in requirements if not r.resolved]
     still = [r for r in requirements if r.resolved and r.satisfied < r.wanted]
 
     quality = 1.0 - len(unresolved) / len(requirements)
-    stated = [j.confidence for j in wanted]
+    stated = sum(r.weight for r in requirements) / len(requirements)
     margin = min(1.0, abs(score - TAU_B8) / MARGIN)
-    confidence = round(quality * (sum(stated) / len(stated)) * margin, 4)
 
     return ItemResult.scored(
         "B8",
         round(score, 4),
         threshold=TAU_B8,
-        confidence=confidence,
+        confidence=round(quality * stated * margin, 4),
         coverage=Coverage.FULL if not unresolved else Coverage.PARTIAL,
         tools=["contract", "parser", "matching"],
         raw_measurements={
-            "expected": expected,
-            "satisfied": satisfied,
+            "expected": round(sum(r.weight * r.wanted for r in requirements), 4),
+            "satisfied": round(sum(r.weight * r.satisfied for r in requirements), 4),
+            "score_explicit_only": round(_weighted([r for r in requirements if r.explicit]), 4),
+            "used_priors": use_priors,
             "requirements": [
                 {
                     "child": r.child,
                     "wanted": r.wanted,
+                    "source": "explicit" if r.explicit else "prior",
                     "matched_parts": list(r.parts),
                     "moving_parts": list(r.moving),
                 }
                 for r in requirements
             ],
             "unresolved_names": [r.child for r in unresolved],
-            "priors_ignored": [
-                joint.child for joint in contract.joints if joint.source is not Source.EXPLICIT
-            ],
         },
         failure_reason=_reason(still, unresolved),
         repair_hint=_repair(still, unresolved, contract),
     )
 
 
+def _weighted(requirements: list[Requirement]) -> float:
+    expected = sum(r.weight * r.wanted for r in requirements)
+    if not expected:
+        return 0.0
+    return sum(r.weight * r.satisfied for r in requirements) / expected
+
+
 def _requirement(joint: ExpectedJoint, asset: Asset, moved: set[str]) -> Requirement:
     found = tuple(match.name for match in matches(joint.child, asset.parts))
+    explicit = joint.source is Source.EXPLICIT
     return Requirement(
         child=joint.child,
         wanted=max(1, joint.count or 1),
         parts=found,
         moving=tuple(name for name in found if name in moved),
+        weight=1.0 if explicit else min(joint.confidence, 0.7),
+        explicit=explicit,
     )
 
 
@@ -130,9 +152,7 @@ def _reason(still: list[Requirement], unresolved: list[Requirement]) -> str:
     return "; ".join(parts)
 
 
-def _repair(
-    still: list[Requirement], unresolved: list[Requirement], contract: Contract
-) -> str:
+def _repair(still: list[Requirement], unresolved: list[Requirement], contract: Contract) -> str:
     attachment = {joint.child: joint.parent for joint in contract.joints}
     hints = []
     for requirement in (*still, *unresolved):

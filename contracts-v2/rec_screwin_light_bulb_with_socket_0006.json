@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_screwin_light_bulb_with_socket_0006",
+  "prompt": "A realistic, highly detailed Screwin Light Bulb With Socket in a rugged utility variant, with a bulb envelope, threaded metal screw base, and a socket collar that visibly receives the threaded interface. Add thicker sections, reinforced joints, exposed fasteners, and durable painted or molded material cues suited to heavy use. threaded or dial rotation should be centered on clear coaxial geometry with practical engagement depth. Keep the object practical, serviceable, and mechanically legible.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "bulb envelope",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bulb envelope"
+    },
+    {
+      "name": "threaded metal screw base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "threaded metal screw base"
+    },
+    {
+      "name": "socket collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "socket collar"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "threaded metal screw base",
+      "parent": "socket collar",
+      "kind": "continuous",
+      "axis_hint": "coaxial",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "threaded or dial rotation should be centered on clear coaxial geometry with practical engagement depth."
+    }
+  ],
+  "notes": []
+}

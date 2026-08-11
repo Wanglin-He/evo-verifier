@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_single_revolute_hinge_e79c119a07f34e7f9d15ec16e851768f",
+  "prompt": "Create a realistic industrial piano hinge segment. Geometry/details required: a long narrow hinge strip with repeated alternating knuckles, many screw bosses, and a continuous steel pin visible at the top and bottom. Articulation required: one revolute joint along the full hinge length; moving half rotates cleanly without detached knuckles. Use believable real-world proportions, visible material/color contrast, chamfered or rounded edges where appropriate, and exact prompt-specific tests for the main mechanism, support/contact, and the most important visible details. Keep the URDF open-tree and make every moving link physically supported; classify any small intentional seated/nested overlaps with scoped allowances and exact proof checks instead of distorting valid geometry.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "moving half",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "moving half"
+    },
+    {
+      "name": "continuous steel pin",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "continuous steel pin"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "moving half",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "along the full hinge length",
+      "location_hint": "",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one revolute joint along the full hinge length"
+    }
+  ],
+  "notes": []
+}

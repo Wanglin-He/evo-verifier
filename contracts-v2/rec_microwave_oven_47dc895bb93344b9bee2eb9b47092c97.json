@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97",
+  "prompt": "A grill-combo microwave with a side-hinged door, a turntable tray, and a chunky selector knob. The front face is divided between the large door window and a narrow side control strip with buttons and one main knob. The door rotates on a vertical side hinge axis, the turntable rotates continuously about a vertical spindle, the knob rotates on its local axis, and the buttons translate inward on short prismatic travel. Keep the turntable tray clipped to its central support in the oven cavity so it stays captured while rotating.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side-hinged door"
+    },
+    {
+      "name": "turntable tray",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "turntable tray"
+    },
+    {
+      "name": "selector knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "selector knob"
+    },
+    {
+      "name": "buttons",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "buttons"
+    },
+    {
+      "name": "central support",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central support"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "door",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "side hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The door rotates on a vertical side hinge axis"
+    },
+    {
+      "child": "turntable",
+      "parent": "central support",
+      "kind": "continuous",
+      "axis_hint": "vertical spindle",
+      "location_hint": "oven cavity",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the turntable rotates continuously about a vertical spindle"
+    },
+    {
+      "child": "knob",
+      "parent": "",
+      "kind": null,
+      "axis_hint": "local axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the knob rotates on its local axis"
+    },
+    {
+      "child": "buttons",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "inward",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the buttons translate inward on short prismatic travel"
+    }
+  ],
+  "notes": []
+}
