@@ -277,6 +277,17 @@ def find_model_py(data_dir: Path | str, record_id: str) -> Path:
     return path
 
 
+def read_prompt(data_dir: Path | str, record_id: str) -> str:
+    """The full prompt, not the 150-character preview the annotation export carries."""
+    record_dir = Path(data_dir) / "records" / record_id
+    payload = json.loads((record_dir / "record.json").read_text(encoding="utf-8"))
+    relative = (payload.get("artifacts") or {}).get("prompt_txt")
+    if not relative:
+        revision = payload.get("active_revision_id", "rev_000001")
+        relative = f"revisions/{revision}/prompt.txt"
+    return (record_dir / relative).read_text(encoding="utf-8").strip()
+
+
 def load_asset(source: Path | str, record_id: str = "") -> Asset:
     """Read one ``model.py``. Never executes it."""
     path = Path(source)

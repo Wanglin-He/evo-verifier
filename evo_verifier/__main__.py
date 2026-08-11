@@ -7,10 +7,19 @@ from collections import Counter
 from collections.abc import Sequence
 from pathlib import Path
 
-from evo_verifier.asset import find_model_py, load_asset
+from evo_verifier.asset import find_model_py, load_asset, read_prompt
+from evo_verifier.contract import ContractError
 from evo_verifier.evaluate import evaluate, format_table
-from evo_verifier.items import ITEMS, items_in_group
-from evo_verifier.labels import AnnotatedCase, count_all, load_annotations
+from evo_verifier.extract import (
+    DEFAULT_MODEL,
+    ENDPOINT,
+    INSTRUCTION,
+    ExtractionError,
+    extract,
+    read_api_key,
+)
+from evo_verifier.items import ITEMS, Item, items_in_group
+from evo_verifier.labels import AnnotatedCase, Label, count_all, load_annotations
 from evo_verifier.report import load_reports
 
 DEFAULT_ANNOTATIONS = Path(__file__).resolve().parent.parent / "data" / "annotations-2026-08-11.csv"
@@ -38,6 +47,22 @@ def main(argv: Sequence[str] | None = None) -> int:
     subparsers.add_parser("stats", help="label distribution per item")
     parsed = subparsers.add_parser("parse", help="how much of each model.py resolves statically")
     parsed.add_argument("data_dir", type=Path, help="an articraft-data clone")
+    extracted = subparsers.add_parser("extract", help="prompt -> contract, once, via a model")
+    extracted.add_argument("data_dir", type=Path, help="an articraft-data clone")
+    extracted.add_argument("--out", type=Path, required=True, help="directory for contract JSON")
+    extracted.add_argument("--env-file", type=Path, help=".env holding GEMINI_API_KEY")
+    extracted.add_argument("--model", default=DEFAULT_MODEL)
+    extracted.add_argument("--limit", type=int, help="stop after this many records")
+    extracted.add_argument(
+        "--failures-only",
+        action="store_true",
+        help="only records a human failed on one of the selected items",
+    )
+    extracted.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="print what would be sent and to whom, call nothing",
+    )
     scored = subparsers.add_parser("evaluate", help="agreement between reports and humans")
     scored.add_argument("reports", type=Path, help="directory of report JSON files")
 
@@ -54,6 +79,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.command == "parse":
         _print_parse(cases, args.data_dir)
         return 0
+
+    if args.command == "extract":
+        return _extract(cases, items, args)
 
     reports = load_reports(args.reports)
     matched = sum(1 for case in cases if case.record_id in reports)
@@ -78,6 +106,49 @@ def _print_stats(cases: list[AnnotatedCase], items: Sequence[object]) -> None:
             f"{counts.item_id:5} {counts.passed:6} {counts.failed:6} "
             f"{counts.not_applicable:5} {counts.missing:8} {rate:>10}"
         )
+
+
+def _extract(cases: list[AnnotatedCase], items: Sequence[Item], args: argparse.Namespace) -> int:
+    """Send prompts to a model, once, and write the contracts to disk.
+
+    Re-running skips records already written, so a interrupted batch resumes
+    instead of paying twice.
+    """
+    wanted = {item.item_id for item in items}
+    if args.failures_only:
+        cases = [c for c in cases if any(c.labels[i] is Label.FAIL for i in wanted)]
+    if args.limit:
+        cases = cases[: args.limit]
+    todo = [case for case in cases if not (args.out / f"{case.record_id}.json").exists()]
+
+    print(f"{len(todo)} records to extract ({len(cases) - len(todo)} already on disk)")
+    print(f"model: {args.model}   endpoint: {ENDPOINT.format(model=args.model)}")
+    if args.dry_run:
+        if todo:
+            prompt = read_prompt(args.data_dir, todo[0].record_id)
+            print(f"\nfirst prompt ({todo[0].record_id}):\n{prompt}\n")
+            print(f"instruction is {len(INSTRUCTION)} characters, sent with every request")
+        print("dry run: nothing was sent")
+        return 0
+
+    api_key = read_api_key(args.env_file)
+    written, failed = 0, []
+    for index, case in enumerate(todo, start=1):
+        prompt = read_prompt(args.data_dir, case.record_id)
+        try:
+            contract = extract(case.record_id, prompt, api_key=api_key, model=args.model)
+        except (ExtractionError, ContractError) as error:
+            failed.append((case.record_id, str(error)[:160]))
+            print(f"  [{index}/{len(todo)}] {case.record_id}: FAILED")
+            continue
+        contract.save(args.out / f"{case.record_id}.json")
+        written += 1
+        print(f"  [{index}/{len(todo)}] {case.record_id}: {len(contract.joints)} joints")
+
+    print(f"\nwrote {written}, failed {len(failed)}")
+    for record_id, error in failed:
+        print(f"  {record_id}: {error}")
+    return 0 if written else 1
 
 
 def _print_parse(cases: list[AnnotatedCase], data_dir: Path) -> None:
