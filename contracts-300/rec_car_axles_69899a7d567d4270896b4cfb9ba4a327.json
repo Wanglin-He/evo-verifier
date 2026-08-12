@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_car_axles_69899a7d567d4270896b4cfb9ba4a327",
+  "prompt": "A live rear axle with an integral differential housing mid-span and two axle tubes. A pinion input shaft rotates continuously into the differential housing. Each wheel hub at the tube end rotates continuously on bearings.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "differential housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "differential housing"
+    },
+    {
+      "name": "axle tubes",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two axle tubes"
+    },
+    {
+      "name": "pinion input shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pinion input shaft"
+    },
+    {
+      "name": "wheel hub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wheel hub"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "pinion input shaft",
+      "parent": "differential housing",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "into the differential housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A pinion input shaft rotates continuously into the differential housing."
+    },
+    {
+      "child": "wheel hub",
+      "parent": "axle tubes",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "at the tube end",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each wheel hub at the tube end rotates continuously on bearings."
+    }
+  ],
+  "notes": []
+}

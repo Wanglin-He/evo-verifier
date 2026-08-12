@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_cannon_43b736d0e6ca4ec6a51994baed7055ef",
+  "prompt": "A Civil War garrison siege cannon on a four-wheel iron-shod timber carriage. The heavy cylindrical barrel elevates on a revolute trunnion joint at the side cheeks of the carriage; a wooden quoin wedge slides prismatically beneath the breech along the carriage bed; the four truck wheels rotate continuously on their fixed axles.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "heavy cylindrical barrel"
+    },
+    {
+      "name": "carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "timber carriage"
+    },
+    {
+      "name": "quoin wedge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wooden quoin wedge"
+    },
+    {
+      "name": "truck wheels",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four truck wheels"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "barrel",
+      "parent": "side cheeks of the carriage",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the side cheeks of the carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "heavy cylindrical barrel elevates on a revolute trunnion joint at the side cheeks of the carriage"
+    },
+    {
+      "child": "quoin wedge",
+      "parent": "carriage bed",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "beneath the breech along the carriage bed",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wooden quoin wedge slides prismatically beneath the breech along the carriage bed"
+    },
+    {
+      "child": "truck wheels",
+      "parent": "fixed axles",
+      "kind": "continuous",
+      "axis_hint": "on their fixed axles",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four truck wheels rotate continuously on their fixed axles"
+    }
+  ],
+  "notes": []
+}

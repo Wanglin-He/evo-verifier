@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_lazy_susan_8993eb65fa824308aa175d873efd9225",
+  "prompt": "A spice-carousel lazy Susan with a tall outer rail and a central bearing base. The round tray has shallow compartments around the perimeter and a low circular base ring beneath. The tray rotates continuously about the vertical center axis at the bearing base.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tall outer rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall outer rail"
+    },
+    {
+      "name": "central bearing base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central bearing base"
+    },
+    {
+      "name": "round tray",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round tray"
+    },
+    {
+      "name": "shallow compartments",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shallow compartments"
+    },
+    {
+      "name": "low circular base ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "low circular base ring"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "round tray",
+      "parent": "central bearing base",
+      "kind": "continuous",
+      "axis_hint": "vertical center axis",
+      "location_hint": "at the bearing base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tray rotates continuously about the vertical center axis at the bearing base"
+    }
+  ],
+  "notes": []
+}

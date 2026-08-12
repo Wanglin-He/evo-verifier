@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_garden_gate_3ffbd3e876a142d2ab5693140093a96a",
+  "prompt": "A double-leaf courtyard gate with two narrow framed leaves meeting under a shallow arch. Each leaf is hinged to an outer post, and one meeting stile carries a latch while the other carries a vertical cane bolt that drops into the ground. The two leaves rotate on separate vertical hinge axes at the posts, the latch lever rotates on its small pivot, and the cane bolt slides vertically in its guide loops. Keep the cane bolt clipped through its guide loops on the meeting stile so it remains captured when raised and lowered.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "framed leaf",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two narrow framed leaves"
+    },
+    {
+      "name": "outer post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "outer post"
+    },
+    {
+      "name": "latch lever",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "latch lever"
+    },
+    {
+      "name": "cane bolt",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cane bolt"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "leaves",
+      "parent": "posts",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at the posts",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The two leaves rotate on separate vertical hinge axes at the posts"
+    },
+    {
+      "child": "latch lever",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on its small pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the latch lever rotates on its small pivot"
+    },
+    {
+      "child": "cane bolt",
+      "parent": "guide loops",
+      "kind": "prismatic",
+      "axis_hint": "vertically",
+      "location_hint": "in its guide loops",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the cane bolt slides vertically in its guide loops"
+    }
+  ],
+  "notes": []
+}

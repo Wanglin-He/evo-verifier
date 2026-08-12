@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_instrument_case_with_hinged_lid_dac33e02a9b54dda87a3e498fd1dd0d5",
+  "prompt": "A compact clarinet case with a flat-bottom shell and a domed lid. The molded lower body holds the instrument cavity, the lid is attached along the rear edge, and two snap latches sit along the front edge. The lid rotates on a rear hinge axis, and the two snap latches rotate on their own small hinge pivots at the closure edge. Keep the domed lid clipped to the rear hinge axis so the top shell stays attached along the full opening motion.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "molded lower body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "molded lower body"
+    },
+    {
+      "name": "domed lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "domed lid"
+    },
+    {
+      "name": "snap latches",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two snap latches sit along the front edge"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "molded lower body",
+      "kind": "revolute",
+      "axis_hint": "rear hinge axis",
+      "location_hint": "rear edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lid rotates on a rear hinge axis"
+    },
+    {
+      "child": "snap latches",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "small hinge pivots",
+      "location_hint": "at the closure edge",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two snap latches rotate on their own small hinge pivots at the closure edge"
+    }
+  ],
+  "notes": []
+}

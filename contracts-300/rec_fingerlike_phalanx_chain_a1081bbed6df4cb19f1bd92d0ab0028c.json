@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_fingerlike_phalanx_chain_a1081bbed6df4cb19f1bd92d0ab0028c",
+  "prompt": "A broad-knuckle articulated finger. A palm-side base block supports three tapered digit segments that decrease in size toward the tip. The three digit segments are joined by three revolute joints about parallel knuckle axes.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "palm-side base block",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "palm-side base block"
+    },
+    {
+      "name": "tapered digit segments",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three tapered digit segments"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "digit segments",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "parallel knuckle axes",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "joined by three revolute joints about parallel knuckle axes"
+    }
+  ],
+  "notes": []
+}

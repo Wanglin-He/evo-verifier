@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_studio_spotlight_on_yoke_7968ae8aa85c40599898348832c45fa4",
+  "prompt": "A photo-studio spotlight on a C-stand style base with three folding legs, a vertical column, and a yoke-mounted lamp body. The three legs rotate on hinges at the base crown, the yoke pans on a vertical joint at the top of the column, and the lamp body tilts on a horizontal hinge between the yoke arms. Photo-studio lighting scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "legs",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three folding legs"
+    },
+    {
+      "name": "vertical column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a vertical column"
+    },
+    {
+      "name": "yoke",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "yoke"
+    },
+    {
+      "name": "lamp body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lamp body"
+    },
+    {
+      "name": "base crown",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base crown"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "legs",
+      "parent": "base crown",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the base crown",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The three legs rotate on hinges at the base crown"
+    },
+    {
+      "child": "yoke",
+      "parent": "column",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at the top of the column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the yoke pans on a vertical joint at the top of the column"
+    },
+    {
+      "child": "lamp body",
+      "parent": "yoke arms",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "between the yoke arms",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the lamp body tilts on a horizontal hinge between the yoke arms"
+    }
+  ],
+  "notes": []
+}

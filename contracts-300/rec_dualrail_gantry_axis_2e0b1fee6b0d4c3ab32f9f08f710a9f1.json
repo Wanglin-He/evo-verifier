@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_dualrail_gantry_axis_2e0b1fee6b0d4c3ab32f9f08f710a9f1",
+  "prompt": "A bridge-rider dual-rail gantry. Two grounded rails support a moving bridge, and the bridge carries a compact crosswise truck on its own guide path. The bridge and the truck are stacked prismatic joints on perpendicular axes.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "grounded rails",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two grounded rails"
+    },
+    {
+      "name": "moving bridge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "moving bridge"
+    },
+    {
+      "name": "compact crosswise truck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact crosswise truck"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "moving bridge",
+      "parent": "grounded rails",
+      "kind": "prismatic",
+      "axis_hint": "perpendicular axes",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two grounded rails support a moving bridge"
+    },
+    {
+      "child": "compact crosswise truck",
+      "parent": "bridge",
+      "kind": "prismatic",
+      "axis_hint": "crosswise",
+      "location_hint": "on its own guide path",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the bridge carries a compact crosswise truck on its own guide path"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_hingeddoor_cabinet_cb53f306db124c92bc397dd2789bdd60",
+  "prompt": "A tall pantry cabinet with separate upper and lower doors on the same side. The cabinet carcass is a full-height rectangle with a divider rail between the compartments, and both doors are attached to one side wall by exposed hinges. Each door rotates on its own vertical hinge axis at the cabinet side, and the two pull handles rotate slightly on their small mounts. Keep both compartment doors clipped into the side-wall hinges so each door stays supported independently during swing.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "cabinet carcass",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cabinet carcass"
+    },
+    {
+      "name": "doors",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper and lower doors"
+    },
+    {
+      "name": "pull handles",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two pull handles"
+    },
+    {
+      "name": "small mounts",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small mounts"
+    },
+    {
+      "name": "side wall",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side wall"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "door",
+      "parent": "cabinet side",
+      "kind": "revolute",
+      "axis_hint": "vertical hinge axis",
+      "location_hint": "at the cabinet side",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each door rotates on its own vertical hinge axis at the cabinet side"
+    },
+    {
+      "child": "pull handles",
+      "parent": "small mounts",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on their small mounts",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two pull handles rotate slightly on their small mounts"
+    }
+  ],
+  "notes": []
+}

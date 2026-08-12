@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_frontload_dryer_e54137a4376a4f02b74cf7e20056f978",
+  "prompt": "A stacked dryer unit with a slim rectangular body, a drum on a revolute axle, and a circular door with a large glass window hinged on the right edge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "body"
+    },
+    {
+      "name": "drum",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drum"
+    },
+    {
+      "name": "circular door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular door"
+    },
+    {
+      "name": "large glass window",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large glass window"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drum",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drum on a revolute axle"
+    },
+    {
+      "child": "circular door",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on the right edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular door with a large glass window hinged on the right edge"
+    }
+  ],
+  "notes": []
+}

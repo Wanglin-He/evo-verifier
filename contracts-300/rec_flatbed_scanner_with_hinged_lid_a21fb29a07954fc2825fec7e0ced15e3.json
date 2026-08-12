@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_flatbed_scanner_with_hinged_lid_a21fb29a07954fc2825fec7e0ced15e3",
+  "prompt": "A large-format A3 flatbed scanner with a wide rectangular body and a hinged lid with a document feed roller housing that opens from the rear on revolute hinges.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "body"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid"
+    },
+    {
+      "name": "document feed roller housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "document feed roller housing"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "opens from the rear on revolute hinges"
+    }
+  ],
+  "notes": []
+}

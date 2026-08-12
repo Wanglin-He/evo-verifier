@@ -1,0 +1,82 @@
+{
+  "version": "1",
+  "record_id": "rec_bicycle_fork_and_handlebar_assembly_9c6fff0201d94260b769313deefe238f",
+  "prompt": "A recumbent trike front fork with a wide squared-crown blade pair, two straight round blade legs, and a threaded steerer. A forward-swept bullhorn handlebar pair clamps at the stem extension tip pinch collar; the full steering assembly pivots on a nearly vertical revolute head-tube axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "recumbent trike front fork",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "recumbent trike front fork"
+    },
+    {
+      "name": "wide squared-crown blade pair",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide squared-crown blade pair"
+    },
+    {
+      "name": "two straight round blade legs",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two straight round blade legs"
+    },
+    {
+      "name": "threaded steerer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "threaded steerer"
+    },
+    {
+      "name": "forward-swept bullhorn handlebar pair",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "forward-swept bullhorn handlebar pair"
+    },
+    {
+      "name": "stem extension tip pinch collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stem extension tip pinch collar"
+    },
+    {
+      "name": "full steering assembly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "full steering assembly"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "forward-swept bullhorn handlebar pair",
+      "parent": "stem extension tip pinch collar",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "at the stem extension tip pinch collar",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "forward-swept bullhorn handlebar pair clamps at the stem extension tip pinch collar"
+    },
+    {
+      "child": "full steering assembly",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "nearly vertical revolute head-tube axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "full steering assembly pivots on a nearly vertical revolute head-tube axis"
+    }
+  ],
+  "notes": []
+}

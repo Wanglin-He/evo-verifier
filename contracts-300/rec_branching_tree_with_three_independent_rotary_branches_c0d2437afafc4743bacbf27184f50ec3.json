@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_branching_tree_with_three_independent_rotary_branches_c0d2437afafc4743bacbf27184f50ec3",
+  "prompt": "A bridge-backed three-branch tooling tree. A rear frame and forward spine support three offset arms, giving each branch clear clearance from its neighbors and from the fixed support. The three branches articulate through independent revolute joints.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rear frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear frame"
+    },
+    {
+      "name": "forward spine",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "forward spine"
+    },
+    {
+      "name": "offset arms",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three offset arms"
+    },
+    {
+      "name": "branches",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three branches"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "branches",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The three branches articulate through independent revolute joints."
+    }
+  ],
+  "notes": []
+}

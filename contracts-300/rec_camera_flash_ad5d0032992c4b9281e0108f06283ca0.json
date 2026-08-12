@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_camera_flash_ad5d0032992c4b9281e0108f06283ca0",
+  "prompt": "A professional camera flash with a tall rear control body, a broad mounting foot, and a forward-facing head between short yoke arms, plus a side control strip with individual mode buttons. the yoke makes the tilt axis visible on both sides of the head, and the side buttons stay separate from the lamp head and neck geometry. The head assembly swivels on a vertical revolute joint above the body and the head pitches on a horizontal revolute joint between the yoke arms, and the side control buttons each depress independently as small prismatic controls. DSLR accessory scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall rear control body"
+    },
+    {
+      "name": "mounting foot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad mounting foot"
+    },
+    {
+      "name": "head assembly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "head assembly"
+    },
+    {
+      "name": "yoke arms",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short yoke arms"
+    },
+    {
+      "name": "side control buttons",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side control buttons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "head assembly",
+      "parent": "body",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "above the body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The head assembly swivels on a vertical revolute joint above the body"
+    },
+    {
+      "child": "head",
+      "parent": "yoke arms",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "between the yoke arms",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "head pitches on a horizontal revolute joint between the yoke arms"
+    },
+    {
+      "child": "side control buttons",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side control buttons each depress independently as small prismatic controls"
+    }
+  ],
+  "notes": []
+}

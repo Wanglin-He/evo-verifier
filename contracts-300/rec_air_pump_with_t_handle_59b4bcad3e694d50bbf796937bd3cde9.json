@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_air_pump_with_t_handle_59b4bcad3e694d50bbf796937bd3cde9",
+  "prompt": "A garage floor pump with a tall barrel, a T-handle, and a side hose clip. The rigid base carries the cylinder upright, and a small hook-like clip is mounted to one side of the lower barrel. The T-handle and piston rod slide prismatically along the barrel axis, and the hose clip rotates on a small side pivot.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tall barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall barrel"
+    },
+    {
+      "name": "T-handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "T-handle"
+    },
+    {
+      "name": "side hose clip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side hose clip"
+    },
+    {
+      "name": "rigid base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rigid base"
+    },
+    {
+      "name": "piston rod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "piston rod"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "T-handle and piston rod",
+      "parent": "barrel",
+      "kind": "prismatic",
+      "axis_hint": "along the barrel axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The T-handle and piston rod slide prismatically along the barrel axis"
+    },
+    {
+      "child": "hose clip",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on a small side pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the hose clip rotates on a small side pivot"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,122 @@
+{
+  "version": "1",
+  "record_id": "rec_stand_mixer_c0fa93459fd4468598e818696b301b96",
+  "prompt": "A retro home baking stand mixer with a compact cast-metal base, a stainless bowl carried just ahead of the neck, and a bulbous head fitted with a flat beater. Keep the canonical articulation tree: a short prismatic bowl-adjustment slide at the base front, a rear revolute tilt-head hinge, a continuous vertical beater shaft beneath the head, a base-mounted speed knob on a revolute joint, and a base-mounted head-lock plunger on a short prismatic joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact cast-metal base"
+    },
+    {
+      "name": "stainless bowl",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stainless bowl"
+    },
+    {
+      "name": "head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bulbous head"
+    },
+    {
+      "name": "flat beater",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat beater"
+    },
+    {
+      "name": "bowl-adjustment slide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bowl-adjustment slide"
+    },
+    {
+      "name": "beater shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "beater shaft"
+    },
+    {
+      "name": "speed knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "speed knob"
+    },
+    {
+      "name": "head-lock plunger",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "head-lock plunger"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "bowl-adjustment slide",
+      "parent": "base",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "at the base front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short prismatic bowl-adjustment slide at the base front"
+    },
+    {
+      "child": "head",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear revolute tilt-head hinge"
+    },
+    {
+      "child": "beater shaft",
+      "parent": "head",
+      "kind": "continuous",
+      "axis_hint": "vertical",
+      "location_hint": "beneath the head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "continuous vertical beater shaft beneath the head"
+    },
+    {
+      "child": "speed knob",
+      "parent": "base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "base-mounted",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base-mounted speed knob on a revolute joint"
+    },
+    {
+      "child": "head-lock plunger",
+      "parent": "base",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "base-mounted",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base-mounted head-lock plunger on a short prismatic joint"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_cantilever_articulated_arm_0c46128c7eda409b9d37704d9aea8000",
+  "prompt": "A floor-pedestal service arm with a heavy root column, an offset shoulder yoke, a long upper link, a shorter forearm, and a compact circular tool flange. The links should be boxed or ribbed and each joint should sit in clear side plates or clevis cheeks so the support structure is easy to trust. It should feel like real reach hardware with cast joint housings, machined caps, trimmed cable covers where they make sense, and believable mass around the shoulder and elbow. Shoulder and elbow are revolute joints about parallel horizontal axes, and the wrist is a separate revolute joint about the forearm tool axis. Keep every part mechanically grounded with no floating members, and make sure the articulation paths stay clear so nothing clips through covers, stops, housings, rails, or neighboring links.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "root column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "heavy root column"
+    },
+    {
+      "name": "shoulder yoke",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "offset shoulder yoke"
+    },
+    {
+      "name": "upper link",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "long upper link"
+    },
+    {
+      "name": "forearm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shorter forearm"
+    },
+    {
+      "name": "tool flange",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact circular tool flange"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "shoulder yoke",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "parallel horizontal axes",
+      "location_hint": "shoulder",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Shoulder and elbow are revolute joints about parallel horizontal axes"
+    },
+    {
+      "child": "forearm",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "parallel horizontal axes",
+      "location_hint": "elbow",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Shoulder and elbow are revolute joints about parallel horizontal axes"
+    },
+    {
+      "child": "tool flange",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "forearm tool axis",
+      "location_hint": "wrist",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wrist is a separate revolute joint about the forearm tool axis"
+    }
+  ],
+  "notes": []
+}

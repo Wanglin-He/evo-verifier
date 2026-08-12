@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_floor_lamp_0042e687f24e46ecac782b1ca71df7d5",
+  "prompt": "A task floor lamp with a heavy rectangular base, a two-link arm, and a rectangular light head with a side button. The lower arm rotates on a hinge at the base mount, the upper arm rotates on an elbow hinge, the head tilts on a hinge at the tip, and the side button depresses as a small prismatic control. Work-light floor-lamp scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "heavy rectangular base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "heavy rectangular base"
+    },
+    {
+      "name": "lower arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower arm"
+    },
+    {
+      "name": "upper arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper arm"
+    },
+    {
+      "name": "rectangular light head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular light head"
+    },
+    {
+      "name": "side button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side button"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lower arm",
+      "parent": "heavy rectangular base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the base mount",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower arm rotates on a hinge at the base mount"
+    },
+    {
+      "child": "upper arm",
+      "parent": "lower arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "elbow hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper arm rotates on an elbow hinge"
+    },
+    {
+      "child": "head",
+      "parent": "upper arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the tip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "head tilts on a hinge at the tip"
+    },
+    {
+      "child": "side button",
+      "parent": "rectangular light head",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "side",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side button depresses as a small prismatic control"
+    }
+  ],
+  "notes": []
+}

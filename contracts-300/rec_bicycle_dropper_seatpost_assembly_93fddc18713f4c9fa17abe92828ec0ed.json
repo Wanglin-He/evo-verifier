@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_bicycle_dropper_seatpost_assembly_93fddc18713f4c9fa17abe92828ec0ed",
+  "prompt": "A rugged mountain bike dropper post with a machined alloy outer body, a telescoping inner shaft actuated by a prismatic joint, and a clamp head with an integrated cable port. Topped with a trail-ready saddle featuring a contoured profile, slim front, durable padded rear platform, and rail mounts for secure attachment.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "machined alloy outer body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "machined alloy outer body"
+    },
+    {
+      "name": "telescoping inner shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "telescoping inner shaft"
+    },
+    {
+      "name": "clamp head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "clamp head"
+    },
+    {
+      "name": "trail-ready saddle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "trail-ready saddle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "telescoping inner shaft",
+      "parent": "machined alloy outer body",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "telescoping inner shaft actuated by a prismatic joint"
+    }
+  ],
+  "notes": []
+}

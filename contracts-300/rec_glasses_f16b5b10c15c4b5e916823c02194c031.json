@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_glasses_f16b5b10c15c4b5e916823c02194c031",
+  "prompt": "A pair of flip-up driving glasses with a main frame, two temple arms, and a tinted secondary lens frame mounted ahead of the primary rims. The tinted front is carried by two small hinges near the brow line, while the temples connect at the outer corners of the main frame. The temples fold on their usual outer revolute hinges, and the tinted front rotates upward on a transverse pair of revolute pivots above the lenses.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "main frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main frame"
+    },
+    {
+      "name": "temple arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two temple arms"
+    },
+    {
+      "name": "tinted secondary lens frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tinted secondary lens frame"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "temples",
+      "parent": "main frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the outer corners of the main frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The temples fold on their usual outer revolute hinges"
+    },
+    {
+      "child": "tinted front",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "transverse",
+      "location_hint": "above the lenses",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the tinted front rotates upward on a transverse pair of revolute pivots above the lenses"
+    }
+  ],
+  "notes": []
+}

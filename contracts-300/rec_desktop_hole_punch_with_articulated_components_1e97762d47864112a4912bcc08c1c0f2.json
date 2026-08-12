@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_desktop_hole_punch_with_articulated_components_1e97762d47864112a4912bcc08c1c0f2",
+  "prompt": "A desktop hole punch with a tall lever handle, a side lock latch, and an adjustable paper stop rail across the front. The lever handle rotates on a rear transverse hinge, the side lock latch rotates on a short local pivot, and the paper stop rail slides prismatically along the front guide. Office desktop scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "lever handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lever handle"
+    },
+    {
+      "name": "side lock latch",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side lock latch"
+    },
+    {
+      "name": "paper stop rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "paper stop rail"
+    },
+    {
+      "name": "front guide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front guide"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lever handle",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "transverse",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lever handle rotates on a rear transverse hinge"
+    },
+    {
+      "child": "side lock latch",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "side",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side lock latch rotates on a short local pivot"
+    },
+    {
+      "child": "paper stop rail",
+      "parent": "front guide",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "front guide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "paper stop rail slides prismatically along the front guide"
+    }
+  ],
+  "notes": []
+}

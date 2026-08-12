@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_range_hood_with_articulated_controls_0034",
+  "prompt": "A chimney-style kitchen range hood with a broad trapezoidal canopy and a narrow chimney cover. Two large push-buttons occupy the center of the front strip, with one small rotary knob tucked beneath each button. Only these controls articulate, with the buttons moving inward prismatically and the knobs rotating continuously.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "canopy",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad trapezoidal canopy"
+    },
+    {
+      "name": "chimney cover",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "narrow chimney cover"
+    },
+    {
+      "name": "push-button",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two large push-buttons"
+    },
+    {
+      "name": "rotary knob",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one small rotary knob tucked beneath each button"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "push-button",
+      "parent": "front strip",
+      "kind": "prismatic",
+      "axis_hint": "inward",
+      "location_hint": "center of the front strip",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "buttons moving inward prismatically"
+    },
+    {
+      "child": "rotary knob",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "tucked beneath each button",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "knobs rotating continuously"
+    }
+  ],
+  "notes": []
+}

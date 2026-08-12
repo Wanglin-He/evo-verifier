@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_flap_array_with_independent_hinges_0002",
+  "prompt": "A rectangular frame carrying several independently hinged flaps, with repeated revolute joints and clean sheet-metal-like geometry.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular frame",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular frame"
+    },
+    {
+      "name": "flaps",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flaps"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "flaps",
+      "parent": "rectangular frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "independently hinged flaps, with repeated revolute joints"
+    }
+  ],
+  "notes": []
+}

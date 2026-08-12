@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_bicycle_crankset_and_pedal_assembly_5fe9bf7e4c1645d888747e760f2f4536",
+  "prompt": "A downhill freeride crankset with a wide bottom-bracket shell, two oversized crank arms, and a bash-guard outer ring. The spindle and crank arms rotate continuously. Each platform pedal rotates about its axle spindle.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "bottom-bracket shell",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide bottom-bracket shell"
+    },
+    {
+      "name": "crank arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two oversized crank arms"
+    },
+    {
+      "name": "bash-guard outer ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bash-guard outer ring"
+    },
+    {
+      "name": "spindle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spindle"
+    },
+    {
+      "name": "platform pedal",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "platform pedal"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "spindle",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The spindle and crank arms rotate continuously."
+    },
+    {
+      "child": "crank arms",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The spindle and crank arms rotate continuously."
+    },
+    {
+      "child": "platform pedal",
+      "parent": "axle spindle",
+      "kind": "continuous",
+      "axis_hint": "about its axle spindle",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each platform pedal rotates about its axle spindle."
+    }
+  ],
+  "notes": []
+}

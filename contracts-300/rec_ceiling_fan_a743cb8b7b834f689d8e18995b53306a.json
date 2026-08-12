@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_ceiling_fan_a743cb8b7b834f689d8e18995b53306a",
+  "prompt": "A four-blade contemporary ceiling fan with a low-profile disc motor housing flush to the ceiling canopy, four angular aluminium blades on a central revolute axle, and an integrated light tray on a revolute hinge at the housing underside.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "disc motor housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "low-profile disc motor housing"
+    },
+    {
+      "name": "ceiling canopy",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "ceiling canopy"
+    },
+    {
+      "name": "angular aluminium blades",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four angular aluminium blades"
+    },
+    {
+      "name": "integrated light tray",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "integrated light tray"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "angular aluminium blades",
+      "parent": "disc motor housing",
+      "kind": "continuous",
+      "axis_hint": "central",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four angular aluminium blades on a central revolute axle"
+    },
+    {
+      "child": "integrated light tray",
+      "parent": "disc motor housing",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the housing underside",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "integrated light tray on a revolute hinge at the housing underside"
+    }
+  ],
+  "notes": []
+}

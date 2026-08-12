@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_vertical_slide_with_wrist_hinge_f18d3a9735e24e03b94589349819009e",
+  "prompt": "A mast-and-wrist slide. A grounded vertical guide carries a moving carriage, and the carriage carries a compact hinged output face at its front. The carriage is a vertical prismatic joint and the output face is a carried revolute joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "grounded vertical guide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded vertical guide"
+    },
+    {
+      "name": "moving carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "moving carriage"
+    },
+    {
+      "name": "output face",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "output face"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "moving carriage",
+      "parent": "grounded vertical guide",
+      "kind": "prismatic",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A grounded vertical guide carries a moving carriage"
+    },
+    {
+      "child": "output face",
+      "parent": "carriage",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at its front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the carriage carries a compact hinged output face at its front"
+    }
+  ],
+  "notes": []
+}

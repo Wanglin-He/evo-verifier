@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_barrier_gate_0444d0f8a1e14f6fb45a1866bd673b6f",
+  "prompt": "A telescoping street bollard with a square outer sleeve fixed in the ground and an inner square post that extends vertically on a prismatic joint, and a hinged dome cap plate on a revolute hinge at the inner post top that covers the recess when the bollard is lowered.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "square outer sleeve",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "square outer sleeve"
+    },
+    {
+      "name": "inner square post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner square post"
+    },
+    {
+      "name": "hinged dome cap plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged dome cap plate"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "inner square post",
+      "parent": "square outer sleeve",
+      "kind": "prismatic",
+      "axis_hint": "vertically",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner square post that extends vertically on a prismatic joint"
+    },
+    {
+      "child": "hinged dome cap plate",
+      "parent": "inner square post",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the inner post top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged dome cap plate on a revolute hinge at the inner post top"
+    }
+  ],
+  "notes": []
+}

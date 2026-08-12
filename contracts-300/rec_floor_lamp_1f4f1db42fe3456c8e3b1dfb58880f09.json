@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_floor_lamp_1f4f1db42fe3456c8e3b1dfb58880f09",
+  "prompt": "A bedside arc reading lamp with a weighted square base, a long boom arm, and a small adjustable shade at the end. The boom arm pivots on a revolute hinge at the base post top. The shade tilts on a revolute hinge at the arm end bracket.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "weighted square base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "weighted square base"
+    },
+    {
+      "name": "long boom arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "long boom arm"
+    },
+    {
+      "name": "small adjustable shade",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small adjustable shade"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "boom arm",
+      "parent": "base post",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the base post top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The boom arm pivots on a revolute hinge at the base post top."
+    },
+    {
+      "child": "shade",
+      "parent": "arm end bracket",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the arm end bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The shade tilts on a revolute hinge at the arm end bracket."
+    }
+  ],
+  "notes": []
+}

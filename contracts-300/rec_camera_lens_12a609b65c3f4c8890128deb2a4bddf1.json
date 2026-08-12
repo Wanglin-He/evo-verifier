@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_camera_lens_12a609b65c3f4c8890128deb2a4bddf1",
+  "prompt": "A realistic, highly detailed camera lens with a convincing barrel, glass elements, control rings, and professional optical-equipment character. The focus or zoom rings articulate naturally, and the object should feel like a real precision product with refined construction and finish.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "barrel"
+    },
+    {
+      "name": "glass elements",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "glass elements"
+    },
+    {
+      "name": "control rings",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control rings"
+    },
+    {
+      "name": "focus or zoom rings",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "focus or zoom rings"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "focus or zoom rings",
+      "parent": "",
+      "kind": null,
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "focus or zoom rings articulate naturally"
+    }
+  ],
+  "notes": []
+}

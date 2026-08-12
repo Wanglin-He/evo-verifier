@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_dualrail_gantry_axis_f57f225d938b44789fa12066ce9d8c6a",
+  "prompt": "A compact service gantry. A fixed lower frame supports a moving bridge and a short cross-slide whose support hardware remains visibly larger than the tool face it carries. The moving bridge and cross-slide are orthogonal prismatic joints.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "lower frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed lower frame"
+    },
+    {
+      "name": "moving bridge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "moving bridge"
+    },
+    {
+      "name": "cross-slide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short cross-slide"
+    },
+    {
+      "name": "tool face",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tool face"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "moving bridge",
+      "parent": "lower frame",
+      "kind": "prismatic",
+      "axis_hint": "orthogonal",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The moving bridge and cross-slide are orthogonal prismatic joints."
+    },
+    {
+      "child": "cross-slide",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "orthogonal",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The moving bridge and cross-slide are orthogonal prismatic joints."
+    }
+  ],
+  "notes": []
+}

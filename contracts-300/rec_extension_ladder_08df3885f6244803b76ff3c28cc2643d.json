@@ -1,0 +1,65 @@
+{
+  "version": "1",
+  "record_id": "rec_extension_ladder_08df3885f6244803b76ff3c28cc2643d",
+  "prompt": "A combination A-frame-plus-extension ladder with a front A-frame section and a rear fly that slides prismatically in the front section guides. The front section opens as an A-frame on a revolute hinge at the apex. A spreader brace locks the angle on a revolute hinge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "front A-frame section",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front A-frame section"
+    },
+    {
+      "name": "rear fly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear fly"
+    },
+    {
+      "name": "spreader brace",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spreader brace"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rear fly",
+      "parent": "front section guides",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "in the front section guides",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear fly that slides prismatically in the front section guides"
+    },
+    {
+      "child": "front section",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the apex",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front section opens as an A-frame on a revolute hinge at the apex"
+    },
+    {
+      "child": "spreader brace",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spreader brace locks the angle on a revolute hinge"
+    }
+  ],
+  "notes": []
+}

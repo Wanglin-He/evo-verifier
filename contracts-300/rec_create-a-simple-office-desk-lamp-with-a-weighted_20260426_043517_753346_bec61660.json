@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_create-a-simple-office-desk-lamp-with-a-weighted_20260426_043517_753346_bec61660",
+  "prompt": "Create a simple office desk lamp with a weighted base, lower arm, upper arm, and tilting lamp head. Use clear hinge joints at the base and elbow, keep the geometry clean and manufacturable, and make the open/closed articulation easy to understand.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "weighted base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "weighted base"
+    },
+    {
+      "name": "lower arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower arm"
+    },
+    {
+      "name": "upper arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper arm"
+    },
+    {
+      "name": "tilting lamp head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilting lamp head"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lower arm",
+      "parent": "weighted base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinge joints at the base"
+    },
+    {
+      "child": "upper arm",
+      "parent": "lower arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "elbow",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "elbow"
+    },
+    {
+      "child": "tilting lamp head",
+      "parent": "upper arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilting lamp head"
+    }
+  ],
+  "notes": []
+}

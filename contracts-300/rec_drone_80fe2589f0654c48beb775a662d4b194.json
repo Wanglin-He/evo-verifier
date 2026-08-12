@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_drone_80fe2589f0654c48beb775a662d4b194",
+  "prompt": "A fixed-arm racing quadrotor with an X-frame body, four diagonal arms, and a two-blade propeller on each arm tip on a revolute axle above the motor pod.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "X-frame body",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "X-frame body"
+    },
+    {
+      "name": "diagonal arms",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four diagonal arms"
+    },
+    {
+      "name": "two-blade propeller",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two-blade propeller on each arm tip"
+    },
+    {
+      "name": "motor pod",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "motor pod"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "diagonal arms",
+      "parent": "X-frame body",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed-arm"
+    },
+    {
+      "child": "two-blade propeller",
+      "parent": "motor pod",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "above the motor pod",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two-blade propeller on each arm tip on a revolute axle above the motor pod"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_box_fan_with_control_knob_9e3e0eaa1ff9438fbf0b9cf0395d318f",
+  "prompt": "A kitchen range hood box fan with a wide rectangular housing and a removable grease filter panel on the underside. The grease filter slides prismatically out on guide rails. The fan blade inside rotates continuously. A speed control knob rotates continuously.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wide rectangular housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular housing"
+    },
+    {
+      "name": "grease filter panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grease filter panel"
+    },
+    {
+      "name": "fan blade",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fan blade"
+    },
+    {
+      "name": "speed control knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "speed control knob"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "grease filter",
+      "parent": "guide rails",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on the underside",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The grease filter slides prismatically out on guide rails."
+    },
+    {
+      "child": "fan blade",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "inside",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The fan blade inside rotates continuously."
+    },
+    {
+      "child": "speed control knob",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A speed control knob rotates continuously."
+    }
+  ],
+  "notes": []
+}
