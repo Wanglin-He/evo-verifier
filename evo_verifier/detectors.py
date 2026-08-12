@@ -11,6 +11,7 @@ should carry a joint that moves it.
 from __future__ import annotations
 
 import math
+import re
 from dataclasses import dataclass
 
 from evo_verifier.asset import Articulation, Asset
@@ -351,13 +352,20 @@ def _connection_reason(connection: Connection) -> str:
 
 TAU_B9 = 0.70
 
+NEAR_MISS = 0.4
+"""Credit for confusing revolute with continuous.
+
+Both turn about an axis and differ only in whether the turn stops, which is a
+milder mistake than turning where the asset should slide -- but still a mistake:
+a wheel that should spin freely but hits a stop does not roll. So the value has
+to satisfy ``0.6 * NEAR_MISS + 0.4 < tau``, or a near miss would pass. At 0.5 it
+lands exactly on 0.70 and passes, which a unit test caught.
+"""
+
 TYPE_AGREEMENT: dict[tuple[str, str], float] = {
-    ("revolute", "continuous"): 0.5,
-    ("continuous", "revolute"): 0.5,
+    ("revolute", "continuous"): NEAR_MISS,
+    ("continuous", "revolute"): NEAR_MISS,
 }
-"""Near misses. Both turn about an axis and differ only in whether it stops,
-which is a different mistake from turning where it should slide. Still below
-the threshold -- a knob that should spin freely but hits a stop is wrong."""
 
 
 @dataclass(frozen=True)
@@ -486,6 +494,215 @@ def _contradiction(joint: Articulation) -> str:
     if joint.axis is not None and not any(abs(component) > 1e-9 for component in joint.axis):
         return "zero-length axis"
     return ""
+
+
+TAU_B10 = 0.70
+
+ANCHOR_TOLERANCE = 0.05
+"""Anchor distance, as a fraction of the moving link, at which the score falls to 1/e."""
+
+AXIS_TOLERANCE = 15.0
+"""Degrees of axis error at which the score falls to 1/e."""
+
+_VERTICAL = re.compile(r"vertical|upright|up.?down|plumb", re.IGNORECASE)
+_HORIZONTAL = re.compile(r"horizontal|transverse|lateral|side.?to.?side", re.IGNORECASE)
+
+
+@dataclass(frozen=True)
+class Placement:
+    """Where one joint sits and which way it points, against what was asked."""
+
+    child: str
+    joint: str
+    anchor: float | None
+    """Distance from the joint to the link it moves, over that link's diagonal."""
+    anchor_score: float | None
+    axis_error: float | None
+    """Degrees between the declared axis and the direction the prompt named."""
+    axis_score: float | None
+    wanted_axis: str = ""
+
+    @property
+    def score(self) -> float | None:
+        """Geometric mean of the terms that could be computed.
+
+        The protocol multiplies its terms. With one of them missing a product
+        would silently become the other term alone, which reads as full evidence;
+        a geometric mean over what was available keeps the multiplicative
+        character and stays honest about how many terms it rests on.
+        """
+        parts = [term for term in (self.anchor_score, self.axis_score) if term is not None]
+        if not parts:
+            return None
+        product = 1.0
+        for term in parts:
+            product *= term
+        return product ** (1 / len(parts))
+
+
+def check_b10(asset: Asset, contract: Contract) -> ItemResult:
+    """Is each joint in the right place, pointing the right way?
+
+    ``S_B10`` combines an anchor term and an axis term, geometric mean over
+    whichever could be computed.
+
+    **Anchor.** The protocol divides the anchor distance by ``D``, the whole
+    asset's diagonal, which needs every part to have analytic geometry -- true
+    for 19 of 607 records. But the joint origin *is* the moving link's own frame
+    origin, so the distance that matters is from the joint to the link it moves,
+    over that link's own diagonal. That needs geometry for one part instead of
+    all of them, and it measures the thing the item is about: a hinge sitting
+    outside the door it swings is not attached to it. Deviation from ``D``,
+    recorded.
+
+    **Axis.** Compared against the direction the prompt named -- "a vertical side
+    hinge", "horizontal hinges at the panel edges". Only direction words that
+    resolve in the world frame are used; "about its axle" and "coaxial" name a
+    direction relative to geometry we do not have, and are left uncomputed.
+
+    The protocol's third term, trajectory direction, is the same circular
+    quantity as B9's classifier against a declared graph, and is omitted.
+
+    On the annotated set this decides a minority of joints and abstains on the
+    rest. That is the honest state of the item without meshes, and the shape is
+    ready for them: filling in the anchor term is a geometry problem, not a
+    redesign.
+    """
+    wanted = [joint for joint in contract.joints if joint.child]
+    if not wanted:
+        return ItemResult.not_applicable("B10", "the prompt names no joint", tools=["contract"])
+
+    by_child = {joint.child: joint for joint in asset.articulations if joint.child}
+    placements, unresolved = [], []
+    for expected in wanted:
+        part = next(
+            (m.name for m in matches(expected.child, asset.parts) if m.name in by_child), None
+        )
+        if part is None:
+            unresolved.append(expected.child)
+            continue
+        placements.append(_placement(part, by_child[part], expected, asset))
+
+    scored = [p for p in placements if p.score is not None]
+    if not scored:
+        return ItemResult.unsupported(
+            "B10",
+            "no joint has analytic geometry or a directional hint to check",
+            tools=["contract", "parser", "geometry"],
+        )
+
+    score = sum(p.score for p in scored if p.score is not None) / len(scored)
+    complete = [p for p in scored if p.anchor_score is not None and p.axis_score is not None]
+    wrong = [p for p in scored if (p.score or 1.0) < TAU_B10]
+
+    return ItemResult.scored(
+        "B10",
+        round(score, 4),
+        threshold=TAU_B10,
+        confidence=round(len(scored) / len(wanted), 4),
+        coverage=(Coverage.FULL if len(complete) == len(wanted) else Coverage.PARTIAL),
+        tools=["contract", "parser", "matching", "geometry"],
+        raw_measurements={
+            "checked": len(scored),
+            "of_expected": len(wanted),
+            "with_both_terms": len(complete),
+            "anchor_tolerance": ANCHOR_TOLERANCE,
+            "axis_tolerance_degrees": AXIS_TOLERANCE,
+            "margin": round(min(1.0, abs(score - TAU_B10) / MARGIN), 4),
+            "joints": [
+                {
+                    "child": p.child,
+                    "joint": p.joint,
+                    "anchor_over_link": p.anchor,
+                    "anchor_score": p.anchor_score,
+                    "wanted_axis": p.wanted_axis,
+                    "axis_error_degrees": p.axis_error,
+                    "axis_score": p.axis_score,
+                    "score": p.score,
+                }
+                for p in placements
+            ],
+            "unresolved_names": unresolved,
+        },
+        failure_reason="; ".join(_placement_reason(p) for p in wrong),
+        repair_hint="; ".join(
+            f"move {p.joint} onto the {p.child} interface"
+            if p.anchor_score is not None and p.anchor_score < 0.7
+            else f"align {p.joint} with the {p.wanted_axis} direction the prompt names"
+            for p in wrong
+        ),
+    )
+
+
+def _placement(part: str, joint: Articulation, expected: ExpectedJoint, asset: Asset) -> Placement:
+    anchor = _anchor(part, joint, asset)
+    axis_error = _axis_error(joint, expected.axis_hint)
+    return Placement(
+        child=part,
+        joint=joint.name,
+        anchor=anchor,
+        anchor_score=None if anchor is None else math.exp(-anchor / ANCHOR_TOLERANCE),
+        axis_error=axis_error,
+        axis_score=None if axis_error is None else math.exp(-axis_error / AXIS_TOLERANCE),
+        wanted_axis=_wanted_axis(expected.axis_hint),
+    )
+
+
+def _anchor(part: str, joint: Articulation, asset: Asset) -> float | None:
+    """Distance from the joint to the link it moves, over that link's diagonal.
+
+    The joint origin is the child frame's own origin, so the child's shapes are
+    already positioned relative to it: the distance is from the origin to the
+    child's own bounding box, zero when the joint sits inside the part.
+    """
+    link = asset.parts.get(part)
+    if link is None or not link.geometry_complete or joint.origin.xyz is None:
+        return None
+    box = link.aabb()
+    if box is None:
+        return None
+    low, high = box
+    gap = math.dist(
+        (0.0, 0.0, 0.0),
+        tuple(max(low[axis], 0.0) + min(high[axis], 0.0) for axis in range(3)),
+    )
+    diagonal = math.dist(low, high)
+    return gap / diagonal if diagonal > 0 else None
+
+
+def _wanted_axis(hint: str) -> str:
+    if not hint:
+        return ""
+    if _VERTICAL.search(hint):
+        return "vertical"
+    if _HORIZONTAL.search(hint):
+        return "horizontal"
+    return ""
+
+
+def _axis_error(joint: Articulation, hint: str) -> float | None:
+    """Degrees between the declared axis and the direction the prompt named."""
+    wanted = _wanted_axis(hint)
+    if not wanted or joint.axis is None:
+        return None
+    length = math.dist((0.0, 0.0, 0.0), joint.axis)
+    if length <= 0:
+        return None
+    from_vertical = math.degrees(math.acos(min(1.0, abs(joint.axis[2]) / length)))
+    return from_vertical if wanted == "vertical" else 90.0 - from_vertical
+
+
+def _placement_reason(placement: Placement) -> str:
+    reasons = []
+    if placement.anchor_score is not None and placement.anchor_score < 0.7:
+        reasons.append(
+            f"{placement.joint} sits {placement.anchor:.3f} link-diagonals off {placement.child}"
+        )
+    if placement.axis_score is not None and placement.axis_score < 0.7:
+        reasons.append(
+            f"{placement.joint} axis is {placement.axis_error:.1f} deg from {placement.wanted_axis}"
+        )
+    return "; ".join(reasons) or f"{placement.joint} placement below threshold"
 
 
 def _weighted(requirements: list[Requirement]) -> float:
