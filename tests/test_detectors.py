@@ -6,7 +6,14 @@ import pytest
 
 from evo_verifier.asset import Articulation, Asset, Limits, Origin, Part, Shape
 from evo_verifier.contract import Contract, ExpectedJoint, Source
-from evo_verifier.detectors import NEAR_MISS, check_b7, check_b8, check_b9, check_b10
+from evo_verifier.detectors import (
+    AGGREGATE,
+    NEAR_MISS,
+    check_b7,
+    check_b8,
+    check_b9,
+    check_b10,
+)
 from evo_verifier.report import Coverage, Prediction
 
 PROMPT = "a cabinet with a door and a drawer"
@@ -123,7 +130,7 @@ def test_b8_a_missing_part_counts_against_but_costs_confidence():
             ExpectedJoint(child="drawer", kind="prismatic", source=Source.PRIOR),
         ),
     )
-    assert both.score == 0.5
+    assert both.score == 0.0, "B8 aggregates worst-first: one unmet requirement decides"
     assert both.coverage is Coverage.PARTIAL
     assert both.confidence < 1.0
     assert "drawer" in both.failure_reason
@@ -149,7 +156,7 @@ def test_b8_a_prior_weighs_less_than_a_quoted_requirement():
         parts=[part("body"), part("door"), part("drawer")],
         joints=[joint("h", "revolute", "body", "door")],
     )
-    result = check_b8(built, contract(quoted, guessed))
+    result = check_b8(built, contract(quoted, guessed), aggregate="mean")
     assert result.score == pytest.approx(1.0 / 1.7, abs=1e-4), "the prior costs only its own weight"
     assert result.raw_measurements["score_explicit_only"] == 1.0
 
@@ -477,3 +484,45 @@ def test_b10_ignores_a_direction_word_that_needs_geometry():
         ),
     )
     assert result.coverage is Coverage.UNSUPPORTED
+
+
+# -- aggregation ------------------------------------------------------------
+
+
+def _one_of_four_broken():
+    return (
+        asset(
+            parts=[part("body"), *(part(f"flap_{i}") for i in range(4))],
+            joints=[
+                joint("h0", "revolute", "body", "flap_0"),
+                joint("h1", "revolute", "body", "flap_1"),
+                joint("h2", "revolute", "body", "flap_2"),
+                joint("h3", "prismatic", "body", "flap_3"),  # the wrong one
+            ],
+        ),
+        contract(
+            *(
+                ExpectedJoint(child=f"flap {i}", kind="revolute", source=Source.PRIOR)
+                for i in range(4)
+            )
+        ),
+    )
+
+
+def test_mean_lets_three_good_joints_hide_a_bad_one():
+    """Why the aggregation choice matters: 3 of 4 right averages to 0.85."""
+    built, asked = _one_of_four_broken()
+    result = check_b9(built, asked, aggregate="mean")
+    assert result.score > 0.70
+    assert result.prediction is Prediction.PASS
+
+
+def test_worst_lets_one_bad_joint_decide():
+    built, asked = _one_of_four_broken()
+    result = check_b9(built, asked, aggregate="worst")
+    assert result.score < 0.70
+    assert result.prediction is Prediction.FAIL
+
+
+def test_each_item_has_an_aggregation_chosen_from_evidence():
+    assert AGGREGATE == {"B7": "mean", "B8": "worst", "B9": "mean", "B10": "mean"}

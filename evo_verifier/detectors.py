@@ -22,6 +22,32 @@ from evo_verifier.report import Coverage, ItemResult
 TAU_B8 = 0.70
 """Protocol placeholder. Calibrate on the dev set, then freeze."""
 
+AGGREGATE: dict[str, str] = {"B7": "mean", "B8": "worst", "B9": "mean", "B10": "mean"}
+"""How per-joint scores become one asset score, per item: ``worst`` or ``mean``.
+
+The protocol gives per-joint formulas and never says how to combine them, and
+the choice matters more than it looks: under ``mean`` with tau at 0.70 an asset
+has to break more than 30% of its joints before the average falls far enough, so
+one wrong hinge among four is a pass.
+
+Injected faults and human labels were measured under both. They agree on B8 --
+every stated motion needing its own joint means one missing joint decides it, and
+``worst`` raised injected-fault detection from 15% to 46% and real-label F1 from
+0.32 to 0.48. They disagree on B7 and B9: ``worst`` finds far more injected
+faults (9% to 59% on B9) but also turns three clean assets into false alarms and
+drives kappa negative. Those two rest on noisier per-joint measurements -- a
+parent name matched across the prose/identifier gap, a joint type read out of a
+prompt -- and taking the worst amplifies that noise faster than the signal.
+
+So the value is per item and set from evidence, not from one number. Revisit it
+on a real dev set: 31 records, all of them human-failed, is not one.
+"""
+
+
+def _aggregate_for(item: str, override: str | None) -> str:
+    return override or AGGREGATE[item]
+
+
 MARGIN = 0.20
 """Score distance at which a verdict is considered clear of the threshold.
 
@@ -65,6 +91,7 @@ def check_b8(
     *,
     use_priors: bool = True,
     missing_is_failure: bool = True,
+    aggregate: str | None = None,
 ) -> ItemResult:
     """Does every part that should move have a non-fixed joint?
 
@@ -85,6 +112,7 @@ def check_b8(
     might be the matcher's fault rather than the asset's. That doubt lands on the
     confidence, and enough of it makes the item abstain rather than accuse.
     """
+    aggregate = _aggregate_for("B8", aggregate)
     wanted = [
         joint
         for joint in contract.joints
@@ -105,7 +133,7 @@ def check_b8(
         return ItemResult.unsupported(
             "B8", "no expected part was found in the asset", tools=["contract", "matching"]
         )
-    score = _weighted(scored)
+    score = _weighted(scored, aggregate)
 
     quality = 1.0 - len(unresolved) / len(requirements)
     stated = sum(r.weight for r in requirements) / len(requirements)
@@ -122,8 +150,11 @@ def check_b8(
             "satisfied": round(sum(r.weight * r.satisfied for r in scored), 4),
             "missing_is_failure": missing_is_failure,
             "margin": round(min(1.0, abs(score - TAU_B8) / MARGIN), 4),
-            "score_explicit_only": round(_weighted([r for r in scored if r.explicit]), 4),
+            "score_explicit_only": round(
+                _weighted([r for r in scored if r.explicit], aggregate), 4
+            ),
             "used_priors": use_priors,
+            "aggregate": aggregate,
             "requirements": [
                 {
                     "child": r.child,
@@ -179,7 +210,7 @@ class Connection:
     """Parts that ride on this joint but were declared to attach elsewhere."""
 
 
-def check_b7(asset: Asset, contract: Contract) -> ItemResult:
+def check_b7(asset: Asset, contract: Contract, *, aggregate: str | None = None) -> ItemResult:
     """Does each joint connect the parts the prompt said it connects?
 
     ``S_B7 = 0.3 * child + 0.4 * parent + 0.3 * subtree purity``, renormalised
@@ -203,6 +234,7 @@ def check_b7(asset: Asset, contract: Contract) -> ItemResult:
     Subtree purity is what catches the juicer: the pusher's own joint looks
     correct until you notice it is riding on the lid's subtree.
     """
+    aggregate = _aggregate_for("B7", aggregate)
     stated = [joint for joint in contract.joints if joint.child]
     usable = [joint for joint in stated if joint.parent]
     if not usable:
@@ -224,7 +256,7 @@ def check_b7(asset: Asset, contract: Contract) -> ItemResult:
     terms = [(0.3, child_scores), (0.4, parent_scores), (0.3, purity)]
     live = [(weight, values) for weight, values in terms if values]
     total = sum(weight for weight, _ in live)
-    score = sum(weight * sum(values) / len(values) for weight, values in live) / total
+    score = sum(weight * _combine(values, aggregate) for weight, values in live) / total
 
     unresolved = [c.child for c in connections if not c.part]
     unjointed = [c for c in connections if c.part and c.actual_parent is None]
@@ -385,7 +417,7 @@ class TypeCheck:
         return 0.6 * self.agreement + 0.4 * self.consistency
 
 
-def check_b9(asset: Asset, contract: Contract) -> ItemResult:
+def check_b9(asset: Asset, contract: Contract, *, aggregate: str | None = None) -> ItemResult:
     """Is each joint the kind of joint the prompt asked for?
 
     ``S_B9 = 0.6 * declared type + 0.4 * self-consistency``.
@@ -403,6 +435,7 @@ def check_b9(asset: Asset, contract: Contract) -> ItemResult:
     A part the asset never modelled is B8's finding, not a wrong type, so it
     leaves this score and costs confidence instead.
     """
+    aggregate = _aggregate_for("B9", aggregate)
     wanted = [joint for joint in contract.joints if joint.kind]
     if not wanted:
         return ItemResult.not_applicable("B9", "the prompt names no joint type", tools=["contract"])
@@ -410,20 +443,23 @@ def check_b9(asset: Asset, contract: Contract) -> ItemResult:
     by_child = {joint.child: joint for joint in asset.articulations if joint.child}
     checks, unresolved = [], []
     for expected in wanted:
-        found = [match.name for match in matches(expected.child, asset.parts)]
-        declared = next((by_child[name] for name in found if name in by_child), None)
-        if declared is None:
+        found = [m.name for m in matches(expected.child, asset.parts) if m.name in by_child]
+        if not found:
             unresolved.append(expected.child)
             continue
-        checks.append(_type_check(expected.child, expected.kind or "", declared))
+        # Every instance, not just the first: "four flaps rotate" is four joints,
+        # and checking one of them cannot see the fourth declared as a slide.
+        checks.extend(
+            _type_check(expected.child, expected.kind or "", by_child[name]) for name in found
+        )
 
     if not checks:
         return ItemResult.unsupported(
             "B9", "no expected joint was found in the asset", tools=["contract", "matching"]
         )
 
-    score = sum(check.score for check in checks) / len(checks)
-    quality = len(checks) / len(wanted)
+    score = _combine([check.score for check in checks], aggregate)
+    quality = 1.0 - len(unresolved) / len(wanted)
     wrong = [check for check in checks if check.score < 1.0]
 
     return ItemResult.scored(
@@ -540,7 +576,7 @@ class Placement:
         return product ** (1 / len(parts))
 
 
-def check_b10(asset: Asset, contract: Contract) -> ItemResult:
+def check_b10(asset: Asset, contract: Contract, *, aggregate: str | None = None) -> ItemResult:
     """Is each joint in the right place, pointing the right way?
 
     ``S_B10`` combines an anchor term and an axis term, geometric mean over
@@ -568,6 +604,7 @@ def check_b10(asset: Asset, contract: Contract) -> ItemResult:
     ready for them: filling in the anchor term is a geometry problem, not a
     redesign.
     """
+    aggregate = _aggregate_for("B10", aggregate)
     wanted = [joint for joint in contract.joints if joint.child]
     if not wanted:
         return ItemResult.not_applicable("B10", "the prompt names no joint", tools=["contract"])
@@ -575,13 +612,11 @@ def check_b10(asset: Asset, contract: Contract) -> ItemResult:
     by_child = {joint.child: joint for joint in asset.articulations if joint.child}
     placements, unresolved = [], []
     for expected in wanted:
-        part = next(
-            (m.name for m in matches(expected.child, asset.parts) if m.name in by_child), None
-        )
-        if part is None:
+        found = [m.name for m in matches(expected.child, asset.parts) if m.name in by_child]
+        if not found:
             unresolved.append(expected.child)
             continue
-        placements.append(_placement(part, by_child[part], expected, asset))
+        placements.extend(_placement(name, by_child[name], expected, asset) for name in found)
 
     scored = [p for p in placements if p.score is not None]
     if not scored:
@@ -591,7 +626,7 @@ def check_b10(asset: Asset, contract: Contract) -> ItemResult:
             tools=["contract", "parser", "geometry"],
         )
 
-    score = sum(p.score for p in scored if p.score is not None) / len(scored)
+    score = _combine([p.score for p in scored if p.score is not None], aggregate)
     complete = [p for p in scored if p.anchor_score is not None and p.axis_score is not None]
     wrong = [p for p in scored if (p.score or 1.0) < TAU_B10]
 
@@ -599,7 +634,9 @@ def check_b10(asset: Asset, contract: Contract) -> ItemResult:
         "B10",
         round(score, 4),
         threshold=TAU_B10,
-        confidence=round(len(scored) / len(wanted), 4),
+        confidence=round(
+            (1.0 - len(unresolved) / len(wanted)) * (len(scored) / max(1, len(placements))), 4
+        ),
         coverage=(Coverage.FULL if len(complete) == len(wanted) else Coverage.PARTIAL),
         tools=["contract", "parser", "matching", "geometry"],
         raw_measurements={
@@ -705,7 +742,16 @@ def _placement_reason(placement: Placement) -> str:
     return "; ".join(reasons) or f"{placement.joint} placement below threshold"
 
 
-def _weighted(requirements: list[Requirement]) -> float:
+def _combine(scores: list[float], how: str) -> float:
+    """One number for the asset from one number per joint."""
+    if not scores:
+        return 0.0
+    return min(scores) if how == "worst" else sum(scores) / len(scores)
+
+
+def _weighted(requirements: list[Requirement], how: str = "mean") -> float:
+    if how == "worst":
+        return _combine([r.satisfied / r.wanted for r in requirements if r.wanted], how)
     expected = sum(r.weight * r.wanted for r in requirements)
     if not expected:
         return 0.0
