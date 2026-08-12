@@ -59,6 +59,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         help="only records a human failed on one of the selected items",
     )
     extracted.add_argument(
+        "--sample",
+        type=int,
+        help="keep every human-failed record, then fill to this many with an even "
+        "deterministic stride over the rest",
+    )
+    extracted.add_argument(
         "--dry-run",
         action="store_true",
         help="print what would be sent and to whom, call nothing",
@@ -117,6 +123,8 @@ def _extract(cases: list[AnnotatedCase], items: Sequence[Item], args: argparse.N
     wanted = {item.item_id for item in items}
     if args.failures_only:
         cases = [c for c in cases if any(c.labels[i] is Label.FAIL for i in wanted)]
+    if args.sample:
+        cases = _stratified(cases, wanted, args.sample)
     if args.limit:
         cases = cases[: args.limit]
     todo = [case for case in cases if not (args.out / f"{case.record_id}.json").exists()]
@@ -149,6 +157,25 @@ def _extract(cases: list[AnnotatedCase], items: Sequence[Item], args: argparse.N
     for record_id, error in failed:
         print(f"  {record_id}: {error}")
     return 0 if written else 1
+
+
+def _stratified(cases: list[AnnotatedCase], items: set[str], size: int) -> list[AnnotatedCase]:
+    """Every human failure, then an even stride over the rest up to ``size``.
+
+    Failures are the scarce half of the data -- 47 across B7-B10 -- so all of
+    them are kept and recall is measured on the lot. The rest are sampled at a
+    known rate, which leaves the false-alarm rate unbiased and precision
+    enriched by a factor the reporting can correct for. The stride is over
+    record ids in sorted order, so the same request returns the same sample.
+    """
+    failed = [c for c in cases if any(c.labels[i] is Label.FAIL for i in items)]
+    passed = sorted((c for c in cases if c not in failed), key=lambda case: case.record_id)
+    room = max(0, size - len(failed))
+    if room >= len(passed):
+        return failed + passed
+    stride = len(passed) / room if room else 0
+    picked = [passed[int(index * stride)] for index in range(room)]
+    return failed + picked
 
 
 def _print_parse(cases: list[AnnotatedCase], data_dir: Path) -> None:

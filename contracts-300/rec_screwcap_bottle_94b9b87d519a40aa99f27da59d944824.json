@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_screwcap_bottle_94b9b87d519a40aa99f27da59d944824",
+  "prompt": "A screw-cap bottle. A bottle body rises to a threaded neck, capped by a separate screw closure. Joints: the cap rotates continuously about the bottle neck axis. Use a taller proportion with a small rotating element at one end.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "bottle body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bottle body"
+    },
+    {
+      "name": "threaded neck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "threaded neck"
+    },
+    {
+      "name": "screw closure",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "screw closure"
+    },
+    {
+      "name": "cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cap"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "cap",
+      "parent": "bottle neck",
+      "kind": "continuous",
+      "axis_hint": "about the bottle neck axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the cap rotates continuously about the bottle neck axis."
+    }
+  ],
+  "notes": []
+}

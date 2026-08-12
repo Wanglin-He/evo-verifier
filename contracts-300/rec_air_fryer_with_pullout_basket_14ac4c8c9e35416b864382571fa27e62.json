@@ -1,0 +1,115 @@
+{
+  "version": "1",
+  "record_id": "rec_air_fryer_with_pullout_basket_14ac4c8c9e35416b864382571fa27e62",
+  "prompt": "A cylindrical matte-finish air fryer with a rounded body, a short basket drawer, and a top control tower carrying a temperature dial, a time dial, and a keep-warm button. The drawer slides prismatically from the lower front of the body, both dials rotate continuously, and the keep-warm button is a small prismatic push control. The basket handle release button slides prismatically into the handle top. The basket, drawer, and heating cavity should remain clearly hollow instead of reading as one solid cylinder. Small appliance scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rounded body"
+    },
+    {
+      "name": "top control tower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top control tower"
+    },
+    {
+      "name": "short basket drawer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short basket drawer"
+    },
+    {
+      "name": "temperature dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "temperature dial"
+    },
+    {
+      "name": "time dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "time dial"
+    },
+    {
+      "name": "keep-warm button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "keep-warm button"
+    },
+    {
+      "name": "basket handle release button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "basket handle release button"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drawer",
+      "parent": "body",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "lower front of the body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The drawer slides prismatically from the lower front of the body"
+    },
+    {
+      "child": "temperature dial",
+      "parent": "top control tower",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "both dials rotate continuously"
+    },
+    {
+      "child": "time dial",
+      "parent": "top control tower",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "both dials rotate continuously"
+    },
+    {
+      "child": "keep-warm button",
+      "parent": "top control tower",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the keep-warm button is a small prismatic push control"
+    },
+    {
+      "child": "basket handle release button",
+      "parent": "handle top",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "into the handle top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The basket handle release button slides prismatically into the handle top."
+    }
+  ],
+  "notes": []
+}

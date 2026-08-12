@@ -1,0 +1,82 @@
+{
+  "version": "1",
+  "record_id": "rec_a-benchtop-monocular-laboratory-microscope-a-hea_20260331_230942_552800_6c80d18c",
+  "prompt": "A benchtop monocular laboratory microscope. A heavy base supports a vertical column and fixed specimen stage, with an optical body carriage riding on the column and carrying the eyepiece tube and objective turret. Joints: the optical body carriage translates prismatically up and down along the column for focus, and a pair of focus knobs mounted on the carriage rotate continuously about their shared horizontal axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "heavy base"
+    },
+    {
+      "name": "column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vertical column"
+    },
+    {
+      "name": "specimen stage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed specimen stage"
+    },
+    {
+      "name": "optical body carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "optical body carriage"
+    },
+    {
+      "name": "eyepiece tube",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "eyepiece tube"
+    },
+    {
+      "name": "objective turret",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "objective turret"
+    },
+    {
+      "name": "focus knobs",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pair of focus knobs"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "optical body carriage",
+      "parent": "column",
+      "kind": "prismatic",
+      "axis_hint": "up and down",
+      "location_hint": "along the column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "optical body carriage translates prismatically up and down along the column for focus"
+    },
+    {
+      "child": "focus knobs",
+      "parent": "carriage",
+      "kind": "continuous",
+      "axis_hint": "horizontal axis",
+      "location_hint": "mounted on the carriage",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a pair of focus knobs mounted on the carriage rotate continuously about their shared horizontal axis"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7",
+  "prompt": "A casino slot machine with a tall cabinet, a front reel window, a coin tray, and a large pull handle mounted on one side.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tall cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall cabinet"
+    },
+    {
+      "name": "front reel window",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front reel window"
+    },
+    {
+      "name": "coin tray",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "coin tray"
+    },
+    {
+      "name": "large pull handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large pull handle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "large pull handle",
+      "parent": "tall cabinet",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "mounted on one side",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large pull handle mounted on one side"
+    }
+  ],
+  "notes": []
+}

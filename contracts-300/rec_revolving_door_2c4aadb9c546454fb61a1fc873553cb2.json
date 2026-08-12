@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_revolving_door_2c4aadb9c546454fb61a1fc873553cb2",
+  "prompt": "A frameless all-glass three-wing revolving door for a boutique storefront. A slim central steel post carries three full-height glass panel wings. The wing assembly rotates continuously about the vertical post axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "central steel post",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central steel post"
+    },
+    {
+      "name": "full-height glass panel wings",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three full-height glass panel wings"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wing assembly",
+      "parent": "central steel post",
+      "kind": "continuous",
+      "axis_hint": "vertical post axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The wing assembly rotates continuously about the vertical post axis."
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_centrifugal_juicer_with_articulated_components_eef762714dac4ef5b6189cf8f714cfd6",
+  "prompt": "A wide-feed juicer with a broad rectangular base, a large clear lid, and a wide pusher block that moves vertically through the top feed opening. A hinged secondary flap covers the top of the chute when the pusher is removed. The pusher slides prismatically along the chute guide, the main lid rotates on a rear hinge, the secondary flap rotates on a small top hinge at the chute rim, and the internal basket rotates continuously about the vertical motor axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad rectangular base"
+    },
+    {
+      "name": "main lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large clear lid"
+    },
+    {
+      "name": "pusher block",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide pusher block"
+    },
+    {
+      "name": "secondary flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged secondary flap"
+    },
+    {
+      "name": "internal basket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal basket"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "pusher",
+      "parent": "chute guide",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pusher slides prismatically along the chute guide"
+    },
+    {
+      "child": "main lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main lid rotates on a rear hinge"
+    },
+    {
+      "child": "secondary flap",
+      "parent": "chute rim",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the chute rim",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "secondary flap rotates on a small top hinge at the chute rim"
+    },
+    {
+      "child": "internal basket",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "vertical motor axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal basket rotates continuously about the vertical motor axis"
+    }
+  ],
+  "notes": []
+}

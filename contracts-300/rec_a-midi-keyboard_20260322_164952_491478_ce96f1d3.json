@@ -1,0 +1,29 @@
+{
+  "version": "1",
+  "record_id": "rec_a-midi-keyboard_20260322_164952_491478_ce96f1d3",
+  "prompt": "A midi keyboard",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "key",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "key",
+      "parent": "body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "notes": []
+}

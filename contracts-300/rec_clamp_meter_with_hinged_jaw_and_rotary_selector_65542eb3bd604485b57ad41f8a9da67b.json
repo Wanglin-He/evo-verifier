@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_clamp_meter_with_hinged_jaw_and_rotary_selector_65542eb3bd604485b57ad41f8a9da67b",
+  "prompt": "A handheld electrician's clamp meter with a C-shaped jaw, a thick insulated body, and a broad function dial under the display, plus three front buttons below the display. the body has a pronounced upper shoulder leading into the jaw hinge block, and the button bank is clearly separated from the selector dial. The jaw rotates on a top hinge at the head and the function dial rotates continuously on the front face, and the three front buttons each move independently as prismatic push controls. Handheld field-meter scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "body"
+    },
+    {
+      "name": "jaw",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "jaw"
+    },
+    {
+      "name": "function dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "function dial"
+    },
+    {
+      "name": "front buttons",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three front buttons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "jaw",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The jaw rotates on a top hinge at the head"
+    },
+    {
+      "child": "function dial",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on the front face",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the function dial rotates continuously on the front face"
+    },
+    {
+      "child": "front buttons",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the three front buttons each move independently as prismatic push controls"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,75 @@
+{
+  "version": "1",
+  "record_id": "rec_casino_machine_a70993399d1b41d890e8589c17466b88",
+  "prompt": "A tall reel-style slot machine with a curved top box, a central reel window, a front button shelf, and a lower service door. The button shelf projects from the cabinet face as a real ledge and the lower door remains recessed into the cabinet front. The lower service door rotates on a vertical side hinge, and the play buttons on the shelf articulate independently as small prismatic push controls. Full-height slot-machine scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "lower service door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower service door"
+    },
+    {
+      "name": "play buttons",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "play buttons"
+    },
+    {
+      "name": "button shelf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "button shelf"
+    },
+    {
+      "name": "curved top box",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "curved top box"
+    },
+    {
+      "name": "central reel window",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central reel window"
+    },
+    {
+      "name": "cabinet face",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cabinet face"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lower service door",
+      "parent": "cabinet front",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "side hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lower service door rotates on a vertical side hinge"
+    },
+    {
+      "child": "play buttons",
+      "parent": "shelf",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on the shelf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "play buttons on the shelf articulate independently as small prismatic push controls"
+    }
+  ],
+  "notes": []
+}

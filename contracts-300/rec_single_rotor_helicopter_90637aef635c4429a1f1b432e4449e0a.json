@@ -1,0 +1,104 @@
+{
+  "version": "1",
+  "record_id": "rec_single_rotor_helicopter_90637aef635c4429a1f1b432e4449e0a",
+  "prompt": "An offshore transport helicopter with a long fuselage, wheeled landing gear, a five-blade main rotor on a tall mast, and a tail boom with a tail rotor on the fin. The cockpit has one hinged door on each side, and the passenger cabin has a separate sliding door behind the cockpit. The main rotor rotates continuously about the vertical mast axis, the tail rotor rotates continuously about the transverse tail axis, the cockpit doors rotate on vertical side hinges, and the cabin door slides prismatically along a side rail.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "main rotor",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a five-blade main rotor"
+    },
+    {
+      "name": "mast",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall mast"
+    },
+    {
+      "name": "tail rotor",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a tail rotor on the fin"
+    },
+    {
+      "name": "fin",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fin"
+    },
+    {
+      "name": "cockpit door",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one hinged door on each side"
+    },
+    {
+      "name": "cabin door",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a separate sliding door behind the cockpit"
+    },
+    {
+      "name": "side rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side rail"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "main rotor",
+      "parent": "mast",
+      "kind": "continuous",
+      "axis_hint": "vertical mast axis",
+      "location_hint": "tall mast",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The main rotor rotates continuously about the vertical mast axis"
+    },
+    {
+      "child": "tail rotor",
+      "parent": "fin",
+      "kind": "continuous",
+      "axis_hint": "transverse tail axis",
+      "location_hint": "fin",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the tail rotor rotates continuously about the transverse tail axis"
+    },
+    {
+      "child": "cockpit doors",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical side hinges",
+      "location_hint": "each side",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the cockpit doors rotate on vertical side hinges"
+    },
+    {
+      "child": "cabin door",
+      "parent": "side rail",
+      "kind": "prismatic",
+      "axis_hint": "along a side rail",
+      "location_hint": "behind the cockpit",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the cabin door slides prismatically along a side rail"
+    }
+  ],
+  "notes": []
+}

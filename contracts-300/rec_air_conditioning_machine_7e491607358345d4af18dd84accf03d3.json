@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_air_conditioning_machine_7e491607358345d4af18dd84accf03d3",
+  "prompt": "A ceiling-suspended cassette air conditioning machine with a square panel, a central intake grille, and four outlet flaps around the perimeter. The four outlet flaps rotate on their own horizontal hinges at the panel edges, and the small service buttons on one side of the panel articulate independently as prismatic push controls. Commercial ceiling-unit scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "square panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "square panel"
+    },
+    {
+      "name": "central intake grille",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central intake grille"
+    },
+    {
+      "name": "outlet flaps",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four outlet flaps"
+    },
+    {
+      "name": "small service buttons",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small service buttons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "outlet flaps",
+      "parent": "panel",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the panel edges",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four outlet flaps rotate on their own horizontal hinges at the panel edges"
+    },
+    {
+      "child": "small service buttons",
+      "parent": "panel",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on one side of the panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small service buttons on one side of the panel articulate independently as prismatic push controls"
+    }
+  ],
+  "notes": []
+}
