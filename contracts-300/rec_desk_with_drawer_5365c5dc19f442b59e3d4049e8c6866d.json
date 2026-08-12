@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_desk_with_drawer_5365c5dc19f442b59e3d4049e8c6866d",
+  "prompt": "A secretary drop-front desk with a rectangular cabinet body, a hinged drop-front writing leaf on a revolute hinge at the bottom body edge that opens flat to form a work surface, an interior pull-out writing shelf on a prismatic joint, and two stacked small drawers inside the cabinet each on prismatic guide rails.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular cabinet body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular cabinet body"
+    },
+    {
+      "name": "drop-front writing leaf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drop-front writing leaf"
+    },
+    {
+      "name": "interior pull-out writing shelf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "interior pull-out writing shelf"
+    },
+    {
+      "name": "small drawers",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two stacked small drawers"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drop-front writing leaf",
+      "parent": "rectangular cabinet body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the bottom body edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged drop-front writing leaf on a revolute hinge at the bottom body edge"
+    },
+    {
+      "child": "interior pull-out writing shelf",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "interior",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "interior pull-out writing shelf on a prismatic joint"
+    },
+    {
+      "child": "small drawers",
+      "parent": "cabinet",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "inside the cabinet",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two stacked small drawers inside the cabinet each on prismatic guide rails"
+    }
+  ],
+  "notes": []
+}

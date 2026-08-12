@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_conventional_oven_with_dropdown_door_dd8ba4fbcf514c61813654e4f2605468",
+  "prompt": "A rotisserie oven with a wide rectangular stainless housing, a drop-down glass-panel door on a bottom revolute hinge with a bar handle, and an internal rotisserie spit rod on a continuous revolute axle running horizontally through the oven cavity between two end sockets at the interior walls.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular stainless housing"
+    },
+    {
+      "name": "drop-down glass-panel door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drop-down glass-panel door"
+    },
+    {
+      "name": "bar handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bar handle"
+    },
+    {
+      "name": "internal rotisserie spit rod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal rotisserie spit rod"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drop-down glass-panel door",
+      "parent": "housing",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "bottom",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drop-down glass-panel door on a bottom revolute hinge"
+    },
+    {
+      "child": "internal rotisserie spit rod",
+      "parent": "housing",
+      "kind": "continuous",
+      "axis_hint": "horizontally",
+      "location_hint": "through the oven cavity between two end sockets at the interior walls",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal rotisserie spit rod on a continuous revolute axle running horizontally through the oven cavity between two end sockets at the interior walls"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_linear_carriage_with_independent_rotary_endeffector_2d03511e3d564c29818bc2c343def996",
+  "prompt": "An inspection rail module with a low base guide, a sliding carriage block, and a compact vertical spindle nose mounted on the carriage. The carriage and spindle should read as separate mechanical subsystems with different support geometry. The carriage slides prismatically along the rail axis, and the spindle rotates as its own revolute joint about a vertical local axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base guide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "low base guide"
+    },
+    {
+      "name": "carriage block",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "sliding carriage block"
+    },
+    {
+      "name": "spindle nose",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact vertical spindle nose"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "carriage",
+      "parent": "base guide",
+      "kind": "prismatic",
+      "axis_hint": "along the rail axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The carriage slides prismatically along the rail axis"
+    },
+    {
+      "child": "spindle",
+      "parent": "carriage",
+      "kind": "revolute",
+      "axis_hint": "about a vertical local axis",
+      "location_hint": "mounted on the carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the spindle rotates as its own revolute joint about a vertical local axis"
+    }
+  ],
+  "notes": []
+}

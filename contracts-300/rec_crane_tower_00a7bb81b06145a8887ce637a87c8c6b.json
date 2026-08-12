@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_crane_tower_00a7bb81b06145a8887ce637a87c8c6b",
+  "prompt": "A tower crane with a vertical mast, a horizontal jib and counter-jib, a slewing ring at the mast top on a vertical revolute joint, and a trolley sliding on a prismatic joint along the jib.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "mast",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vertical mast"
+    },
+    {
+      "name": "jib",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "horizontal jib"
+    },
+    {
+      "name": "counter-jib",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "counter-jib"
+    },
+    {
+      "name": "slewing ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slewing ring"
+    },
+    {
+      "name": "trolley",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "trolley"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "slewing ring",
+      "parent": "mast",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at the mast top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slewing ring at the mast top on a vertical revolute joint"
+    },
+    {
+      "child": "trolley",
+      "parent": "jib",
+      "kind": "prismatic",
+      "axis_hint": "along the jib",
+      "location_hint": "along the jib",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "trolley sliding on a prismatic joint along the jib"
+    }
+  ],
+  "notes": []
+}

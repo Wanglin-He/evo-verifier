@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_desktop_hole_punch_with_articulated_components_e631d366a19c4e08940e47e60ec453fb",
+  "prompt": "A long-reach desktop hole punch with an extended base, a tall handle, a front paper guide, and a stop knob at the end of the guide. The handle rotates on a rear transverse hinge, the paper guide slides prismatically along the front fence, and the stop knob rotates on its short side-facing shaft. Office tool scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "extended base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "extended base"
+    },
+    {
+      "name": "tall handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall handle"
+    },
+    {
+      "name": "front paper guide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front paper guide"
+    },
+    {
+      "name": "stop knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stop knob"
+    },
+    {
+      "name": "front fence",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front fence"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "handle",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "transverse",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The handle rotates on a rear transverse hinge"
+    },
+    {
+      "child": "paper guide",
+      "parent": "front fence",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "along the front fence",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the paper guide slides prismatically along the front fence"
+    },
+    {
+      "child": "stop knob",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "short side-facing",
+      "location_hint": "side-facing shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the stop knob rotates on its short side-facing shaft"
+    }
+  ],
+  "notes": []
+}

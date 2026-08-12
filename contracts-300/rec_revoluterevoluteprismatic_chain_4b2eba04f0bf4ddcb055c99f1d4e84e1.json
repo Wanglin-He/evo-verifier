@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_revoluterevoluteprismatic_chain_4b2eba04f0bf4ddcb055c99f1d4e84e1",
+  "prompt": "A two-link arm with output slide. A fixed root support carries an upper link and a forelink in series, and the forelink carries a compact end runner. The upper link and forelink pivot on two revolute joints, and the runner is a distal prismatic joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "fixed root support",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed root support"
+    },
+    {
+      "name": "upper link",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper link"
+    },
+    {
+      "name": "forelink",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "forelink"
+    },
+    {
+      "name": "compact end runner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact end runner"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "upper link",
+      "parent": "fixed root support",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The upper link and forelink pivot on two revolute joints"
+    },
+    {
+      "child": "forelink",
+      "parent": "upper link",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The upper link and forelink pivot on two revolute joints"
+    },
+    {
+      "child": "runner",
+      "parent": "forelink",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "distal",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the runner is a distal prismatic joint"
+    }
+  ],
+  "notes": []
+}

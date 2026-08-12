@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_fourjoint_revolute_chain_b1e491d7ebdd40db81f51fb97afd176f",
+  "prompt": "A four-joint revolute chain. Five rigid links are connected in series by evenly spaced hinge blocks, with the root link mounted to a fixed base foot. All four joints are revolute about parallel axes in one plane, each with about 90 degrees of travel each way.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rigid links",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Five rigid links"
+    },
+    {
+      "name": "hinge blocks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinge blocks"
+    },
+    {
+      "name": "fixed base foot",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed base foot"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rigid links",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "parallel axes in one plane",
+      "location_hint": "evenly spaced hinge blocks",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "All four joints are revolute about parallel axes in one plane"
+    }
+  ],
+  "notes": []
+}

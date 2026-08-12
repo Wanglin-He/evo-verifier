@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_stick_vacuum_with_folding_joint_40c9de2231e94873a507f7b3c096e4b5",
+  "prompt": "A stick vacuum with a folding wand. A motor body connects to a straight wand and a floor head, with the fold joint placed between the body and the wand. Joints: the fold joint is revolute about a horizontal axis, and the floor head pitches on a second revolute hinge. Bias the design toward one dominant primary link and one shorter secondary link.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "motor body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "motor body"
+    },
+    {
+      "name": "straight wand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "straight wand"
+    },
+    {
+      "name": "floor head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "floor head"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "straight wand",
+      "parent": "motor body",
+      "kind": "revolute",
+      "axis_hint": "horizontal axis",
+      "location_hint": "between the body and the wand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the fold joint is revolute about a horizontal axis"
+    },
+    {
+      "child": "floor head",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the floor head pitches on a second revolute hinge"
+    }
+  ],
+  "notes": []
+}

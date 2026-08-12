@@ -1,0 +1,64 @@
+{
+  "version": "1",
+  "record_id": "rec_dualcolumn_lift_carriage_376ff6d79af84845a048c90d9babe879",
+  "prompt": "A dual-column lift module like a compact pallet stacker mast. Two vertical guide columns are tied by a base and top crosshead, and a rectangular carriage rides between them on wrapped guide blocks. One prismatic joint moves the carriage along the column axis while the frame stays fixed.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "vertical guide columns",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two vertical guide columns"
+    },
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base"
+    },
+    {
+      "name": "top crosshead",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top crosshead"
+    },
+    {
+      "name": "rectangular carriage",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a rectangular carriage"
+    },
+    {
+      "name": "wrapped guide blocks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wrapped guide blocks"
+    },
+    {
+      "name": "frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "frame"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "carriage",
+      "parent": "frame",
+      "kind": "prismatic",
+      "axis_hint": "along the column axis",
+      "location_hint": "between them",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "One prismatic joint moves the carriage along the column axis while the frame stays fixed."
+    }
+  ],
+  "notes": []
+}

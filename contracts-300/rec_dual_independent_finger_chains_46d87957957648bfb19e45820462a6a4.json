@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_dual_independent_finger_chains_46d87957957648bfb19e45820462a6a4",
+  "prompt": "A bench gripper finger pair. A boxed palm body supports two separate digit chains with proximal, middle, and distal links on mirrored sides of the centerline. Each digit uses three revolute joints, with no coupling bar or shared actuator geometry between the two chains.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "boxed palm body",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "boxed palm body"
+    },
+    {
+      "name": "digit chains",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two separate digit chains"
+    },
+    {
+      "name": "proximal links",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "proximal, middle, and distal links"
+    },
+    {
+      "name": "middle links",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "proximal, middle, and distal links"
+    },
+    {
+      "name": "distal links",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "proximal, middle, and distal links"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "digit chains",
+      "parent": "boxed palm body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "mirrored sides of the centerline",
+      "count": 6,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each digit uses three revolute joints"
+    }
+  ],
+  "notes": []
+}

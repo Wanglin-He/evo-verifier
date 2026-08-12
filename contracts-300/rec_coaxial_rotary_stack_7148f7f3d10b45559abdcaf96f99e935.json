@@ -1,0 +1,65 @@
+{
+  "version": "1",
+  "record_id": "rec_coaxial_rotary_stack_7148f7f3d10b45559abdcaf96f99e935",
+  "prompt": "A nested ring turntable with a low platter, a thick intermediate ring, and a compact upper fixture cup carried on the same upright centerline. Each concentric stage should have its own housing break, flange lip, or cap interface so the motion hierarchy is obvious at a glance. The assembly should feel like real indexing hardware with stepped castings, machined ring faces, cap screws, and sensible clearances between concentric members. Each stage rotates independently as a revolute joint about the common vertical axis with visible support at every level. Keep every part mechanically grounded with no floating members, and make sure the articulation paths stay clear so nothing clips through covers, stops, housings, rails, or neighboring links.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "low platter",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "low platter"
+    },
+    {
+      "name": "thick intermediate ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "thick intermediate ring"
+    },
+    {
+      "name": "compact upper fixture cup",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact upper fixture cup"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "low platter",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each stage rotates independently as a revolute joint about the common vertical axis"
+    },
+    {
+      "child": "thick intermediate ring",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each stage rotates independently as a revolute joint about the common vertical axis"
+    },
+    {
+      "child": "compact upper fixture cup",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each stage rotates independently as a revolute joint about the common vertical axis"
+    }
+  ],
+  "notes": []
+}

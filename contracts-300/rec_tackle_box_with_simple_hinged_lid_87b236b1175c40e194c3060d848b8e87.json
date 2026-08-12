@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_tackle_box_with_simple_hinged_lid_87b236b1175c40e194c3060d848b8e87",
+  "prompt": "A tackle box with a plain hinged lid. A rectangular box body supports one lid panel along the rear edge, with internal tray details kept fixed inside the body. Joints: the lid is a single revolute panel about a horizontal rear hinge axis. Make the lid or door long and thin relative to the body.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular box body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular box body"
+    },
+    {
+      "name": "lid panel",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one lid panel"
+    },
+    {
+      "name": "internal tray details",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal tray details"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "rectangular box body",
+      "kind": "revolute",
+      "axis_hint": "horizontal rear hinge axis",
+      "location_hint": "along the rear edge",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the lid is a single revolute panel about a horizontal rear hinge axis"
+    },
+    {
+      "child": "internal tray details",
+      "parent": "body",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "inside the body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal tray details kept fixed inside the body"
+    }
+  ],
+  "notes": []
+}

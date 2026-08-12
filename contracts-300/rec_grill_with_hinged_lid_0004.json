@@ -1,0 +1,93 @@
+{
+  "version": "1",
+  "record_id": "rec_grill_with_hinged_lid_0004",
+  "prompt": "A barrel-style outdoor grill with a horizontal cooking chamber and a side shelf. The lower half of the barrel is fixed to a cart frame, and the upper half acts as the lid with a handle along the front edge. The lid rotates upward on a rear longitudinal revolute axis about 95 degrees, and the cart wheels rotate continuously on their axle.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "horizontal cooking chamber",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "horizontal cooking chamber"
+    },
+    {
+      "name": "side shelf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side shelf"
+    },
+    {
+      "name": "lower half of the barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower half of the barrel"
+    },
+    {
+      "name": "cart frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cart frame"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid"
+    },
+    {
+      "name": "handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "handle"
+    },
+    {
+      "name": "cart wheels",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cart wheels"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lower half of the barrel",
+      "parent": "cart frame",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower half of the barrel is fixed to a cart frame"
+    },
+    {
+      "child": "lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "rear longitudinal",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid rotates upward on a rear longitudinal revolute axis"
+    },
+    {
+      "child": "cart wheels",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "on their axle",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cart wheels rotate continuously on their axle"
+    }
+  ],
+  "notes": []
+}

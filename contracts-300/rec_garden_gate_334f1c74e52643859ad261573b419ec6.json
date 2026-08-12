@@ -1,0 +1,93 @@
+{
+  "version": "1",
+  "record_id": "rec_garden_gate_334f1c74e52643859ad261573b419ec6",
+  "prompt": "A picket garden gate with a lower surface bolt for holding it open. The rectangular leaf hangs from one side post on two hinges, closes against a latch post with a ring latch, and carries a slim vertical drop bolt near the lower rail. The main leaf rotates on a vertical hinge axis, the ring latch rotates on its own pivot, and the drop bolt slides vertically through its guide brackets. Keep the drop bolt clipped through its guide loops on the gate so it stays constrained while sliding up and down.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "main leaf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main leaf"
+    },
+    {
+      "name": "side post",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one side post"
+    },
+    {
+      "name": "hinges",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two hinges"
+    },
+    {
+      "name": "latch post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "latch post"
+    },
+    {
+      "name": "ring latch",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "ring latch"
+    },
+    {
+      "name": "drop bolt",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drop bolt"
+    },
+    {
+      "name": "guide brackets",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "guide brackets"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "main leaf",
+      "parent": "side post",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The main leaf rotates on a vertical hinge axis"
+    },
+    {
+      "child": "ring latch",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the ring latch rotates on its own pivot"
+    },
+    {
+      "child": "drop bolt",
+      "parent": "guide brackets",
+      "kind": "prismatic",
+      "axis_hint": "vertically",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the drop bolt slides vertically through its guide brackets"
+    }
+  ],
+  "notes": []
+}

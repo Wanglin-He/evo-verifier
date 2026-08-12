@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_drawer_cabinet_with_sliding_drawers_ed911543e2b74804b0131908b6f8d864",
+  "prompt": "A bedside drawer cabinet with three front drawers and a hinged top compartment lid above them. The three drawers slide prismatically on straight guides, and the top compartment lid rotates upward on a rear horizontal hinge. Bedroom cabinet scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "bedside drawer cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bedside drawer cabinet"
+    },
+    {
+      "name": "front drawers",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three front drawers"
+    },
+    {
+      "name": "top compartment lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top compartment lid"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drawers",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "straight guides",
+      "location_hint": "front",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three drawers slide prismatically on straight guides"
+    },
+    {
+      "child": "top compartment lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top compartment lid rotates upward on a rear horizontal hinge"
+    }
+  ],
+  "notes": []
+}

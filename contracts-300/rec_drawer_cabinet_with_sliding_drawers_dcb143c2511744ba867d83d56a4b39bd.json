@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_drawer_cabinet_with_sliding_drawers_dcb143c2511744ba867d83d56a4b39bd",
+  "prompt": "A wooden dresser with a wide rectangular carcass and five stacked drawers, each on prismatic guide rails with round knob handles.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "carcass",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "carcass"
+    },
+    {
+      "name": "drawers",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "five stacked drawers"
+    },
+    {
+      "name": "knob handles",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round knob handles"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drawers",
+      "parent": "carcass",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "five stacked drawers, each on prismatic guide rails"
+    }
+  ],
+  "notes": []
+}

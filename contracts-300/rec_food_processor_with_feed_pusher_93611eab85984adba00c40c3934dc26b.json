@@ -1,0 +1,136 @@
+{
+  "version": "1",
+  "record_id": "rec_food_processor_with_feed_pusher_93611eab85984adba00c40c3934dc26b",
+  "prompt": "A premium food processor with a broad bowl, a tall chute, a small ingredient flap in the lid, and a front panel carrying one selector dial and four program buttons. The pusher slides prismatically inside the main chute, the ingredient flap rotates on a short hinge in the lid, and the processing disc rotates continuously on the vertical shaft. The selector dial rotates continuously, and all four program buttons are separate prismatic push controls. The bowl, chute, and lid should remain clearly hollow and open above the cutter assembly. Family countertop scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "bowl",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad bowl"
+    },
+    {
+      "name": "chute",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall chute"
+    },
+    {
+      "name": "ingredient flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small ingredient flap"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid"
+    },
+    {
+      "name": "front panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front panel"
+    },
+    {
+      "name": "selector dial",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one selector dial"
+    },
+    {
+      "name": "program buttons",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four program buttons"
+    },
+    {
+      "name": "pusher",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pusher"
+    },
+    {
+      "name": "processing disc",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "processing disc"
+    },
+    {
+      "name": "vertical shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vertical shaft"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "pusher",
+      "parent": "main chute",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "inside the main chute",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The pusher slides prismatically inside the main chute"
+    },
+    {
+      "child": "ingredient flap",
+      "parent": "lid",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "in the lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the ingredient flap rotates on a short hinge in the lid"
+    },
+    {
+      "child": "processing disc",
+      "parent": "vertical shaft",
+      "kind": "continuous",
+      "axis_hint": "vertical",
+      "location_hint": "on the vertical shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the processing disc rotates continuously on the vertical shaft"
+    },
+    {
+      "child": "selector dial",
+      "parent": "front panel",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The selector dial rotates continuously"
+    },
+    {
+      "child": "program buttons",
+      "parent": "front panel",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "all four program buttons are separate prismatic push controls"
+    }
+  ],
+  "notes": []
+}

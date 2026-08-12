@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_elevator_5ef65550be264a2a90f25346b9b8f927",
+  "prompt": "A glass panoramic elevator with a circular glass-sided car on a vertical prismatic guide rail, a single curved sliding door panel on a prismatic joint at the car opening, and a stainless handrail bar on revolute pin mounts around the car interior perimeter.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "circular glass-sided car",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular glass-sided car"
+    },
+    {
+      "name": "vertical prismatic guide rail",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vertical prismatic guide rail"
+    },
+    {
+      "name": "curved sliding door panel",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "single curved sliding door panel"
+    },
+    {
+      "name": "stainless handrail bar",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stainless handrail bar"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "circular glass-sided car",
+      "parent": "vertical prismatic guide rail",
+      "kind": "prismatic",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular glass-sided car on a vertical prismatic guide rail"
+    },
+    {
+      "child": "curved sliding door panel",
+      "parent": "circular glass-sided car",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "at the car opening",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "single curved sliding door panel on a prismatic joint at the car opening"
+    },
+    {
+      "child": "stainless handrail bar",
+      "parent": "circular glass-sided car",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "around the car interior perimeter",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stainless handrail bar on revolute pin mounts around the car interior perimeter"
+    }
+  ],
+  "notes": []
+}

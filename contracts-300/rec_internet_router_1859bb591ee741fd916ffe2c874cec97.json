@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_internet_router_1859bb591ee741fd916ffe2c874cec97",
+  "prompt": "A flat home router with two fold-out paddle antennas and a small rocker power switch. The main body is a rounded rectangular slab, the antennas mount on short hinge pods at the back edge, and the switch is set into a side recess. The two antennas rotate on horizontal root hinges, and the rocker switch rotates on a local transverse pivot in the side wall.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "main body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main body"
+    },
+    {
+      "name": "paddle antennas",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two fold-out paddle antennas"
+    },
+    {
+      "name": "hinge pods",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short hinge pods"
+    },
+    {
+      "name": "rocker power switch",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rocker power switch"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "antennas",
+      "parent": "hinge pods",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the back edge",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The two antennas rotate on horizontal root hinges"
+    },
+    {
+      "child": "rocker switch",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "transverse",
+      "location_hint": "in the side wall",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rocker switch rotates on a local transverse pivot in the side wall"
+    }
+  ],
+  "notes": []
+}

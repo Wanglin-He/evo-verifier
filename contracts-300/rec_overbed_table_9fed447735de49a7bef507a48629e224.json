@@ -1,0 +1,118 @@
+{
+  "version": "1",
+  "record_id": "rec_overbed_table_9fed447735de49a7bef507a48629e224",
+  "prompt": "A hospital overbed table with a C-shaped rolling base, a single telescoping column, a rectangular tray top, and a squeeze-release lever under the front edge, plus locking casters at the base corners. the tray keeps a raised perimeter lip and a simple support head above the column, and the wheel forks remain individually visible under the base frame. The inner lift column slides prismatically within the outer post, the tray tilts on a horizontal hinge at the support head, and the four casters spin continuously on their fork axles, and the caster lock tabs rotate on their small local pivots. Hospital bedside scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "C-shaped rolling base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "C-shaped rolling base"
+    },
+    {
+      "name": "inner lift column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner lift column"
+    },
+    {
+      "name": "outer post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "outer post"
+    },
+    {
+      "name": "rectangular tray top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular tray top"
+    },
+    {
+      "name": "squeeze-release lever",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "squeeze-release lever"
+    },
+    {
+      "name": "casters",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four casters"
+    },
+    {
+      "name": "support head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "support head"
+    },
+    {
+      "name": "wheel forks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wheel forks"
+    },
+    {
+      "name": "caster lock tabs",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "caster lock tabs"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "inner lift column",
+      "parent": "outer post",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "within the outer post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The inner lift column slides prismatically within the outer post"
+    },
+    {
+      "child": "tray",
+      "parent": "support head",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the support head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the tray tilts on a horizontal hinge at the support head"
+    },
+    {
+      "child": "casters",
+      "parent": "wheel forks",
+      "kind": "continuous",
+      "axis_hint": "on their fork axles",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the four casters spin continuously on their fork axles"
+    },
+    {
+      "child": "caster lock tabs",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on their small local pivots",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the caster lock tabs rotate on their small local pivots"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_dualcolumn_lift_carriage_61b26819e5d240b1b9ee5c3f10445291",
+  "prompt": "A boxed dual-column lift carriage. Two grounded guide columns are tied by a base and top crosshead, and a rectangular carriage rides between them on wrapped guide blocks. One prismatic joint moves the carriage along the column axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "guide columns",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two grounded guide columns"
+    },
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base"
+    },
+    {
+      "name": "top crosshead",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top crosshead"
+    },
+    {
+      "name": "rectangular carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular carriage"
+    },
+    {
+      "name": "wrapped guide blocks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wrapped guide blocks"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "carriage",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "along the column axis",
+      "location_hint": "",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "One prismatic joint moves the carriage along the column axis."
+    }
+  ],
+  "notes": []
+}

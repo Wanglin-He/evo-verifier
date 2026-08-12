@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_overshot_waterwheel_34ab721ae08a4072bcdd7ecbce39bf4b",
+  "prompt": "An overshot waterwheel with a side-mounted drive pinion on the same axle. The large bucketed wheel sits between support blocks, and a smaller gear wheel is fixed to one axle end outside the main rim. The waterwheel rotates continuously on its horizontal axle, and the side pinion rotates continuously with the same axle.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "waterwheel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "waterwheel"
+    },
+    {
+      "name": "side-mounted drive pinion",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side-mounted drive pinion"
+    },
+    {
+      "name": "axle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "axle"
+    },
+    {
+      "name": "support blocks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "support blocks"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "waterwheel",
+      "parent": "axle",
+      "kind": "continuous",
+      "axis_hint": "horizontal",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The waterwheel rotates continuously on its horizontal axle"
+    },
+    {
+      "child": "side pinion",
+      "parent": "axle",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the side pinion rotates continuously with the same axle"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_lazy_susan_efcb4237eb1c4f96a46d0b370cf1dcb5",
+  "prompt": "A two-tier lazy Susan with a fixed central post and two separate rotating shelves. Each circular shelf is carried by its own bearing collar around the post, so the upper and lower tiers can move independently. The lower shelf rotates on one vertical revolute axis around the post, and the upper shelf rotates on a second vertical revolute axis on its own collar.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "central post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed central post"
+    },
+    {
+      "name": "rotating shelves",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two separate rotating shelves"
+    },
+    {
+      "name": "bearing collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bearing collar"
+    },
+    {
+      "name": "lower shelf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower shelf"
+    },
+    {
+      "name": "upper shelf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper shelf"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lower shelf",
+      "parent": "post",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "around the post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lower shelf rotates on one vertical revolute axis around the post"
+    },
+    {
+      "child": "upper shelf",
+      "parent": "collar",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "on its own collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper shelf rotates on a second vertical revolute axis on its own collar"
+    }
+  ],
+  "notes": []
+}

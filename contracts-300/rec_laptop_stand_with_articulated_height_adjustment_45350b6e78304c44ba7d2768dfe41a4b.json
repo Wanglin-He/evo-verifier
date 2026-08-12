@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_laptop_stand_with_articulated_height_adjustment_45350b6e78304c44ba7d2768dfe41a4b",
+  "prompt": "A folding laptop stand with a flat base plate, a Z-style support arm, and a vented top tray with front retaining lips. The support arm remains a real paired linkage under the tray rather than a floating stylized bracket. The two arm links rotate on their revolute joints and the tray tilts on a hinge at the top of the support arm. Small desk-accessory scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat base plate"
+    },
+    {
+      "name": "support arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Z-style support arm"
+    },
+    {
+      "name": "top tray",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vented top tray"
+    },
+    {
+      "name": "retaining lips",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front retaining lips"
+    },
+    {
+      "name": "arm links",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two arm links"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "arm links",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two arm links rotate on their revolute joints"
+    },
+    {
+      "child": "tray",
+      "parent": "support arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the top of the support arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tray tilts on a hinge at the top of the support arm"
+    }
+  ],
+  "notes": []
+}

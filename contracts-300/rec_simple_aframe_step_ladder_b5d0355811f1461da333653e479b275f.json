@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_simple_aframe_step_ladder_b5d0355811f1461da333653e479b275f",
+  "prompt": "A folding A-frame step ladder. A front climbing frame and a rear support frame meet at a top cap, with wide treads on the front frame. Joints: the rear frame folds relative to the front frame on a single revolute hinge at the top cap. Keep the folded envelope narrow and easy to store.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "front climbing frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front climbing frame"
+    },
+    {
+      "name": "rear support frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear support frame"
+    },
+    {
+      "name": "top cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top cap"
+    },
+    {
+      "name": "wide treads",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide treads"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rear frame",
+      "parent": "front frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the top cap",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the rear frame folds relative to the front frame on a single revolute hinge at the top cap"
+    }
+  ],
+  "notes": []
+}

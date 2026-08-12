@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_wall_safe_with_hinged_door_and_dial_a62b6299f8e34d21a36c51681a3d3709",
+  "prompt": "A recessed wall safe with a rectangular front frame, a thick door, a round combination dial, and a three-spoke handle at the center. The door rotates on a vertical hinge at the right side of the frame, the combination dial rotates continuously about its central shaft, and the three-spoke handle rotates on a coaxial shaft at the door center.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular front frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular front frame"
+    },
+    {
+      "name": "thick door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "thick door"
+    },
+    {
+      "name": "round combination dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round combination dial"
+    },
+    {
+      "name": "three-spoke handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three-spoke handle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "door",
+      "parent": "frame",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at the right side of the frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The door rotates on a vertical hinge at the right side of the frame"
+    },
+    {
+      "child": "combination dial",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "about its central shaft",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the combination dial rotates continuously about its central shaft"
+    },
+    {
+      "child": "three-spoke handle",
+      "parent": "door",
+      "kind": null,
+      "axis_hint": "coaxial shaft",
+      "location_hint": "at the door center",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the three-spoke handle rotates on a coaxial shaft at the door center"
+    }
+  ],
+  "notes": []
+}

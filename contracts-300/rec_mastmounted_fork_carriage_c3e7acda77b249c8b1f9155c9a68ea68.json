@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_mastmounted_fork_carriage_c3e7acda77b249c8b1f9155c9a68ea68",
+  "prompt": "A warehouse mast fork carriage. A twin-upright mast supports a moving fork frame with a stiff backrest grid and short paired forks at the bottom edge. The fork frame is a single prismatic joint on the mast guides.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "twin-upright mast",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "twin-upright mast"
+    },
+    {
+      "name": "fork frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fork frame"
+    },
+    {
+      "name": "backrest grid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "backrest grid"
+    },
+    {
+      "name": "forks",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "paired forks"
+    },
+    {
+      "name": "mast guides",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "mast guides"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "fork frame",
+      "parent": "mast guides",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on the mast guides",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The fork frame is a single prismatic joint on the mast guides."
+    }
+  ],
+  "notes": []
+}

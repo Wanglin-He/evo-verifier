@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_prismaticrevolute_chain_f2db7a9a3cd74ad69fed4bf64d6c9722",
+  "prompt": "A drawer-like shuttle with a side-mounted pivot block and a small inspection paddle at the end of a short link. The sliding base and the hinged link should have clearly separate support structures. The shuttle is a prismatic joint along its guide axis and the paddle link is a revolute joint on the shuttle.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "shuttle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drawer-like shuttle"
+    },
+    {
+      "name": "pivot block",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side-mounted pivot block"
+    },
+    {
+      "name": "inspection paddle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small inspection paddle"
+    },
+    {
+      "name": "link",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short link"
+    },
+    {
+      "name": "sliding base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "sliding base"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "shuttle",
+      "parent": "sliding base",
+      "kind": "prismatic",
+      "axis_hint": "along its guide axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The shuttle is a prismatic joint along its guide axis"
+    },
+    {
+      "child": "paddle link",
+      "parent": "shuttle",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on the shuttle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the paddle link is a revolute joint on the shuttle"
+    }
+  ],
+  "notes": []
+}

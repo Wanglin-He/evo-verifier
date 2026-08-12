@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_orthogonal_xy_stage_dd803112f5e4499aaec517af3dde49c3",
+  "prompt": "A box-rail XY cross stage. A grounded lower rail carries a rectangular X carriage, and the X carriage carries a short Y slide with a plain platform. The X and Y motions are orthogonal prismatic joints on supported guides.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "grounded lower rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded lower rail"
+    },
+    {
+      "name": "rectangular X carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular X carriage"
+    },
+    {
+      "name": "short Y slide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short Y slide"
+    },
+    {
+      "name": "plain platform",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "plain platform"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rectangular X carriage",
+      "parent": "grounded lower rail",
+      "kind": "prismatic",
+      "axis_hint": "orthogonal",
+      "location_hint": "on supported guides",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A grounded lower rail carries a rectangular X carriage"
+    },
+    {
+      "child": "short Y slide",
+      "parent": "rectangular X carriage",
+      "kind": "prismatic",
+      "axis_hint": "orthogonal",
+      "location_hint": "on supported guides",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the X carriage carries a short Y slide"
+    }
+  ],
+  "notes": []
+}

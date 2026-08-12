@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_twojoint_revolute_chain_81af4b1a09fe42bebb22ea5c3e5048a3",
+  "prompt": "A wall-backed two-joint revolute chain. A fixed backplate carries a root clevis and a sequence of articulated links, with enough spacing between links that each joint pair stays readable. The motion comes from two revolute joints in series on parallel axes.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "backplate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed backplate"
+    },
+    {
+      "name": "root clevis",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "root clevis"
+    },
+    {
+      "name": "links",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "articulated links"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "links",
+      "parent": "root clevis",
+      "kind": "revolute",
+      "axis_hint": "parallel axes",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two revolute joints in series on parallel axes"
+    }
+  ],
+  "notes": []
+}

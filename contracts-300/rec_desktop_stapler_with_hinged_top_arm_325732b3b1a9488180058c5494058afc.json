@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_desktop_stapler_with_hinged_top_arm_325732b3b1a9488180058c5494058afc",
+  "prompt": "A die-cast desktop stapler with a flat rectangular base, a boxy staple magazine connected to a rear hinge tower, a low-profile top arm carried on the back of the magazine, and a reversible anvil in the base. The staple magazine rotates upward on a rear horizontal revolute hinge at the hinge tower, the top arm rotates on a second rear revolute hinge at the back of the magazine shell, and the reversible anvil rotates on a short central pivot beneath the stapling nose. Dense desk-accessory scale with a practical office silhouette.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a flat rectangular base"
+    },
+    {
+      "name": "staple magazine",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a boxy staple magazine"
+    },
+    {
+      "name": "hinge tower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a rear hinge tower"
+    },
+    {
+      "name": "top arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a low-profile top arm"
+    },
+    {
+      "name": "reversible anvil",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a reversible anvil"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "staple magazine",
+      "parent": "hinge tower",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the hinge tower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The staple magazine rotates upward on a rear horizontal revolute hinge at the hinge tower"
+    },
+    {
+      "child": "top arm",
+      "parent": "magazine shell",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the back of the magazine shell",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the top arm rotates on a second rear revolute hinge at the back of the magazine shell"
+    },
+    {
+      "child": "reversible anvil",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "beneath the stapling nose",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the reversible anvil rotates on a short central pivot beneath the stapling nose"
+    }
+  ],
+  "notes": []
+}

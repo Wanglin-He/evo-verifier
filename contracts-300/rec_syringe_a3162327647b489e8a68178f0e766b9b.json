@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_syringe_a3162327647b489e8a68178f0e766b9b",
+  "prompt": "Create a cost-optimized mass-manufacturable Syringe. Base architecture: a graduated barrel with linear plunger rod and nozzle tip. Reduce part count, simplify molds/extrusions/stampings, and keep assembly order obvious with realistic snap/bolt/clamp interfaces. Plunger motion should be linear, coaxial, and bounded by stop geometry. Every piece must have a believable attachment path; no floating or orphaned components. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "graduated barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "graduated barrel"
+    },
+    {
+      "name": "linear plunger rod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "linear plunger rod"
+    },
+    {
+      "name": "nozzle tip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "nozzle tip"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "plunger rod",
+      "parent": "graduated barrel",
+      "kind": "prismatic",
+      "axis_hint": "linear, coaxial",
+      "location_hint": "bounded by stop geometry",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Plunger motion should be linear, coaxial, and bounded by stop geometry."
+    }
+  ],
+  "notes": []
+}

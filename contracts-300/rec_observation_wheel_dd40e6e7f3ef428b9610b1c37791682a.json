@@ -1,0 +1,75 @@
+{
+  "version": "1",
+  "record_id": "rec_observation_wheel_dd40e6e7f3ef428b9610b1c37791682a",
+  "prompt": "An observation wheel with twin rim rings and cabins suspended between the rims on short hanger brackets. The wheel is supported by side legs and a central axle, and each cabin hangs from the inner structure rather than far outside the rim. The main wheel rotates on a horizontal central revolute axis, and each cabin pivots on its own hanger revolute axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "twin rim rings",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "twin rim rings"
+    },
+    {
+      "name": "cabins",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cabins"
+    },
+    {
+      "name": "short hanger brackets",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short hanger brackets"
+    },
+    {
+      "name": "side legs",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side legs"
+    },
+    {
+      "name": "central axle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central axle"
+    },
+    {
+      "name": "main wheel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main wheel"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "main wheel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal central",
+      "location_hint": "central",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main wheel rotates on a horizontal central revolute axis"
+    },
+    {
+      "child": "cabin",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "hanger",
+      "location_hint": "hanger",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each cabin pivots on its own hanger revolute axis"
+    }
+  ],
+  "notes": []
+}

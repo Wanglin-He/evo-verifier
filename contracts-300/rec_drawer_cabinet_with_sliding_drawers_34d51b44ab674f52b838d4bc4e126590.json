@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_drawer_cabinet_with_sliding_drawers_34d51b44ab674f52b838d4bc4e126590",
+  "prompt": "A laboratory specimen drawer cabinet with a tall rectangular body and six shallow drawers. All six drawers slide prismatically on straight internal runners within the rigid outer carcass. Lab storage scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rigid outer carcass",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rigid outer carcass"
+    },
+    {
+      "name": "shallow drawers",
+      "count": 6,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "six shallow drawers"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "shallow drawers",
+      "parent": "rigid outer carcass",
+      "kind": "prismatic",
+      "axis_hint": "straight",
+      "location_hint": "on straight internal runners",
+      "count": 6,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "All six drawers slide prismatically on straight internal runners within the rigid outer carcass."
+    }
+  ],
+  "notes": []
+}

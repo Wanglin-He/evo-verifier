@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_graphics_card_with_cooling_fans_0003",
+  "prompt": "A dual-slot desktop graphics card. A long rectangular PCB carries a shrouded heatsink and two axial cooling fans on the front face, with a bracket plate at one end. Each fan is mounted in its own circular frame and spins continuously on a central revolute axis normal to the card face.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "PCB",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "PCB"
+    },
+    {
+      "name": "shrouded heatsink",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shrouded heatsink"
+    },
+    {
+      "name": "axial cooling fan",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two axial cooling fans"
+    },
+    {
+      "name": "bracket plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bracket plate"
+    },
+    {
+      "name": "circular frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular frame"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "fan",
+      "parent": "circular frame",
+      "kind": "continuous",
+      "axis_hint": "normal to the card face",
+      "location_hint": "central",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each fan is mounted in its own circular frame and spins continuously on a central revolute axis normal to the card face."
+    }
+  ],
+  "notes": []
+}

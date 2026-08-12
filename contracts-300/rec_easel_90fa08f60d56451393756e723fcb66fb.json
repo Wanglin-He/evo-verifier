@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_easel_90fa08f60d56451393756e723fcb66fb",
+  "prompt": "A studio H-frame easel with a tall center mast, a sliding lower canvas tray, and a side crank handle for height adjustment. The tray slides prismatically along the mast, and the side crank handle rotates continuously on its short shaft at the adjustment mechanism. Art-studio scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "center mast",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center mast"
+    },
+    {
+      "name": "lower canvas tray",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower canvas tray"
+    },
+    {
+      "name": "side crank handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side crank handle"
+    },
+    {
+      "name": "short shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short shaft"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "tray",
+      "parent": "mast",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "along the mast",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The tray slides prismatically along the mast"
+    },
+    {
+      "child": "side crank handle",
+      "parent": "short shaft",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "at the adjustment mechanism",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side crank handle rotates continuously on its short shaft at the adjustment mechanism"
+    }
+  ],
+  "notes": []
+}

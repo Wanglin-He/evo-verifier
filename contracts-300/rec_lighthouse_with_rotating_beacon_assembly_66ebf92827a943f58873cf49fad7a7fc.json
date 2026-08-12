@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_lighthouse_with_rotating_beacon_assembly_66ebf92827a943f58873cf49fad7a7fc",
+  "prompt": "A realistic, highly detailed lighthouse with a substantial tower and a believable rotating beacon assembly at the top. The beacon motion articulates naturally, and the structure should feel architectural, iconic, and true to a real navigational landmark.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "substantial tower"
+    },
+    {
+      "name": "beacon assembly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotating beacon assembly"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "beacon assembly",
+      "parent": "tower",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "at the top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "believable rotating beacon assembly at the top"
+    }
+  ],
+  "notes": []
+}

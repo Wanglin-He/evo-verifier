@@ -1,0 +1,75 @@
+{
+  "version": "1",
+  "record_id": "rec_globe_e4280c31c61d4872a54824276a852921",
+  "prompt": "An executive floor globe with a large sphere above a tripod stand and a circular map shelf. The sphere sits in a partial meridian on polar pivots, and the support frame rises from the tripod center through a simple rotating collar above the shelf. The sphere rotates about its polar axis, and the upper support turns about a vertical axis at the collar so the globe can be reoriented over the stand. Keep the upper globe support clipped into the rotating collar above the shelf so the globe assembly stays seated over the stand.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "sphere",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large sphere"
+    },
+    {
+      "name": "tripod stand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tripod stand"
+    },
+    {
+      "name": "circular map shelf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular map shelf"
+    },
+    {
+      "name": "partial meridian",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "partial meridian"
+    },
+    {
+      "name": "upper support",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper support"
+    },
+    {
+      "name": "rotating collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotating collar"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "sphere",
+      "parent": "partial meridian",
+      "kind": "continuous",
+      "axis_hint": "polar axis",
+      "location_hint": "on polar pivots",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The sphere rotates about its polar axis"
+    },
+    {
+      "child": "upper support",
+      "parent": "rotating collar",
+      "kind": "revolute",
+      "axis_hint": "vertical axis",
+      "location_hint": "at the collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the upper support turns about a vertical axis at the collar"
+    }
+  ],
+  "notes": []
+}

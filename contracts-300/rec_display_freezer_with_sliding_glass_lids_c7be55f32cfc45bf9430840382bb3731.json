@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_display_freezer_with_sliding_glass_lids_c7be55f32cfc45bf9430840382bb3731",
+  "prompt": "A convenience freezer with two top glass sliders and a narrow side lock flap over the key cylinder, plus a temperature-control knob on the end wall. the insulated cabinet stays deep enough to read as a real chest freezer body, and the knob remains a separate control in the end panel. The two glass lids slide prismatically on their tracks and the side lock flap rotates on a small hinge, and the temperature-control knob rotates continuously on its short shaft. Store freezer scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "top glass sliders",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two top glass sliders"
+    },
+    {
+      "name": "narrow side lock flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "narrow side lock flap"
+    },
+    {
+      "name": "temperature-control knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "temperature-control knob"
+    },
+    {
+      "name": "insulated cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "insulated cabinet"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "glass lids",
+      "parent": "tracks",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on their tracks",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The two glass lids slide prismatically on their tracks"
+    },
+    {
+      "child": "side lock flap",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on a small hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the side lock flap rotates on a small hinge"
+    },
+    {
+      "child": "temperature-control knob",
+      "parent": "end wall",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on its short shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the temperature-control knob rotates continuously on its short shaft"
+    }
+  ],
+  "notes": []
+}

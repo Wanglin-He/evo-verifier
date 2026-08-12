@@ -1,0 +1,65 @@
+{
+  "version": "1",
+  "record_id": "rec_frontload_dryer_42eeb6585076482faca978263caba667",
+  "prompt": "A compact travel dryer with a collapsible drum housing: the drum on a revolute axle inside a rectangular frame that collapses flat on revolute hinge joints at the four frame corners for storage, and a small porthole door on a revolute hinge at the frame front.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "drum",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drum"
+    },
+    {
+      "name": "rectangular frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular frame"
+    },
+    {
+      "name": "porthole door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "porthole door"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drum",
+      "parent": "rectangular frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "inside a rectangular frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drum on a revolute axle inside a rectangular frame"
+    },
+    {
+      "child": "rectangular frame",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the four frame corners",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "revolute hinge joints at the four frame corners"
+    },
+    {
+      "child": "porthole door",
+      "parent": "frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the frame front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "porthole door on a revolute hinge at the frame front"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_skateboard_746de8d78d9a4747ad202ec9810657f0",
+  "prompt": "A realistic, highly detailed Skateboard in a rugged utility variant, with a deck body, front and rear truck assemblies, wheel axles, and realistic bushing and kingpin zones. Add thicker sections, reinforced joints, exposed fasteners, and durable painted or molded material cues suited to heavy use. primary articulation should be obvious from the supporting pivots, axles, and linkage anchors. Keep the object practical, serviceable, and mechanically legible.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "deck body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "deck body"
+    },
+    {
+      "name": "front and rear truck assemblies",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front and rear truck assemblies"
+    },
+    {
+      "name": "wheel axles",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wheel axles"
+    },
+    {
+      "name": "wheel",
+      "count": 4,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front and rear truck assemblies",
+      "parent": "deck body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "supporting pivots",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "primary articulation should be obvious from the supporting pivots, axles, and linkage anchors."
+    },
+    {
+      "child": "wheel",
+      "parent": "wheel axles",
+      "kind": "continuous",
+      "axis_hint": "axles",
+      "location_hint": "",
+      "count": 4,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_palm_with_multiple_uncoupled_finger_chains_1226e6e9dfae4933be79bf3c52dd3627",
+  "prompt": "A mechanical palm plate with three forward finger chains and one side thumb chain for a simple gripper hand. The palm is a flat plate with separate knuckle mounts, and each digit is a short serial chain of rigid phalanx-like links connected end to end. Each digit root rotates on its own pivot at the palm, and each additional joint in the digit chains rotates on its own local hinge axis with no coupling between digits. Keep each digit chain clipped together at its knuckle pivots so the links stay attached instead of separating during curl motion.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "mechanical palm plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "mechanical palm plate"
+    },
+    {
+      "name": "forward finger chains",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three forward finger chains"
+    },
+    {
+      "name": "side thumb chain",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one side thumb chain"
+    },
+    {
+      "name": "knuckle mounts",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "separate knuckle mounts"
+    },
+    {
+      "name": "phalanx-like links",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "phalanx-like links"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "digit root",
+      "parent": "palm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the palm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each digit root rotates on its own pivot at the palm"
+    },
+    {
+      "child": "phalanx-like links",
+      "parent": "phalanx-like links",
+      "kind": "revolute",
+      "axis_hint": "local hinge axis",
+      "location_hint": "in the digit chains",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each additional joint in the digit chains rotates on its own local hinge axis"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,97 @@
+{
+  "version": "1",
+  "record_id": "rec_hand_truck_dolly_1a842b7dbed8438c84571e70a7a63608",
+  "prompt": "A convertible dolly with a rear wheel axle and a fold-down front caster module. The upright frame carries two large rear wheels and a main nose plate, while a front caster bar folds out under the plate to support four-wheel cart mode. The rear wheels spin on their axle, each front caster wheel spins on its own axle and swivels on a vertical caster stem, and the caster bar rotates on its hinge mounts under the frame. Keep the fold-down caster module clipped to its hinge mounts under the frame so the front support stays captured between modes.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "upright frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upright frame"
+    },
+    {
+      "name": "rear wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two large rear wheels"
+    },
+    {
+      "name": "main nose plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main nose plate"
+    },
+    {
+      "name": "front caster bar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front caster bar"
+    },
+    {
+      "name": "front caster wheel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front caster wheel"
+    },
+    {
+      "name": "vertical caster stem",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vertical caster stem"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rear wheels",
+      "parent": "axle",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear wheels spin on their axle"
+    },
+    {
+      "child": "front caster wheel",
+      "parent": "axle",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each front caster wheel spins on its own axle"
+    },
+    {
+      "child": "front caster wheel",
+      "parent": "vertical caster stem",
+      "kind": "continuous",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "swivels on a vertical caster stem"
+    },
+    {
+      "child": "caster bar",
+      "parent": "hinge mounts",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "under the frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "caster bar rotates on its hinge mounts under the frame"
+    }
+  ],
+  "notes": []
+}

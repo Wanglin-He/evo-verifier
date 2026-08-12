@@ -1,0 +1,65 @@
+{
+  "version": "1",
+  "record_id": "rec_floodlight_mast_with_tilt_head_48c88642c0c344e0b667967ec55a0d69",
+  "prompt": "A portable two-leg work light tower with two adjustable legs, a telescoping mast, and a twin-head floodlight bar. Each leg splays on a revolute hinge at the mast base ring. The mast extends prismatically from the base section. The lamp bar tilts on a revolute hinge at the mast top bracket.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "leg",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two adjustable legs"
+    },
+    {
+      "name": "mast",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "telescoping mast"
+    },
+    {
+      "name": "lamp bar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "twin-head floodlight bar"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "leg",
+      "parent": "mast base ring",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the mast base ring",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each leg splays on a revolute hinge at the mast base ring."
+    },
+    {
+      "child": "mast",
+      "parent": "base section",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The mast extends prismatically from the base section."
+    },
+    {
+      "child": "lamp bar",
+      "parent": "mast top bracket",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the mast top bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lamp bar tilts on a revolute hinge at the mast top bracket."
+    }
+  ],
+  "notes": []
+}

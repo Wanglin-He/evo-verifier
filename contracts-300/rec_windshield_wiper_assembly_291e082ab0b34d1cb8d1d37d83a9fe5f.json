@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_windshield_wiper_assembly_291e082ab0b34d1cb8d1d37d83a9fe5f",
+  "prompt": "A realistic, highly detailed windshield wiper assembly with a pivoting wiper arm, articulated blade support structure, and a believable automotive-hardware appearance. The wiping motion articulates naturally from the base pivot, and the assembly should feel like a real attached vehicle component with slender but grounded support geometry.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wiper arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wiper arm"
+    },
+    {
+      "name": "blade support structure",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade support structure"
+    },
+    {
+      "name": "base pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base pivot"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wiper arm",
+      "parent": "base pivot",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "base pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wiping motion articulates naturally from the base pivot"
+    },
+    {
+      "child": "blade support structure",
+      "parent": "wiper arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "articulated blade support structure"
+    }
+  ],
+  "notes": []
+}

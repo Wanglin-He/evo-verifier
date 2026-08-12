@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_display_freezer_with_sliding_glass_lids_254bdb1a218647c7964714d308084b3a",
+  "prompt": "A compact display freezer with two framed glass sliders, a deep tub body, and a small drain-cover flap near one lower corner, plus a side lock flap over the key cylinder. the drain-cover flap sits as a real part in the lower shell, and the flap is clearly mounted as a small protective cover on the side wall. The glass lid panels slide prismatically on the top rails and the drain-cover flap rotates on a short hinge, and the side lock flap rotates on a short hinge. Convenience-store freezer scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "framed glass sliders",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two framed glass sliders"
+    },
+    {
+      "name": "deep tub body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "deep tub body"
+    },
+    {
+      "name": "drain-cover flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small drain-cover flap near one lower corner"
+    },
+    {
+      "name": "side lock flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side lock flap over the key cylinder"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "glass lid panels",
+      "parent": "top rails",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on the top rails",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The glass lid panels slide prismatically on the top rails"
+    },
+    {
+      "child": "drain-cover flap",
+      "parent": "lower shell",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "near one lower corner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drain-cover flap rotates on a short hinge"
+    },
+    {
+      "child": "side lock flap",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "over the key cylinder",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side lock flap rotates on a short hinge"
+    }
+  ],
+  "notes": []
+}

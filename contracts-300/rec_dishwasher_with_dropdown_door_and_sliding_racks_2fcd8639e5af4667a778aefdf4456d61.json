@@ -1,0 +1,162 @@
+{
+  "version": "1",
+  "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61",
+  "prompt": "A European-style built-in dishwasher with a flat front, a dropdown door, two deep sliding racks, a narrow top cutlery tray, and a concealed top-edge control strip. The door rotates downward on a bottom horizontal revolute hinge, the upper rack, lower rack, and cutlery tray each slide prismatically on their own guides, and the upper and lower spray arms rotate continuously on central hubs inside the tub. A fold-down stemware shelf on the upper rack rotates on matched side pivots, the detergent-cup cover on the inner door opens on a small hinge, and each visible top-edge button is a separate small prismatic push button. The wash tub should read as a hollow thin-wall cavity with open rack volumes rather than a solid block. Built-in kitchen scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "dropdown door",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "dropdown door"
+    },
+    {
+      "name": "upper rack",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper rack"
+    },
+    {
+      "name": "lower rack",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower rack"
+    },
+    {
+      "name": "cutlery tray",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cutlery tray"
+    },
+    {
+      "name": "upper and lower spray arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper and lower spray arms"
+    },
+    {
+      "name": "fold-down stemware shelf",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fold-down stemware shelf"
+    },
+    {
+      "name": "detergent-cup cover",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "detergent-cup cover"
+    },
+    {
+      "name": "top-edge button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top-edge button"
+    },
+    {
+      "name": "wash tub",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wash tub"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "door",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "bottom",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The door rotates downward on a bottom horizontal revolute hinge"
+    },
+    {
+      "child": "upper rack",
+      "parent": "guides",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the upper rack, lower rack, and cutlery tray each slide prismatically on their own guides"
+    },
+    {
+      "child": "lower rack",
+      "parent": "guides",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the upper rack, lower rack, and cutlery tray each slide prismatically on their own guides"
+    },
+    {
+      "child": "cutlery tray",
+      "parent": "guides",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the upper rack, lower rack, and cutlery tray each slide prismatically on their own guides"
+    },
+    {
+      "child": "upper and lower spray arms",
+      "parent": "central hubs",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "central hubs inside the tub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the upper and lower spray arms rotate continuously on central hubs inside the tub"
+    },
+    {
+      "child": "fold-down stemware shelf",
+      "parent": "upper rack",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "matched side pivots",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A fold-down stemware shelf on the upper rack rotates on matched side pivots"
+    },
+    {
+      "child": "detergent-cup cover",
+      "parent": "inner door",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the detergent-cup cover on the inner door opens on a small hinge"
+    },
+    {
+      "child": "top-edge button",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "top-edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each visible top-edge button is a separate small prismatic push button"
+    }
+  ],
+  "notes": []
+}

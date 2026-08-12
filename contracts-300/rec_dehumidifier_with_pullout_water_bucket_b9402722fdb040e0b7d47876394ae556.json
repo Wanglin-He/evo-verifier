@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_dehumidifier_with_pullout_water_bucket_b9402722fdb040e0b7d47876394ae556",
+  "prompt": "A rounded-front dehumidifier with a pullout lower tank, a top outlet louver flap, and a front control strip with four preset buttons beside a mode dial. The water tank slides prismatically along the body depth axis, the outlet louver rotates on a rear horizontal hinge, and the mode dial rotates continuously on the control strip. Each preset button is a separate small prismatic push control. The tank should remain a believable hollow bucket with thin shell walls and real reservoir depth. Bedroom appliance scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "water tank",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "water tank"
+    },
+    {
+      "name": "outlet louver",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "outlet louver"
+    },
+    {
+      "name": "control strip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front control strip"
+    },
+    {
+      "name": "preset button",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four preset buttons"
+    },
+    {
+      "name": "mode dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "mode dial"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "water tank",
+      "parent": "body",
+      "kind": "prismatic",
+      "axis_hint": "depth axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The water tank slides prismatically along the body depth axis"
+    },
+    {
+      "child": "outlet louver",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the outlet louver rotates on a rear horizontal hinge"
+    },
+    {
+      "child": "mode dial",
+      "parent": "control strip",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on the control strip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the mode dial rotates continuously on the control strip"
+    },
+    {
+      "child": "preset button",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each preset button is a separate small prismatic push control."
+    }
+  ],
+  "notes": []
+}

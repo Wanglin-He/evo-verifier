@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_floor_standing_drafting_table_41f846e630f747e6958d3cc056c7e149",
+  "prompt": "A floor-standing drafting table with a twin-post base, a central board support, and a broad drawing surface, plus a shallow accessory drawer under the board. the twin posts clearly carry the same rigid board assembly together, and the drawer is carried by short runners below the board frame. The board rotates on a transverse hinge at the support head and both inner height stages slide prismatically within their outer posts, and the accessory drawer slides prismatically on its guide runners. Drafting-studio scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "broad drawing surface",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad drawing surface"
+    },
+    {
+      "name": "central board support",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central board support"
+    },
+    {
+      "name": "shallow accessory drawer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shallow accessory drawer"
+    },
+    {
+      "name": "inner height stages",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "both inner height stages"
+    },
+    {
+      "name": "outer posts",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "outer posts"
+    },
+    {
+      "name": "guide runners",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "guide runners"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "board",
+      "parent": "support head",
+      "kind": "revolute",
+      "axis_hint": "transverse",
+      "location_hint": "at the support head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The board rotates on a transverse hinge at the support head"
+    },
+    {
+      "child": "inner height stages",
+      "parent": "outer posts",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "within their outer posts",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "both inner height stages slide prismatically within their outer posts"
+    },
+    {
+      "child": "accessory drawer",
+      "parent": "guide runners",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on its guide runners",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "accessory drawer slides prismatically on its guide runners"
+    }
+  ],
+  "notes": []
+}

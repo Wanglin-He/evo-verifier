@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_gear_assemblies_d7ca69ea418840b3847207b8b97c711d",
+  "prompt": "An open reduction gearbox with parallel shafts. A grounded housing base exposes several parallel shafts with one obvious gear on each stage and no enclosing lid. Each shaft is modeled as its own revolute joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "grounded housing base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded housing base"
+    },
+    {
+      "name": "parallel shafts",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "parallel shafts"
+    },
+    {
+      "name": "gear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "gear"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "shaft",
+      "parent": "grounded housing base",
+      "kind": "revolute",
+      "axis_hint": "parallel",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each shaft is modeled as its own revolute joint."
+    }
+  ],
+  "notes": []
+}

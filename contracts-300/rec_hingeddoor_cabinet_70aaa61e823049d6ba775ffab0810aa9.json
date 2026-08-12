@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_hingeddoor_cabinet_70aaa61e823049d6ba775ffab0810aa9",
+  "prompt": "A realistic, highly detailed cabinet with a well-built body, hinged doors, and believable handles, hinges, and interior volume. The doors articulate naturally, and the piece should feel like real furniture with substantial construction, clean alignment, and practical proportions.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "body"
+    },
+    {
+      "name": "doors",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "doors"
+    },
+    {
+      "name": "handles",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "handles"
+    },
+    {
+      "name": "hinges",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinges"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "doors",
+      "parent": "body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged doors"
+    }
+  ],
+  "notes": []
+}

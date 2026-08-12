@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_faucet_with_side_handle_2802a6ab55ae4d51a68d4f83646111e2",
+  "prompt": "A widespread bathroom faucet with a low-arc spout body and two separate wing handles each on a revolute joint at the deck-mount escutcheon base for independent hot and cold control.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "low-arc spout body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "low-arc spout body"
+    },
+    {
+      "name": "wing handles",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two separate wing handles"
+    },
+    {
+      "name": "deck-mount escutcheon base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "deck-mount escutcheon base"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wing handles",
+      "parent": "deck-mount escutcheon base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the deck-mount escutcheon base",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two separate wing handles each on a revolute joint at the deck-mount escutcheon base"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,64 @@
+{
+  "version": "1",
+  "record_id": "rec_syringe_431220b09d204ba1a8937f8fb01386a8",
+  "prompt": "Model Syringe as an industrial safety-first variant for heavy duty cycles. Start from a graduated barrel with linear plunger rod and nozzle tip, then add guards, lockouts, over-travel stops, and reinforcement at high-stress joints. Favor visible fastener logic and plate/brace load paths over decorative surfacing. Plunger motion should be linear, coaxial, and bounded by stop geometry. All subparts must remain connected to a parent support; no unsupported fragments. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "graduated barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "graduated barrel"
+    },
+    {
+      "name": "linear plunger rod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "linear plunger rod"
+    },
+    {
+      "name": "nozzle tip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "nozzle tip"
+    },
+    {
+      "name": "guards",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "guards"
+    },
+    {
+      "name": "lockouts",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lockouts"
+    },
+    {
+      "name": "over-travel stops",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "over-travel stops"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "linear plunger rod",
+      "parent": "graduated barrel",
+      "kind": "prismatic",
+      "axis_hint": "coaxial",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Plunger motion should be linear, coaxial, and bounded by stop geometry."
+    }
+  ],
+  "notes": []
+}

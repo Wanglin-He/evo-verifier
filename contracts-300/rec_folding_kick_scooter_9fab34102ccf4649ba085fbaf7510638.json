@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_folding_kick_scooter_9fab34102ccf4649ba085fbaf7510638",
+  "prompt": "A knee scooter mobility aid with a padded knee platform deck, two rear wheels on a rear axle revolute joint, two front wheels in a front fork on a steering revolute joint about a vertical axis, and a height-adjustable handlebar post extending on a prismatic joint from the front fork stem.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "padded knee platform deck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "padded knee platform deck"
+    },
+    {
+      "name": "rear wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two rear wheels"
+    },
+    {
+      "name": "front wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two front wheels"
+    },
+    {
+      "name": "front fork",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front fork"
+    },
+    {
+      "name": "height-adjustable handlebar post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "height-adjustable handlebar post"
+    },
+    {
+      "name": "front fork stem",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front fork stem"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rear wheels",
+      "parent": "rear axle",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear axle",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two rear wheels on a rear axle revolute joint"
+    },
+    {
+      "child": "front fork",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two front wheels in a front fork on a steering revolute joint about a vertical axis"
+    },
+    {
+      "child": "height-adjustable handlebar post",
+      "parent": "front fork stem",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "height-adjustable handlebar post extending on a prismatic joint from the front fork stem"
+    }
+  ],
+  "notes": []
+}

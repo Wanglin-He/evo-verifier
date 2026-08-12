@@ -1,0 +1,75 @@
+{
+  "version": "1",
+  "record_id": "rec_stationary_exercise_bike_541413c0121143a2bed6faede26e1fdc",
+  "prompt": "Build a precision professional Stationary exercise bike tuned for calibration and repeatable alignment. Use a bike frame with crank set, flywheel housing, saddle post, and bars with datum-friendly surfaces, index marks, adjustment features, and controlled gap language. Visual style can be minimal, but kinematics must be explicit. Crank and adjusters should be mounted on explicit bearing/clamp features. Keep a fully connected mechanical stack with no free-floating parts. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "bike frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bike frame"
+    },
+    {
+      "name": "crank set",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "crank set"
+    },
+    {
+      "name": "flywheel housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flywheel housing"
+    },
+    {
+      "name": "saddle post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "saddle post"
+    },
+    {
+      "name": "bars",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bars"
+    },
+    {
+      "name": "adjusters",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "adjusters"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "crank set",
+      "parent": "bike frame",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "bearing/clamp features",
+      "count": null,
+      "source": "explicit",
+      "confidence": 0.9,
+      "quote": "Crank and adjusters should be mounted on explicit bearing/clamp features."
+    },
+    {
+      "child": "saddle post",
+      "parent": "bike frame",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "notes": []
+}

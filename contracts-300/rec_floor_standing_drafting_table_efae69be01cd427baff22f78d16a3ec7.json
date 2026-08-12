@@ -1,0 +1,93 @@
+{
+  "version": "1",
+  "record_id": "rec_floor_standing_drafting_table_efae69be01cd427baff22f78d16a3ec7",
+  "prompt": "A teaching-room drafting table with a wide floor base, a center column, and a tilting board with a bottom tool tray, plus a shallow accessory drawer under the board. the board support remains visibly separate from the height-adjustment column, and the drawer is carried by short runners below the board frame. The board tilts on a horizontal hinge at the support head and the column slides prismatically for height adjustment, and the accessory drawer slides prismatically on its guide runners. Classroom drafting-table scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wide floor base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide floor base"
+    },
+    {
+      "name": "center column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center column"
+    },
+    {
+      "name": "tilting board",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilting board"
+    },
+    {
+      "name": "bottom tool tray",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bottom tool tray"
+    },
+    {
+      "name": "shallow accessory drawer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shallow accessory drawer"
+    },
+    {
+      "name": "board support",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "board support"
+    },
+    {
+      "name": "guide runners",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "guide runners"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "board",
+      "parent": "support head",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the support head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The board tilts on a horizontal hinge at the support head"
+    },
+    {
+      "child": "column",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "height adjustment",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the column slides prismatically for height adjustment"
+    },
+    {
+      "child": "accessory drawer",
+      "parent": "guide runners",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on its guide runners",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the accessory drawer slides prismatically on its guide runners"
+    }
+  ],
+  "notes": []
+}

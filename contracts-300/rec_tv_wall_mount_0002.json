@@ -1,0 +1,82 @@
+{
+  "version": "1",
+  "record_id": "rec_tv_wall_mount_0002",
+  "prompt": "Design a realistic, highly detailed TV wall mount as a standalone mechanical study assembly for the sdk_hybrid pipeline, with a wall-mounted support mechanism using a broad base plate, articulated arms, and a tilt frame, shown without any display attached. Fold, pan, and tilt should be carried by explicit knuckles, pivots, and bracket plates. Emphasize rigid brackets, exposed pivot hardware, removable access covers, and disciplined machined-or-fabricated hard-surface geometry, plus mounting slots, spring-assist housings, and cable-passage details. Keep it as a pure mechanical assembly with explicit joints, guides, bearings, brackets, and support structure. Avoid product styling, decorative housings, or recognizable household or device forms.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "broad base plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad base plate"
+    },
+    {
+      "name": "articulated arms",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "articulated arms"
+    },
+    {
+      "name": "tilt frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilt frame"
+    },
+    {
+      "name": "knuckles",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "knuckles"
+    },
+    {
+      "name": "bracket plates",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bracket plates"
+    },
+    {
+      "name": "removable access covers",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "removable access covers"
+    },
+    {
+      "name": "spring-assist housings",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spring-assist housings"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "articulated arms",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Fold, pan, and tilt should be carried by explicit knuckles, pivots, and bracket plates."
+    },
+    {
+      "child": "tilt frame",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Fold, pan, and tilt should be carried by explicit knuckles, pivots, and bracket plates."
+    }
+  ],
+  "notes": []
+}

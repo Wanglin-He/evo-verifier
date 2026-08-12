@@ -1,0 +1,97 @@
+{
+  "version": "1",
+  "record_id": "rec_rolling_toolbox_with_telescoping_handle_142154fd9b9044eeadad2e03184e1ee8",
+  "prompt": "A stackable rolling toolbox base with a large lower bin, a telescoping handle, and two side latches securing the lid, plus two side latch levers. the lid and body keep clear part breaks suitable for a rugged polymer tool box, and the latch levers bridge the lid and body seams as real parts. The handle slides prismatically on twin rear rails, the lid rotates on a rear hinge, the two side latches rotate on their own pivots, and the wheels spin continuously on their axle, and the side latches rotate on short pivots at the shell sides. Workshop storage scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "large lower bin",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large lower bin"
+    },
+    {
+      "name": "telescoping handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "telescoping handle"
+    },
+    {
+      "name": "side latches",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side latches"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid"
+    },
+    {
+      "name": "side latch levers",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side latch levers"
+    },
+    {
+      "name": "wheels",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wheels"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "handle",
+      "parent": "twin rear rails",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "twin rear rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The handle slides prismatically on twin rear rails"
+    },
+    {
+      "child": "lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the lid rotates on a rear hinge"
+    },
+    {
+      "child": "side latches",
+      "parent": "shell sides",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "short pivots at the shell sides",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the side latches rotate on short pivots at the shell sides"
+    },
+    {
+      "child": "wheels",
+      "parent": "axle",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on their axle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the wheels spin continuously on their axle"
+    }
+  ],
+  "notes": []
+}

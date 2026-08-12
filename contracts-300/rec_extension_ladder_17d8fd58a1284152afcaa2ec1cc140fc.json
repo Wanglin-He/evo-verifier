@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_extension_ladder_17d8fd58a1284152afcaa2ec1cc140fc",
+  "prompt": "A hook-over wall extension ladder with two rectangular steel rail stiles, a fly section extending on a prismatic joint through guide brackets on the base rails, and two wall-hook bracket arms each pivoting on a revolute hinge at the fly top stile ends to engage a wall ledge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular steel rail stiles",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two rectangular steel rail stiles"
+    },
+    {
+      "name": "fly section",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fly section"
+    },
+    {
+      "name": "guide brackets",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "guide brackets"
+    },
+    {
+      "name": "base rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base rails"
+    },
+    {
+      "name": "wall-hook bracket arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two wall-hook bracket arms"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "fly section",
+      "parent": "base rails",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "through guide brackets on the base rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fly section extending on a prismatic joint through guide brackets on the base rails"
+    },
+    {
+      "child": "wall-hook bracket arms",
+      "parent": "fly top stile ends",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the fly top stile ends",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two wall-hook bracket arms each pivoting on a revolute hinge at the fly top stile ends"
+    }
+  ],
+  "notes": []
+}

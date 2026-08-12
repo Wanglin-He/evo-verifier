@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_parabolic_dish_on_azimuth_elevation_mount_7f8512f01f3c4faf96101c5b596b1cf0",
+  "prompt": "A survey dish on a triangular base with a side tilt bracket. The reflector is fixed to a back frame carried between two side arms, and the side arms stand on a rotating center mast. The mast rotates on a vertical azimuth axis, and the back frame rotates on a horizontal elevation axis between the side arms.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "triangular base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "triangular base"
+    },
+    {
+      "name": "side tilt bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side tilt bracket"
+    },
+    {
+      "name": "reflector",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "reflector"
+    },
+    {
+      "name": "back frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "back frame"
+    },
+    {
+      "name": "side arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side arms"
+    },
+    {
+      "name": "center mast",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotating center mast"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "reflector",
+      "parent": "back frame",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The reflector is fixed to a back frame"
+    },
+    {
+      "child": "mast",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical azimuth axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The mast rotates on a vertical azimuth axis"
+    },
+    {
+      "child": "back frame",
+      "parent": "side arms",
+      "kind": "revolute",
+      "axis_hint": "horizontal elevation axis",
+      "location_hint": "between the side arms",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the back frame rotates on a horizontal elevation axis between the side arms"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_flatbed_scanner_with_hinged_lid_edc59f0132af459d93d64aa4c7327fdf",
+  "prompt": "An A3 wide-format flatbed scanner with a wide rectangular body and a lid hinged at the lid's rear edge. The lid opens on two revolute hinge knuckles at the rear. An internal scan head moves prismatically along the scan axis inside the body.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular body"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid"
+    },
+    {
+      "name": "hinge knuckles",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two revolute hinge knuckles"
+    },
+    {
+      "name": "internal scan head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "internal scan head"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the rear",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lid opens on two revolute hinge knuckles at the rear."
+    },
+    {
+      "child": "internal scan head",
+      "parent": "body",
+      "kind": "prismatic",
+      "axis_hint": "along the scan axis",
+      "location_hint": "inside the body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "An internal scan head moves prismatically along the scan axis inside the body."
+    }
+  ],
+  "notes": []
+}

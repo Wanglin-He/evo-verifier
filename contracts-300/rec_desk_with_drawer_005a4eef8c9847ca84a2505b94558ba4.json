@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_desk_with_drawer_005a4eef8c9847ca84a2505b94558ba4",
+  "prompt": "A narrow console desk with a slim top, one center drawer, and a hinged rear cable flap spanning the back edge. The drawer slides prismatically on short internal runners, and the cable flap rotates upward on a rear hinge line along the back of the top. Hallway desk scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "slim top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slim top"
+    },
+    {
+      "name": "center drawer",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one center drawer"
+    },
+    {
+      "name": "cable flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged rear cable flap"
+    },
+    {
+      "name": "short internal runners",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short internal runners"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drawer",
+      "parent": "short internal runners",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "internal",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drawer slides prismatically on short internal runners"
+    },
+    {
+      "child": "cable flap",
+      "parent": "top",
+      "kind": "revolute",
+      "axis_hint": "upward",
+      "location_hint": "along the back of the top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cable flap rotates upward on a rear hinge line along the back of the top"
+    }
+  ],
+  "notes": []
+}

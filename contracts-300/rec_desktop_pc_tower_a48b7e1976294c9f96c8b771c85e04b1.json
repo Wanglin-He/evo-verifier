@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_desktop_pc_tower_a48b7e1976294c9f96c8b771c85e04b1",
+  "prompt": "An extended ATX full-tower with a tall rectangular body, a hinged side panel, a swing-out drive cage, and a hinged top exhaust cover. The main side panel opens on revolute hinges at the panel's rear edge. The drive cage pivots on a revolute hinge inside the case. The top exhaust cover opens on a revolute hinge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "body"
+    },
+    {
+      "name": "main side panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main side panel"
+    },
+    {
+      "name": "drive cage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drive cage"
+    },
+    {
+      "name": "top exhaust cover",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top exhaust cover"
+    },
+    {
+      "name": "case",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "case"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "main side panel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the panel's rear edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The main side panel opens on revolute hinges at the panel's rear edge."
+    },
+    {
+      "child": "drive cage",
+      "parent": "case",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "inside the case",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The drive cage pivots on a revolute hinge inside the case."
+    },
+    {
+      "child": "top exhaust cover",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The top exhaust cover opens on a revolute hinge."
+    }
+  ],
+  "notes": []
+}

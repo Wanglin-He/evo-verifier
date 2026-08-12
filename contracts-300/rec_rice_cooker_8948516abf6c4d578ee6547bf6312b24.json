@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_rice_cooker_8948516abf6c4d578ee6547bf6312b24",
+  "prompt": "A simple rice cooker with a cylindrical body, a domed upper lid, and a small front control panel, plus a single cook-warm selector dial on the front. the body has a slightly inset lower band and a clear front latch zone, and the dial sits below the latch rather than floating in the shell. The lid rotates on a rear hinge at the rim, and the selector dial rotates continuously about its central axle. Small household appliance scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "cylindrical body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cylindrical body"
+    },
+    {
+      "name": "domed upper lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "domed upper lid"
+    },
+    {
+      "name": "small front control panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small front control panel"
+    },
+    {
+      "name": "cook-warm selector dial",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cook-warm selector dial"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear hinge at the rim",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lid rotates on a rear hinge at the rim"
+    },
+    {
+      "child": "selector dial",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "about its central axle",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the selector dial rotates continuously about its central axle"
+    }
+  ],
+  "notes": []
+}

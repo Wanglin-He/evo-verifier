@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_traditional_windmill_00b3e45fa2e04aeaa5fb363f96b2115e",
+  "prompt": "A traditional windmill with a rotating sail hub. A tower body supports a cap and a front hub carrying multiple lattice blades. Joints: the blade hub rotates continuously about the windmill shaft axis, and the cap rotates about the vertical tower axis. Use a low wide support with the rotating mass kept near the ground or mounting plane.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tower body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tower body"
+    },
+    {
+      "name": "cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cap"
+    },
+    {
+      "name": "blade hub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade hub"
+    },
+    {
+      "name": "lattice blades",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lattice blades"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "blade hub",
+      "parent": "cap",
+      "kind": "continuous",
+      "axis_hint": "windmill shaft axis",
+      "location_hint": "front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the blade hub rotates continuously about the windmill shaft axis"
+    },
+    {
+      "child": "cap",
+      "parent": "tower body",
+      "kind": "continuous",
+      "axis_hint": "vertical tower axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the cap rotates about the vertical tower axis"
+    }
+  ],
+  "notes": []
+}

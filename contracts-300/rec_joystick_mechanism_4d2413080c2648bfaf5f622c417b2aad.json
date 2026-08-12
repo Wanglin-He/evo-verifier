@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_joystick_mechanism_4d2413080c2648bfaf5f622c417b2aad",
+  "prompt": "A cardan-ring joystick mechanism. A grounded cup base supports an outer ring, an inner ring, and a rigid central stick fixed to the inner ring. The outer and inner rings create two orthogonal revolute joints about intersecting supported axes.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "grounded cup base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded cup base"
+    },
+    {
+      "name": "outer ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "outer ring"
+    },
+    {
+      "name": "inner ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner ring"
+    },
+    {
+      "name": "rigid central stick",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rigid central stick"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rigid central stick",
+      "parent": "inner ring",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rigid central stick fixed to the inner ring"
+    },
+    {
+      "child": "outer ring",
+      "parent": "grounded cup base",
+      "kind": "revolute",
+      "axis_hint": "orthogonal",
+      "location_hint": "intersecting supported axes",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The outer and inner rings create two orthogonal revolute joints about intersecting supported axes."
+    },
+    {
+      "child": "inner ring",
+      "parent": "outer ring",
+      "kind": "revolute",
+      "axis_hint": "orthogonal",
+      "location_hint": "intersecting supported axes",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The outer and inner rings create two orthogonal revolute joints about intersecting supported axes."
+    }
+  ],
+  "notes": []
+}

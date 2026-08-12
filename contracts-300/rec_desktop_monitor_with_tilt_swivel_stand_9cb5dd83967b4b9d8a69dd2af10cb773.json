@@ -1,0 +1,101 @@
+{
+  "version": "1",
+  "record_id": "rec_desktop_monitor_with_tilt_swivel_stand_9cb5dd83967b4b9d8a69dd2af10cb773",
+  "prompt": "A gaming monitor with a broad screen, a V-shaped base, and a stand that supports height, swivel, and portrait rotation. The display mounts to a rear stand head above the base, and a power button sits at the lower front edge. The center column slides prismatically for height adjustment, the stand swivels on a vertical axis at the base joint, the screen rotates on a horizontal tilt hinge at the stand head, the screen rotates on a portrait pivot behind the panel, and the power button moves on a short prismatic guide.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "screen",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "screen"
+    },
+    {
+      "name": "V-shaped base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "V-shaped base"
+    },
+    {
+      "name": "center column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center column"
+    },
+    {
+      "name": "stand head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stand head"
+    },
+    {
+      "name": "power button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "power button"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "center column",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center column slides prismatically for height adjustment"
+    },
+    {
+      "child": "stand",
+      "parent": "base",
+      "kind": "revolute",
+      "axis_hint": "vertical axis",
+      "location_hint": "at the base joint",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stand swivels on a vertical axis at the base joint"
+    },
+    {
+      "child": "screen",
+      "parent": "stand head",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the stand head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "screen rotates on a horizontal tilt hinge at the stand head"
+    },
+    {
+      "child": "screen",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "behind the panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "screen rotates on a portrait pivot behind the panel"
+    },
+    {
+      "child": "power button",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "power button moves on a short prismatic guide"
+    }
+  ],
+  "notes": []
+}

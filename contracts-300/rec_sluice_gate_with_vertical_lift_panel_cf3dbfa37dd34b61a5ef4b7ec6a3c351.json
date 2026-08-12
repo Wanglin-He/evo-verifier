@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_sluice_gate_with_vertical_lift_panel_cf3dbfa37dd34b61a5ef4b7ec6a3c351",
+  "prompt": "A water-control gate with a wide rectangular opening, a sliding steel panel held between side tracks, and a geared handwheel unit on the top bridge. The steel panel translates prismatically up and down in the tracks, the geared handwheel rotates continuously on its axle, and a narrow inspection flap on the gear housing rotates on a side hinge. Channel-side infrastructure scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "steel panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "steel panel"
+    },
+    {
+      "name": "tracks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tracks"
+    },
+    {
+      "name": "geared handwheel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "geared handwheel"
+    },
+    {
+      "name": "gear housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "gear housing"
+    },
+    {
+      "name": "narrow inspection flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "narrow inspection flap"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "steel panel",
+      "parent": "tracks",
+      "kind": "prismatic",
+      "axis_hint": "up and down",
+      "location_hint": "in the tracks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The steel panel translates prismatically up and down in the tracks"
+    },
+    {
+      "child": "geared handwheel",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "on its axle",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "geared handwheel rotates continuously on its axle"
+    },
+    {
+      "child": "narrow inspection flap",
+      "parent": "gear housing",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on a side hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "narrow inspection flap on the gear housing rotates on a side hinge"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_desktop_monitor_with_tilt_swivel_stand_e8e81ca1ac454e92b6947abb1b453b51",
+  "prompt": "A curved gaming monitor with a wide display shell, a split rear yoke, and a tripod-style base, plus a power rocker and three menu buttons at the underside of the bezel. the yoke arms visibly carry the screen rather than hiding the support inside the shell, and the rocker and buttons stay distinct from one another. The display tilts on a horizontal revolute joint between the yoke arms and the whole stand swivels continuously about a vertical axis where the yoke meets the base, and the power rocker rotates on a short local pivot and the menu buttons depress independently. Gaming-desk scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "display shell",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide display shell"
+    },
+    {
+      "name": "split rear yoke",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "split rear yoke"
+    },
+    {
+      "name": "tripod-style base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tripod-style base"
+    },
+    {
+      "name": "power rocker",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "power rocker"
+    },
+    {
+      "name": "menu buttons",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three menu buttons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "display",
+      "parent": "yoke arms",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "between the yoke arms",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The display tilts on a horizontal revolute joint between the yoke arms"
+    },
+    {
+      "child": "whole stand",
+      "parent": "base",
+      "kind": "continuous",
+      "axis_hint": "vertical",
+      "location_hint": "where the yoke meets the base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the whole stand swivels continuously about a vertical axis where the yoke meets the base"
+    },
+    {
+      "child": "power rocker",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "short local pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the power rocker rotates on a short local pivot"
+    },
+    {
+      "child": "menu buttons",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the menu buttons depress independently"
+    }
+  ],
+  "notes": []
+}

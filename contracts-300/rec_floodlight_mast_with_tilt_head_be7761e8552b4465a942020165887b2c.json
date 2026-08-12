@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_floodlight_mast_with_tilt_head_be7761e8552b4465a942020165887b2c",
+  "prompt": "A stadium floodlight mast with a tall fixed column and a pan-and-tilt head carrying a wide rectangular lamp array. The lamp array tilts on a horizontal revolute joint at the sides of the pan bracket; the pan bracket rotates continuously on a vertical joint at the column top; a safety lockout arm on the pan bracket side pivots on a revolute hinge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall fixed column"
+    },
+    {
+      "name": "lamp array",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular lamp array"
+    },
+    {
+      "name": "pan bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pan bracket"
+    },
+    {
+      "name": "safety lockout arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "safety lockout arm"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lamp array",
+      "parent": "pan bracket",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the sides of the pan bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lamp array tilts on a horizontal revolute joint at the sides of the pan bracket"
+    },
+    {
+      "child": "pan bracket",
+      "parent": "column",
+      "kind": "continuous",
+      "axis_hint": "vertical",
+      "location_hint": "at the column top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the pan bracket rotates continuously on a vertical joint at the column top"
+    },
+    {
+      "child": "safety lockout arm",
+      "parent": "pan bracket",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on the pan bracket side",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a safety lockout arm on the pan bracket side pivots on a revolute hinge"
+    }
+  ],
+  "notes": []
+}

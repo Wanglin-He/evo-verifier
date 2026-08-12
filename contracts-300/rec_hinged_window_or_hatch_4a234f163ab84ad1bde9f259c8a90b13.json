@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_hinged_window_or_hatch_4a234f163ab84ad1bde9f259c8a90b13",
+  "prompt": "A realistic, highly detailed hinged window or hatch with a sturdy frame, clear panel or solid panel construction, and believable mounting hardware. The opening motion articulates naturally, and the assembly should feel like a real architectural or vehicle component with proper support.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "frame"
+    },
+    {
+      "name": "panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "panel"
+    },
+    {
+      "name": "mounting hardware",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "mounting hardware"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "panel",
+      "parent": "frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged window or hatch with a sturdy frame"
+    }
+  ],
+  "notes": []
+}

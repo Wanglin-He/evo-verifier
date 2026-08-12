@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_louvered_shutter_assembly_1e0fd6a81fab445ca693a6892585c319",
+  "prompt": "A broad plantation shutter with two side-by-side louver banks in one panel. The single framed door hangs on one side of the opening, and two parallel banks of louvers fill the opening between the stiles. The panel rotates on a vertical hinge axis at the frame, and the louvers in both banks rotate on their long-axis pivots.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "panel",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one panel"
+    },
+    {
+      "name": "louvers",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "louvers in both banks"
+    },
+    {
+      "name": "frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "at the frame"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "panel",
+      "parent": "frame",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at the frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The panel rotates on a vertical hinge axis at the frame"
+    },
+    {
+      "child": "louvers",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "long-axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "louvers in both banks rotate on their long-axis pivots"
+    }
+  ],
+  "notes": []
+}

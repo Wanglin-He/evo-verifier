@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_stove_top_0005",
+  "prompt": "A flat stainless gas cooktop with four burners mounted into a countertop over a simple two-door base cabinet. The top remains shallow with no stove chassis below, while four rotary knobs form a gentle arc along the front edge and the cabinet has two side-hinged doors below. The four knobs rotate continuously about front-to-back revolute axes, and the two cabinet doors swing on vertical revolute hinges.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "burners",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four burners"
+    },
+    {
+      "name": "rotary knobs",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four rotary knobs"
+    },
+    {
+      "name": "cabinet doors",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two cabinet doors"
+    },
+    {
+      "name": "base cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base cabinet"
+    },
+    {
+      "name": "countertop",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "countertop"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "knobs",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "front-to-back",
+      "location_hint": "along the front edge",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four knobs rotate continuously about front-to-back revolute axes"
+    },
+    {
+      "child": "cabinet doors",
+      "parent": "cabinet",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "side-hinged",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two cabinet doors swing on vertical revolute hinges"
+    }
+  ],
+  "notes": []
+}

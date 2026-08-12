@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_drawer_cabinet_with_sliding_drawers_ab198bb7cf874fe78324067ad88f39bf",
+  "prompt": "A modular stacking single-drawer storage unit with a rectangular body and one wide pull-out drawer. The drawer slides prismatically on guide rails. The unit stacks on identical units via peg-and-socket fixed joints.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular body"
+    },
+    {
+      "name": "drawer",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one wide pull-out drawer"
+    },
+    {
+      "name": "guide rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "guide rails"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drawer",
+      "parent": "guide rails",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "guide rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The drawer slides prismatically on guide rails."
+    },
+    {
+      "child": "unit",
+      "parent": "identical units",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "peg-and-socket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The unit stacks on identical units via peg-and-socket fixed joints."
+    }
+  ],
+  "notes": []
+}

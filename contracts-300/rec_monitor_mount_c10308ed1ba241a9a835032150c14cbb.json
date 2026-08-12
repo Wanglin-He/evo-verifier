@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_monitor_mount_c10308ed1ba241a9a835032150c14cbb",
+  "prompt": "A pole-mounted monitor support with articulated head. A fixed mast clamp carries a first arm, a second arm, and a compact monitor plate, with the head hardware kept clearly smaller than the arm links. The arm has two serial revolute joints, plus a head swivel revolute and a head tilt revolute.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "fixed mast clamp",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed mast clamp"
+    },
+    {
+      "name": "first arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "first arm"
+    },
+    {
+      "name": "second arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "second arm"
+    },
+    {
+      "name": "compact monitor plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact monitor plate"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "arm",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two serial revolute joints"
+    },
+    {
+      "child": "head",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "swivel",
+      "location_hint": "head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "head swivel revolute"
+    },
+    {
+      "child": "head",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "tilt",
+      "location_hint": "head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "head tilt revolute"
+    }
+  ],
+  "notes": []
+}

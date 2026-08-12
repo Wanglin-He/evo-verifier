@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_single_revolute_hinge_6c6ea65bf4b54f5cb8735c5cd4d4c57d",
+  "prompt": "An offset inspection hatch hinge with a short mounting leaf, a taller moving leaf, and a spacer-like barrel that keeps the leaves apart. The hinge geometry should clearly show how the moving leaf sweeps around the pin. The assembly uses one revolute joint about the hinge barrel axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "short mounting leaf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short mounting leaf"
+    },
+    {
+      "name": "taller moving leaf",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "taller moving leaf"
+    },
+    {
+      "name": "spacer-like barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spacer-like barrel"
+    },
+    {
+      "name": "pin",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pin"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "moving leaf",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "about the hinge barrel axis",
+      "location_hint": "",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The assembly uses one revolute joint about the hinge barrel axis."
+    }
+  ],
+  "notes": []
+}

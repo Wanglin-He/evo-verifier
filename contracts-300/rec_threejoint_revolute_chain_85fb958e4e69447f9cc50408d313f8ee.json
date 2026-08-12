@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_threejoint_revolute_chain_85fb958e4e69447f9cc50408d313f8ee",
+  "prompt": "A wall-mounted inspection arm with a grounded base plate, three rigid links, and a small square pad at the end. The link lengths should vary enough to give the arm a clear shoulder, elbow, and wrist silhouette. The three articulations are revolute joints about parallel hinge axes in one plane.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base plate",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded base plate"
+    },
+    {
+      "name": "rigid links",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three rigid links"
+    },
+    {
+      "name": "pad",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small square pad"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rigid links",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "parallel hinge axes in one plane",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three articulations are revolute joints about parallel hinge axes in one plane"
+    }
+  ],
+  "notes": []
+}

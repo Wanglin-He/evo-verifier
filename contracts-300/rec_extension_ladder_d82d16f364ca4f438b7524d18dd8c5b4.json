@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_extension_ladder_d82d16f364ca4f438b7524d18dd8c5b4",
+  "prompt": "A utility extension ladder with two sliding sections and a fold-down rung lock cover near the midsection. The upper section slides prismatically within the lower rails, and the rung lock cover rotates on a short hinge above the lock mechanism. Service ladder scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "sliding section",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two sliding sections"
+    },
+    {
+      "name": "upper section",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper section"
+    },
+    {
+      "name": "lower rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower rails"
+    },
+    {
+      "name": "rung lock cover",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rung lock cover"
+    },
+    {
+      "name": "lock mechanism",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lock mechanism"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "upper section",
+      "parent": "lower rails",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper section slides prismatically within the lower rails"
+    },
+    {
+      "child": "rung lock cover",
+      "parent": "lock mechanism",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "above the lock mechanism",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rung lock cover rotates on a short hinge above the lock mechanism"
+    }
+  ],
+  "notes": []
+}

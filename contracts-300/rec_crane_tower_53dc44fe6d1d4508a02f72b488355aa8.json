@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_crane_tower_53dc44fe6d1d4508a02f72b488355aa8",
+  "prompt": "A derrick mast crane with a round central vertical mast, a single diagonal boom, and a slewing base ring. The boom pivots on a revolute luff joint at the mast top about a horizontal axis. The slewing assembly rotates continuously on a revolute slew bearing at the base.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "mast",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round central vertical mast"
+    },
+    {
+      "name": "boom",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "single diagonal boom"
+    },
+    {
+      "name": "slewing base ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slewing base ring"
+    },
+    {
+      "name": "slewing assembly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slewing assembly"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "boom",
+      "parent": "mast",
+      "kind": "revolute",
+      "axis_hint": "horizontal axis",
+      "location_hint": "at the mast top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The boom pivots on a revolute luff joint at the mast top about a horizontal axis."
+    },
+    {
+      "child": "slewing assembly",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "at the base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The slewing assembly rotates continuously on a revolute slew bearing at the base."
+    }
+  ],
+  "notes": []
+}

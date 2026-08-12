@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_dualrail_gantry_axis_6936c336fe6c48f8bf92eb19b260f003",
+  "prompt": "A dual-rail gantry axis. Two parallel grounded base rails support a bridge carriage, and a smaller truck rides across that bridge on its own guide path. The bridge is one prismatic joint along the base rails, and the truck is a second prismatic joint along the crossbeam.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base rails",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two parallel grounded base rails"
+    },
+    {
+      "name": "bridge carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bridge carriage"
+    },
+    {
+      "name": "truck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "smaller truck"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "bridge",
+      "parent": "base rails",
+      "kind": "prismatic",
+      "axis_hint": "along the base rails",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The bridge is one prismatic joint along the base rails"
+    },
+    {
+      "child": "truck",
+      "parent": "crossbeam",
+      "kind": "prismatic",
+      "axis_hint": "along the crossbeam",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the truck is a second prismatic joint along the crossbeam"
+    }
+  ],
+  "notes": []
+}

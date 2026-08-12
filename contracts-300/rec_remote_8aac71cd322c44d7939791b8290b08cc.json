@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_remote_8aac71cd322c44d7939791b8290b08cc",
+  "prompt": "A trackball desktop controller with a wide rectangular housing and a large spherical trackball in a circular socket on the top face. The trackball rotates continuously about a horizontal axis in its socket. A scroll wheel on the side face rotates continuously about a horizontal axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular housing"
+    },
+    {
+      "name": "trackball",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large spherical trackball"
+    },
+    {
+      "name": "scroll wheel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "scroll wheel"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "trackball",
+      "parent": "socket",
+      "kind": "continuous",
+      "axis_hint": "horizontal axis",
+      "location_hint": "in its socket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The trackball rotates continuously about a horizontal axis in its socket."
+    },
+    {
+      "child": "scroll wheel",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "horizontal axis",
+      "location_hint": "on the side face",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A scroll wheel on the side face rotates continuously about a horizontal axis."
+    }
+  ],
+  "notes": []
+}

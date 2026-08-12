@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_kick_scooter_0ae02eeffd0a45249a0cf934ff7680a3",
+  "prompt": "An off-road kick scooter with large pneumatic wheels and a front fork. The long deck is fixed between a steerable front fork and a rear wheel swing bracket, with a small side stand near the center. The front fork yaws on a vertical steering axis, the two wheels spin on their axles, and the side stand rotates on its hinge under the deck.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two wheels"
+    },
+    {
+      "name": "front fork",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front fork"
+    },
+    {
+      "name": "deck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "long deck"
+    },
+    {
+      "name": "rear wheel swing bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear wheel swing bracket"
+    },
+    {
+      "name": "side stand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small side stand"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front fork",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "steering axis",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The front fork yaws on a vertical steering axis"
+    },
+    {
+      "child": "wheels",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "on their axles",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the two wheels spin on their axles"
+    },
+    {
+      "child": "side stand",
+      "parent": "deck",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "under the deck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the side stand rotates on its hinge under the deck"
+    }
+  ],
+  "notes": []
+}

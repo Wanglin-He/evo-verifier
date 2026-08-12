@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_toy_car_02be9890023a4e7f9b4116f3da82848f",
+  "prompt": "A toy off-road buggy with a faceted body shell, a roof bar, open wheel arches, and four chunky wheels. The four wheels rotate continuously on their axles, and the two side half-doors rotate on vertical hinges at the front edges of the openings.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body shell",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "faceted body shell"
+    },
+    {
+      "name": "roof bar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "roof bar"
+    },
+    {
+      "name": "wheels",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four chunky wheels"
+    },
+    {
+      "name": "side half-doors",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side half-doors"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wheels",
+      "parent": "axles",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on their axles",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four wheels rotate continuously on their axles"
+    },
+    {
+      "child": "side half-doors",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at the front edges of the openings",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side half-doors rotate on vertical hinges at the front edges of the openings"
+    }
+  ],
+  "notes": []
+}

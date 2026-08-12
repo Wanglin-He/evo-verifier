@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_gear_assemblies_0ab342c2068446c49edc6b63a1fec3e1",
+  "prompt": "A right-angle transfer gearbox with a vertical input shaft carrying a bevel gear, a horizontal layshaft, and a second horizontal output shaft carrying a spur pair. The housing can be partly open so the bevel mesh and the spur mesh are both visible. Each supported shaft is its own revolute joint on its bearing axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "vertical input shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vertical input shaft"
+    },
+    {
+      "name": "bevel gear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bevel gear"
+    },
+    {
+      "name": "horizontal layshaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "horizontal layshaft"
+    },
+    {
+      "name": "second horizontal output shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "second horizontal output shaft"
+    },
+    {
+      "name": "spur pair",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spur pair"
+    },
+    {
+      "name": "housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "housing"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "vertical input shaft",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "bearing axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each supported shaft is its own revolute joint on its bearing axis."
+    },
+    {
+      "child": "horizontal layshaft",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "bearing axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each supported shaft is its own revolute joint on its bearing axis."
+    },
+    {
+      "child": "second horizontal output shaft",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "bearing axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each supported shaft is its own revolute joint on its bearing axis."
+    }
+  ],
+  "notes": []
+}

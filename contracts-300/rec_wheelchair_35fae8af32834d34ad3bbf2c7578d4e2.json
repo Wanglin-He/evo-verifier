@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_wheelchair_35fae8af32834d34ad3bbf2c7578d4e2",
+  "prompt": "A realistic, highly detailed Wheelchair in a rugged utility variant, with a rigid or foldable chair frame, large rear drive wheels, front casters, and footrest supports. Add thicker sections, reinforced joints, exposed fasteners, and durable painted or molded material cues suited to heavy use. folding, rolling, or stance-changing features should move through believable hinges, axles, and brace points. Keep the object practical, serviceable, and mechanically legible.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "chair frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "chair frame"
+    },
+    {
+      "name": "large rear drive wheels",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large rear drive wheels"
+    },
+    {
+      "name": "front casters",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front casters"
+    },
+    {
+      "name": "footrest supports",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "footrest supports"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "large rear drive wheels",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "axles",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large rear drive wheels"
+    },
+    {
+      "child": "front casters",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front casters"
+    },
+    {
+      "child": "chair frame",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "hinges",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "foldable chair frame"
+    }
+  ],
+  "notes": []
+}

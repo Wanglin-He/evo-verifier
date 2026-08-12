@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_desk_with_drawer_e1b8a6092e814d0dac234259530b04a1",
+  "prompt": "A pedestal writing desk with a wide rectangular top, three left-pedestal drawers on prismatic guide rails stacked vertically with recessed oval pull handles, and three right-pedestal drawers of graduated depth each on prismatic guide rails.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wide rectangular top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular top"
+    },
+    {
+      "name": "left-pedestal drawers",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three left-pedestal drawers"
+    },
+    {
+      "name": "recessed oval pull handles",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "recessed oval pull handles"
+    },
+    {
+      "name": "right-pedestal drawers",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three right-pedestal drawers"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "left-pedestal drawers",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "stacked vertically",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three left-pedestal drawers on prismatic guide rails stacked vertically"
+    },
+    {
+      "child": "right-pedestal drawers",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three right-pedestal drawers of graduated depth each on prismatic guide rails"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_swivel_bar_stool_f4fe2d5bfd374b929d470fab67fcc788",
+  "prompt": "A pedestal swivel bar stool with a round base, a central post, and a circular seat. The seat rotates continuously about the vertical pedestal axis. Bar seating scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "round base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round base"
+    },
+    {
+      "name": "central post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central post"
+    },
+    {
+      "name": "circular seat",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular seat"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "seat",
+      "parent": "central post",
+      "kind": "continuous",
+      "axis_hint": "vertical pedestal axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The seat rotates continuously about the vertical pedestal axis."
+    }
+  ],
+  "notes": []
+}

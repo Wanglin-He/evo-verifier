@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "record_id": "rec_stick_vacuum_with_folding_joint_b3622f1e140a4e2bbe710b59f55e8d52",
+  "prompt": "Generate a compact apartment/desktop version of Stick vacuum with folding joint. Keep footprint and envelope efficient while preserving full functional articulation from a slim vacuum body with folding wand joint and floor head. Emphasize fold-flat or stow-friendly behavior where relevant, plus safe clearances around moving parts. Fold joint and nozzle articulation should be pinned and bracketed. Ensure a single coherent assembly graph with zero floaters. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "slim vacuum body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slim vacuum body"
+    },
+    {
+      "name": "floor head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "floor head"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "folding wand joint",
+      "parent": "slim vacuum body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "folding wand joint"
+    },
+    {
+      "child": "floor head",
+      "parent": "slim vacuum body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "nozzle articulation"
+    }
+  ],
+  "notes": []
+}

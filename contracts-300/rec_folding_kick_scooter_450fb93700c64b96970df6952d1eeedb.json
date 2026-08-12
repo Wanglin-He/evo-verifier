@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_folding_kick_scooter_450fb93700c64b96970df6952d1eeedb",
+  "prompt": "A stunt scooter with a clamp-hinge fold at the neck on a revolute joint, a wide deck, and front and rear wheels on fork and axle revolute joints.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "neck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "neck"
+    },
+    {
+      "name": "deck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "deck"
+    },
+    {
+      "name": "front and rear wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front and rear wheels"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "neck",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the neck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "clamp-hinge fold at the neck on a revolute joint"
+    },
+    {
+      "child": "front and rear wheels",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "fork and axle",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front and rear wheels on fork and axle revolute joints"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_simple_ironing_board_0c59eca7dcc44990a857d1bbc8f42082",
+  "prompt": "An ironing board with a folding leg trestle. A board top mounts on a base bracket, with one U-shaped leg frame under the middle and a small fixed rest at one end. Joints: the main leg frame folds on a horizontal revolute axis under the board. Add one fixed lower brace, tray, or rest feature that does not introduce a new moving loop.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "board top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "board top"
+    },
+    {
+      "name": "base bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base bracket"
+    },
+    {
+      "name": "U-shaped leg frame",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one U-shaped leg frame"
+    },
+    {
+      "name": "small fixed rest",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a small fixed rest"
+    },
+    {
+      "name": "fixed lower brace, tray, or rest feature",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one fixed lower brace, tray, or rest feature"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "main leg frame",
+      "parent": "board",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "under the board",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the main leg frame folds on a horizontal revolute axis under the board"
+    },
+    {
+      "child": "small fixed rest",
+      "parent": "",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "at one end",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a small fixed rest at one end"
+    }
+  ],
+  "notes": []
+}

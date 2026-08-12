@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_pet_door_flap_1693957a58a54981a2599a6d29d61717",
+  "prompt": "A cat flap assembly with a rectangular frame, a rigid swinging flap, and a four-way selector dial. The flap hangs from the top edge inside the frame hood, and the selector dial is mounted at the lower corner of the frame. The flap rotates on a horizontal upper hinge axis, and the selector dial rotates on its own local axis in the frame. Keep the rigid flap clipped under the top hinge hood so the panel stays attached while swinging through the opening.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular frame"
+    },
+    {
+      "name": "flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rigid swinging flap"
+    },
+    {
+      "name": "selector dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four-way selector dial"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "flap",
+      "parent": "frame",
+      "kind": "revolute",
+      "axis_hint": "horizontal upper hinge axis",
+      "location_hint": "top edge inside the frame hood",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The flap rotates on a horizontal upper hinge axis"
+    },
+    {
+      "child": "selector dial",
+      "parent": "frame",
+      "kind": "revolute",
+      "axis_hint": "local axis",
+      "location_hint": "lower corner of the frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the selector dial rotates on its own local axis in the frame"
+    }
+  ],
+  "notes": []
+}

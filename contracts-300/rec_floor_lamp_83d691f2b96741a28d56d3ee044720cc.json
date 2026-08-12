@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_floor_lamp_83d691f2b96741a28d56d3ee044720cc",
+  "prompt": "A tree floor lamp with a weighted base, a vertical post, and four hinged branch arms with small cone shades. The four branch arms rotate independently on hinges around the post, and the cone shades tilt independently on hinges at the arm tips. Accent floor-light scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "weighted base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "weighted base"
+    },
+    {
+      "name": "vertical post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vertical post"
+    },
+    {
+      "name": "branch arms",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four hinged branch arms"
+    },
+    {
+      "name": "cone shades",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small cone shades"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "branch arms",
+      "parent": "post",
+      "kind": "revolute",
+      "axis_hint": "around the post",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The four branch arms rotate independently on hinges around the post"
+    },
+    {
+      "child": "cone shades",
+      "parent": "arm tips",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the arm tips",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cone shades tilt independently on hinges at the arm tips"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_coaxial_rotary_stack_77213109f65e4e73b23d2100fd02e6b6",
+  "prompt": "A collared coaxial rotary head. A grounded base cup supports stacked circular stages separated by visible collars, with the top stage ending in a plain tooling face. The stacked stages are separate revolute joints about the shared centerline.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base cup",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base cup"
+    },
+    {
+      "name": "stacked circular stages",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stacked circular stages"
+    },
+    {
+      "name": "collars",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "collars"
+    },
+    {
+      "name": "tooling face",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tooling face"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "stacked circular stages",
+      "parent": "base cup",
+      "kind": "revolute",
+      "axis_hint": "about the shared centerline",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The stacked stages are separate revolute joints about the shared centerline."
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_joystick_mechanism_e1340223e0e74a7f8ad40f637f756279",
+  "prompt": "An under-slung joystick assembly. A top support bracket carries an outer yoke and an inner yoke below it, with the stick projecting downward from the innermost member. Two orthogonal revolute joints support the stick through the nested yokes.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "top support bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top support bracket"
+    },
+    {
+      "name": "outer yoke",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "outer yoke"
+    },
+    {
+      "name": "inner yoke",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner yoke"
+    },
+    {
+      "name": "stick",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "stick"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "outer yoke",
+      "parent": "top support bracket",
+      "kind": "revolute",
+      "axis_hint": "orthogonal",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two orthogonal revolute joints support the stick through the nested yokes."
+    },
+    {
+      "child": "inner yoke",
+      "parent": "outer yoke",
+      "kind": "revolute",
+      "axis_hint": "orthogonal",
+      "location_hint": "below it",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Two orthogonal revolute joints support the stick through the nested yokes."
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_floor_lamp_55718f20f72b4f4498441a39149b37d3",
+  "prompt": "A realistic, highly detailed floor lamp with a weighted base, a tall upright stem, an articulated or adjustable lamp head, and a believable residential lighting-fixture appearance. The head adjustment articulates naturally, and the object should feel like a real manufactured lamp with grounded proportions, stable support, and refined hard-surface construction.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "weighted base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "weighted base"
+    },
+    {
+      "name": "tall upright stem",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall upright stem"
+    },
+    {
+      "name": "lamp head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lamp head"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lamp head",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "articulated or adjustable lamp head"
+    }
+  ],
+  "notes": []
+}

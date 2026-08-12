@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_missile_launcher_91c8ac060ad846448a2f80737cd3f3d4",
+  "prompt": "A truck-bed style missile launcher module without the vehicle. A rectangular base frame carries a slewing ring and an elevation arm that supports a bank of cylindrical launch tubes. The base rotates on a vertical revolute axis for azimuth, and the tube bank elevates on a transverse revolute axis where the arm meets the cradle.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular base frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular base frame"
+    },
+    {
+      "name": "slewing ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slewing ring"
+    },
+    {
+      "name": "elevation arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "elevation arm"
+    },
+    {
+      "name": "bank of cylindrical launch tubes",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bank of cylindrical launch tubes"
+    },
+    {
+      "name": "cradle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cradle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "base",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The base rotates on a vertical revolute axis for azimuth"
+    },
+    {
+      "child": "tube bank",
+      "parent": "cradle",
+      "kind": "revolute",
+      "axis_hint": "transverse",
+      "location_hint": "where the arm meets the cradle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the tube bank elevates on a transverse revolute axis where the arm meets the cradle"
+    }
+  ],
+  "notes": []
+}

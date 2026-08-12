@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_prismaticrevoluterevolute_chain_0056a5bf8de84f7bb87f75b397f6bcb9",
+  "prompt": "A compact service carriage with elbow linkage. A grounded guide supports one moving carriage that carries a shoulder link and a shorter outer link. The carriage is prismatic, then shoulder and elbow provide two revolute joints.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "grounded guide",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded guide"
+    },
+    {
+      "name": "moving carriage",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one moving carriage"
+    },
+    {
+      "name": "shoulder link",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a shoulder link"
+    },
+    {
+      "name": "shorter outer link",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a shorter outer link"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "moving carriage",
+      "parent": "grounded guide",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The carriage is prismatic"
+    },
+    {
+      "child": "shoulder link",
+      "parent": "moving carriage",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shoulder and elbow provide two revolute joints"
+    },
+    {
+      "child": "shorter outer link",
+      "parent": "shoulder link",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shoulder and elbow provide two revolute joints"
+    }
+  ],
+  "notes": []
+}

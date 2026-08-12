@@ -1,0 +1,97 @@
+{
+  "version": "1",
+  "record_id": "rec_knee_scooter_1bfb55a23549483abe7babf708aee734",
+  "prompt": "A medical knee scooter with an adjustable knee pad post and a telescoping handlebar stem. The main frame carries two rear wheels on fixed supports and a front steering fork with two small wheels, while the knee pad column and handle stem both slide in height sleeves. The front fork yaws about the steering axis, all four wheels spin on their axles, the knee pad post slides prismatically in its support tube, and the handle stem slides prismatically in its steering column sleeve. Keep the adjustable knee-pad post clipped inside its height sleeve so the pad stays captured during vertical adjustment.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "main frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "main frame"
+    },
+    {
+      "name": "rear wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two rear wheels"
+    },
+    {
+      "name": "front steering fork",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front steering fork"
+    },
+    {
+      "name": "small wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two small wheels"
+    },
+    {
+      "name": "adjustable knee pad post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "adjustable knee pad post"
+    },
+    {
+      "name": "telescoping handlebar stem",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "telescoping handlebar stem"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front fork",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "steering axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The front fork yaws about the steering axis"
+    },
+    {
+      "child": "four wheels",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "axles",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "all four wheels spin on their axles"
+    },
+    {
+      "child": "knee pad post",
+      "parent": "support tube",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the knee pad post slides prismatically in its support tube"
+    },
+    {
+      "child": "handle stem",
+      "parent": "steering column sleeve",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the handle stem slides prismatically in its steering column sleeve"
+    }
+  ],
+  "notes": []
+}

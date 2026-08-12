@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_retractable_utility_knife_e76029f35d794b7297fa43225328e88b",
+  "prompt": "A broad utility knife with a side-mounted blade lock lever. The straight handle surrounds the sliding blade track and carries a short lever near the center. The blade carriage slides prismatically along the handle axis, and the blade lock lever rotates on a small side pivot.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "straight handle"
+    },
+    {
+      "name": "blade carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade carriage"
+    },
+    {
+      "name": "blade lock lever",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade lock lever"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "blade carriage",
+      "parent": "handle",
+      "kind": "prismatic",
+      "axis_hint": "along the handle axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade carriage slides prismatically along the handle axis"
+    },
+    {
+      "child": "blade lock lever",
+      "parent": "handle",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on a small side pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade lock lever rotates on a small side pivot"
+    }
+  ],
+  "notes": []
+}

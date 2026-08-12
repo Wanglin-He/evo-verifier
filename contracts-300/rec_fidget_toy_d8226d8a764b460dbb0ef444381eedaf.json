@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_fidget_toy_d8226d8a764b460dbb0ef444381eedaf",
+  "prompt": "A gyro fidget ring with a wide outer ring, an inner gimbal ring on two diametrically opposed revolute axle pins inside the outer ring, and a spinning weighted disc on two perpendicular revolute axle pins inside the gimbal ring.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wide outer ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide outer ring"
+    },
+    {
+      "name": "inner gimbal ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner gimbal ring"
+    },
+    {
+      "name": "spinning weighted disc",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spinning weighted disc"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "inner gimbal ring",
+      "parent": "outer ring",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "inside the outer ring",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner gimbal ring on two diametrically opposed revolute axle pins inside the outer ring"
+    },
+    {
+      "child": "spinning weighted disc",
+      "parent": "gimbal ring",
+      "kind": "revolute",
+      "axis_hint": "perpendicular",
+      "location_hint": "inside the gimbal ring",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spinning weighted disc on two perpendicular revolute axle pins inside the gimbal ring"
+    }
+  ],
+  "notes": []
+}

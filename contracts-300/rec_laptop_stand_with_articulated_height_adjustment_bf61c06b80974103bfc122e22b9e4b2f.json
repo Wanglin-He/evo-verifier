@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_laptop_stand_with_articulated_height_adjustment_bf61c06b80974103bfc122e22b9e4b2f",
+  "prompt": "A workstation laptop stand with a rectangular base, two short telescoping rear posts, and a single rigid tray spanning between the post tops. The two rear posts are matched counterpart supports for the same tray and remain aligned across its width. Both posts slide prismatically along vertical axes, and the tray rotates on a shared horizontal hinge line at the post heads.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular base"
+    },
+    {
+      "name": "rear posts",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two short telescoping rear posts"
+    },
+    {
+      "name": "tray",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a single rigid tray"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rear posts",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "vertical axes",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Both posts slide prismatically along vertical axes"
+    },
+    {
+      "child": "tray",
+      "parent": "post heads",
+      "kind": "revolute",
+      "axis_hint": "horizontal hinge line",
+      "location_hint": "at the post heads",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the tray rotates on a shared horizontal hinge line at the post heads"
+    }
+  ],
+  "notes": []
+}

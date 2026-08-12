@@ -1,0 +1,83 @@
+{
+  "version": "1",
+  "record_id": "rec_easel_2b99fdd3d854447985b2bb6b6736cfa0",
+  "prompt": "A studio painting tripod easel with two long front legs joined at the top on a revolute hinge, a spreading rear leg on a revolute hinge at the front leg junction, a canvas rest mast crossbar sliding on a prismatic slot between the front legs, and a top locking clip bar on a second prismatic slot above the rest.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "front legs",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two long front legs"
+    },
+    {
+      "name": "rear leg",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spreading rear leg"
+    },
+    {
+      "name": "canvas rest mast crossbar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "canvas rest mast crossbar"
+    },
+    {
+      "name": "top locking clip bar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top locking clip bar"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front legs",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two long front legs joined at the top on a revolute hinge"
+    },
+    {
+      "child": "rear leg",
+      "parent": "front leg junction",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the front leg junction",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a spreading rear leg on a revolute hinge at the front leg junction"
+    },
+    {
+      "child": "canvas rest mast crossbar",
+      "parent": "front legs",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "between the front legs",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a canvas rest mast crossbar sliding on a prismatic slot between the front legs"
+    },
+    {
+      "child": "top locking clip bar",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "above the rest",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a top locking clip bar on a second prismatic slot above the rest"
+    }
+  ],
+  "notes": []
+}

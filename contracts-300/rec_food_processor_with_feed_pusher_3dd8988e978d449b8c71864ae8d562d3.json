@@ -1,0 +1,126 @@
+{
+  "version": "1",
+  "record_id": "rec_food_processor_with_feed_pusher_3dd8988e978d449b8c71864ae8d562d3",
+  "prompt": "A prep food processor with a shallow wide bowl, a broad feed opening, two nested pushers, and a compact front interface with two rocker switches beside a selector knob. The bowl twists on a short continuous lock at the base coupling, the large pusher and small inner pusher slide prismatically in the feed opening, and the slicing disc rotates continuously on the center shaft. The selector knob rotates continuously, and both rocker switches pivot independently on short axes. The bowl and feed assembly should stay visibly hollow with a believable working cavity. Low wide countertop scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "bowl",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bowl"
+    },
+    {
+      "name": "pushers",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two nested pushers"
+    },
+    {
+      "name": "rocker switches",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two rocker switches"
+    },
+    {
+      "name": "selector knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "selector knob"
+    },
+    {
+      "name": "slicing disc",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slicing disc"
+    },
+    {
+      "name": "feed opening",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "feed opening"
+    },
+    {
+      "name": "center shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center shaft"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "bowl",
+      "parent": "base coupling",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the base coupling",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bowl twists on a short continuous lock at the base coupling"
+    },
+    {
+      "child": "large pusher",
+      "parent": "feed opening",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "in the feed opening",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large pusher and small inner pusher slide prismatically in the feed opening"
+    },
+    {
+      "child": "small inner pusher",
+      "parent": "feed opening",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "in the feed opening",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large pusher and small inner pusher slide prismatically in the feed opening"
+    },
+    {
+      "child": "slicing disc",
+      "parent": "center shaft",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on the center shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slicing disc rotates continuously on the center shaft"
+    },
+    {
+      "child": "selector knob",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "selector knob rotates continuously"
+    },
+    {
+      "child": "rocker switches",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "short axes",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "both rocker switches pivot independently on short axes"
+    }
+  ],
+  "notes": []
+}

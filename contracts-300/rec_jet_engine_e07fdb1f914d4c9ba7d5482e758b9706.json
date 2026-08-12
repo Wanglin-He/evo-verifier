@@ -1,0 +1,64 @@
+{
+  "version": "1",
+  "record_id": "rec_jet_engine_e07fdb1f914d4c9ba7d5482e758b9706",
+  "prompt": "A regional-airliner turbofan with a broad intake lip and a long smooth nacelle. The engine has a central spinner, a large front fan, and a short exhaust cone aligned within the rear of the nacelle. The front fan rotor rotates continuously about the longitudinal center axis. Keep the front fan rotor clipped to the center hub so the fan stays seated within the nacelle during rotation.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "nacelle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "nacelle"
+    },
+    {
+      "name": "intake lip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad intake lip"
+    },
+    {
+      "name": "central spinner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central spinner"
+    },
+    {
+      "name": "front fan rotor",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front fan rotor"
+    },
+    {
+      "name": "exhaust cone",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short exhaust cone"
+    },
+    {
+      "name": "center hub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center hub"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front fan rotor",
+      "parent": "center hub",
+      "kind": "continuous",
+      "axis_hint": "longitudinal center axis",
+      "location_hint": "within the nacelle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The front fan rotor rotates continuously about the longitudinal center axis."
+    }
+  ],
+  "notes": []
+}

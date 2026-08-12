@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_rotary_table_with_tilting_trunnion_7ab48c94590045bf94ac6aebe6e13cd9",
+  "prompt": "A compact cradle indexer with a circular lower stage, an offset support frame, and a round faceplate carried in the frame. The upper faceplate should feel like a real trunnion-mounted fixture head with enough surrounding structure to explain the support and sweep. Use realistic detail such as bearing covers, cheek plates, stop features, clamp rings, and practical gaps between the lower stage and the upper cradle. The lower stage rotates about a vertical axis and the upper faceplate rotates about a horizontal axis through the cradle. Keep every part mechanically grounded with no floating members, and make sure the articulation paths stay clear so nothing clips through covers, stops, housings, rails, or neighboring links.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "lower stage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular lower stage"
+    },
+    {
+      "name": "support frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "offset support frame"
+    },
+    {
+      "name": "upper faceplate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper faceplate"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lower stage",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lower stage rotates about a vertical axis"
+    },
+    {
+      "child": "upper faceplate",
+      "parent": "cradle",
+      "kind": "revolute",
+      "axis_hint": "horizontal axis",
+      "location_hint": "through the cradle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper faceplate rotates about a horizontal axis through the cradle"
+    }
+  ],
+  "notes": []
+}

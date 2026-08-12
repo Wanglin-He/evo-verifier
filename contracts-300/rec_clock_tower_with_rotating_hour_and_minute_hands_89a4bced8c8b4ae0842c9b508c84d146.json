@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_clock_tower_with_rotating_hour_and_minute_hands_89a4bced8c8b4ae0842c9b508c84d146",
+  "prompt": "A heritage street platform clock on a slim round fluted cast-iron column, a double-sided clock housing at the column top with a clock face on each side, and hour and minute hands on concentric revolute joints at each face center.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slim round fluted cast-iron column"
+    },
+    {
+      "name": "clock housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "double-sided clock housing"
+    },
+    {
+      "name": "clock face",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "clock face on each side"
+    },
+    {
+      "name": "hour hand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hour and minute hands"
+    },
+    {
+      "name": "minute hand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hour and minute hands"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "hour hand",
+      "parent": "clock face",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at each face center",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hour and minute hands on concentric revolute joints at each face center"
+    },
+    {
+      "child": "minute hand",
+      "parent": "clock face",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at each face center",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hour and minute hands on concentric revolute joints at each face center"
+    }
+  ],
+  "notes": []
+}

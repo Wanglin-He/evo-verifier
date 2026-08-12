@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_internet_router_2f4a8a7046e14284bd1493e09fd6abf3",
+  "prompt": "An upright home router with a vertical slab body and a fold-out rear kickstand. The housing stands on its lower edge, two short antennas hinge from the top corners, and a rear support leg folds out from a slot in the back. The antennas rotate on their root hinges at the top edge, and the kickstand rotates on a lower rear revolute hinge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "housing"
+    },
+    {
+      "name": "antennas",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two short antennas"
+    },
+    {
+      "name": "kickstand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fold-out rear kickstand"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "antennas",
+      "parent": "housing",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the top edge",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The antennas rotate on their root hinges at the top edge"
+    },
+    {
+      "child": "kickstand",
+      "parent": "housing",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "lower rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "kickstand rotates on a lower rear revolute hinge"
+    }
+  ],
+  "notes": []
+}

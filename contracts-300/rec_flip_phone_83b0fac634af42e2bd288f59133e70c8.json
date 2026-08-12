@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_flip_phone_83b0fac634af42e2bd288f59133e70c8",
+  "prompt": "A standard clamshell flip phone with a rounded-rectangle lower keypad body and a matching upper display body joined by a dual-barrel hinge on a revolute joint that opens to approximately 170 degrees.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "lower keypad body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower keypad body"
+    },
+    {
+      "name": "upper display body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper display body"
+    },
+    {
+      "name": "dual-barrel hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "dual-barrel hinge"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "upper display body",
+      "parent": "lower keypad body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "joined by a dual-barrel hinge on a revolute joint"
+    }
+  ],
+  "notes": []
+}

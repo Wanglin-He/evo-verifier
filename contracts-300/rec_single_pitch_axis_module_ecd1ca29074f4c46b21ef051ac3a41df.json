@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_single_pitch_axis_module_ecd1ca29074f4c46b21ef051ac3a41df",
+  "prompt": "A motorized tilt cradle with one clean revolute axis, compact support tower, and a balanced equipment plate.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "motorized tilt cradle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "motorized tilt cradle"
+    },
+    {
+      "name": "support tower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact support tower"
+    },
+    {
+      "name": "equipment plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "balanced equipment plate"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "equipment plate",
+      "parent": "support tower",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one clean revolute axis"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_toaster_oven_9c7391223cd4493699fe5c76b91754c1",
+  "prompt": "Create a cost-optimized mass-manufacturable Toaster oven. Base architecture: a rectangular oven body with front door and shaft-driven control knobs. Reduce part count, simplify molds/extrusions/stampings, and keep assembly order obvious with realistic snap/bolt/clamp interfaces. Door hinges and control shafts should be obvious and manufacturable. Every piece must have a believable attachment path; no floating or orphaned components. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "oven body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "oven body"
+    },
+    {
+      "name": "front door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front door"
+    },
+    {
+      "name": "control knobs",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control knobs"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front door",
+      "parent": "oven body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Door hinges"
+    },
+    {
+      "child": "control knobs",
+      "parent": "oven body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shaft-driven control knobs"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_paper_cutter_guillotine_0003",
+  "prompt": "A heavy office paper cutter with a long straight blade arm and a rectangular base. The base carries a printed alignment bed and a fixed side fence, while the blade arm is attached near one corner through a robust pivot bracket. The arm swings on a revolute joint through about 90 degrees.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "blade arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade arm"
+    },
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base"
+    },
+    {
+      "name": "printed alignment bed",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "printed alignment bed"
+    },
+    {
+      "name": "fixed side fence",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed side fence"
+    },
+    {
+      "name": "pivot bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pivot bracket"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "arm",
+      "parent": "pivot bracket",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "near one corner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The arm swings on a revolute joint through about 90 degrees."
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,158 @@
+{
+  "version": "1",
+  "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d",
+  "prompt": "A contemporary built-in dishwasher with a concealed top strip, two sliding racks, and twin fold-down mug shelves integrated into the upper rack. The dropdown door rotates on a lower horizontal hinge, both racks slide prismatically on their side rails, and the two spray arms rotate continuously on central hubs in the tub. The mug shelves rotate on matched side pivots, the start button and three option buttons on the top strip are separate small prismatic push buttons, and the rinse-aid cap on the door liner rotates continuously. The tub and door interior should remain thin-walled and hollow. Standard kitchen scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "top strip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "concealed top strip"
+    },
+    {
+      "name": "racks",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two sliding racks"
+    },
+    {
+      "name": "mug shelves",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "twin fold-down mug shelves"
+    },
+    {
+      "name": "dropdown door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "dropdown door"
+    },
+    {
+      "name": "spray arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two spray arms"
+    },
+    {
+      "name": "start button",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "start button"
+    },
+    {
+      "name": "option buttons",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three option buttons"
+    },
+    {
+      "name": "rinse-aid cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rinse-aid cap"
+    },
+    {
+      "name": "tub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tub"
+    },
+    {
+      "name": "door liner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "door liner"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "dropdown door",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "lower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "dropdown door rotates on a lower horizontal hinge"
+    },
+    {
+      "child": "racks",
+      "parent": "side rails",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "side rails",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "both racks slide prismatically on their side rails"
+    },
+    {
+      "child": "spray arms",
+      "parent": "central hubs",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "central hubs in the tub",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two spray arms rotate continuously on central hubs in the tub"
+    },
+    {
+      "child": "mug shelves",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "matched side pivots",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "mug shelves rotate on matched side pivots"
+    },
+    {
+      "child": "start button",
+      "parent": "top strip",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "top strip",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "start button and three option buttons on the top strip are separate small prismatic push buttons"
+    },
+    {
+      "child": "option buttons",
+      "parent": "top strip",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "top strip",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "start button and three option buttons on the top strip are separate small prismatic push buttons"
+    },
+    {
+      "child": "rinse-aid cap",
+      "parent": "door liner",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on the door liner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rinse-aid cap on the door liner rotates continuously"
+    }
+  ],
+  "notes": []
+}

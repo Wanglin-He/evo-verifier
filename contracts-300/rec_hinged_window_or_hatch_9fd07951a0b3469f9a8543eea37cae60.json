@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_hinged_window_or_hatch_9fd07951a0b3469f9a8543eea37cae60",
+  "prompt": "A marine deck hatch with a thick rectangular frame and a slightly raised lid. The lid overlaps the fixed curb frame and has side latch blocks near the front corners. A rear-edge revolute hinge axis lets the lid lift about 75 degrees.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "thick rectangular frame"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slightly raised lid"
+    },
+    {
+      "name": "side latch blocks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side latch blocks"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "fixed curb frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear-edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A rear-edge revolute hinge axis lets the lid lift about 75 degrees."
+    }
+  ],
+  "notes": []
+}

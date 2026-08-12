@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_dual_independent_finger_chains_c073d8cdd48844119be58db5e363c1aa",
+  "prompt": "A compact parallel finger study assembly. A central palm plate carries two articulated fingers with distinct root knuckles and tapered outer links so each chain reads clearly from base to tip. Both fingers are independent three-joint revolute chains mounted to the same grounded palm.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "central palm plate",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central palm plate"
+    },
+    {
+      "name": "finger",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two articulated fingers"
+    },
+    {
+      "name": "root knuckles",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "distinct root knuckles"
+    },
+    {
+      "name": "tapered outer links",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tapered outer links"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "fingers",
+      "parent": "grounded palm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Both fingers are independent three-joint revolute chains mounted to the same grounded palm."
+    }
+  ],
+  "notes": []
+}

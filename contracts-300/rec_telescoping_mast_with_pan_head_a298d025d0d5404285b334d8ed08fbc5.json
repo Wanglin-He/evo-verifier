@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_telescoping_mast_with_pan_head_a298d025d0d5404285b334d8ed08fbc5",
+  "prompt": "A side-wall mast with rotating top stage. A grounded side support carries nested upright members and a compact top rotary cartridge. The upright members use serial vertical prismatic joints, and the cartridge is a vertical revolute joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "grounded side support",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded side support"
+    },
+    {
+      "name": "upright members",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upright members"
+    },
+    {
+      "name": "cartridge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cartridge"
+    },
+    {
+      "name": "top stage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top stage"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "upright members",
+      "parent": "grounded side support",
+      "kind": "prismatic",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The upright members use serial vertical prismatic joints"
+    },
+    {
+      "child": "cartridge",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the cartridge is a vertical revolute joint"
+    }
+  ],
+  "notes": []
+}

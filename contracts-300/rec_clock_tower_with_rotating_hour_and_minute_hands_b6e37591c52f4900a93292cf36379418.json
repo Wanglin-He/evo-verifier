@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_clock_tower_with_rotating_hour_and_minute_hands_b6e37591c52f4900a93292cf36379418",
+  "prompt": "A Victorian civic clock tower with a square stone shaft, a corbelled clock stage, and clock faces with hour and minute hands on revolute pivot joints.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "square stone shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "square stone shaft"
+    },
+    {
+      "name": "corbelled clock stage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "corbelled clock stage"
+    },
+    {
+      "name": "clock faces",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "clock faces"
+    },
+    {
+      "name": "hour and minute hands",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hour and minute hands"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "hour and minute hands",
+      "parent": "clock faces",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hour and minute hands on revolute pivot joints"
+    }
+  ],
+  "notes": []
+}

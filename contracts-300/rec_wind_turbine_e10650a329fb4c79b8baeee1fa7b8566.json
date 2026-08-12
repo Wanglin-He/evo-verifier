@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_wind_turbine_e10650a329fb4c79b8baeee1fa7b8566",
+  "prompt": "A horizontal-axis wind turbine with a tapered tower, a nacelle, and a three-blade rotor hub at the front. The nacelle stays clearly mounted on a yaw bearing at the tower top instead of reading as part of the tower shaft. The rotor spins continuously about the main shaft axis and the nacelle yaws about the vertical tower axis. Utility wind-turbine scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tower"
+    },
+    {
+      "name": "nacelle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "nacelle"
+    },
+    {
+      "name": "rotor hub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotor hub"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rotor",
+      "parent": "nacelle",
+      "kind": "continuous",
+      "axis_hint": "main shaft axis",
+      "location_hint": "at the front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The rotor spins continuously about the main shaft axis"
+    },
+    {
+      "child": "nacelle",
+      "parent": "tower",
+      "kind": "revolute",
+      "axis_hint": "vertical tower axis",
+      "location_hint": "at the tower top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the nacelle yaws about the vertical tower axis"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_extension_ladder_4e34aec210cb4bf7a216f2bd5a61ac97",
+  "prompt": "A standard extension ladder with two parallel rail sections and a fly section that rises within the base rails. The fly section slides prismatically upward along the guide channels of the base section. Contractor ladder scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "fly section",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fly section"
+    },
+    {
+      "name": "base section",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base section"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "fly section",
+      "parent": "base section",
+      "kind": "prismatic",
+      "axis_hint": "upward",
+      "location_hint": "along the guide channels of the base section",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The fly section slides prismatically upward along the guide channels of the base section."
+    }
+  ],
+  "notes": []
+}

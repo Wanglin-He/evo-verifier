@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_laptop_clamshell_85db441f7f4c46aaafaba3465723aaf1",
+  "prompt": "A workstation laptop with a hinged display and a pop-open service door under the base. The heavy lower body carries the keyboard deck, and a small access panel is mounted on a hinge under the underside near one edge. The lid rotates on the rear hinge axis, the service door rotates on its small hinge beneath the base, and the keys move as short vertical plungers.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "lower body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The heavy lower body carries the keyboard deck"
+    },
+    {
+      "name": "keyboard deck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "keyboard deck"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lid rotates on the rear hinge axis"
+    },
+    {
+      "name": "service door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the service door rotates on its small hinge beneath the base"
+    },
+    {
+      "name": "keys",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the keys move as short vertical plungers"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "rear hinge axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lid rotates on the rear hinge axis"
+    },
+    {
+      "child": "service door",
+      "parent": "base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "beneath the base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the service door rotates on its small hinge beneath the base"
+    },
+    {
+      "child": "keys",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the keys move as short vertical plungers"
+    }
+  ],
+  "notes": []
+}

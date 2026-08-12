@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_glove_compartment_door_927c892914044efcb1cb608ac19db1b7",
+  "prompt": "A utility truck glove compartment with a top-hinged panel and twin limiter links. The fixed storage bin is boxy and shallow, and the front door is hinged at the top edge with two short links near the lower corners. The door rotates upward on a horizontal top hinge axis, and the two limiter links rotate on their pivots between the door and the box walls.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "fixed storage bin",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed storage bin"
+    },
+    {
+      "name": "front door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front door"
+    },
+    {
+      "name": "limiter links",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two limiter links"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front door",
+      "parent": "fixed storage bin",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "top edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The door rotates upward on a horizontal top hinge axis"
+    },
+    {
+      "child": "limiter links",
+      "parent": "fixed storage bin",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "between the door and the box walls",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two limiter links rotate on their pivots between the door and the box walls"
+    }
+  ],
+  "notes": []
+}

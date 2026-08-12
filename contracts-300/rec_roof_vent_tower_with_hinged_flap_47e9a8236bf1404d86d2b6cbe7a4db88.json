@@ -1,0 +1,64 @@
+{
+  "version": "1",
+  "record_id": "rec_roof_vent_tower_with_hinged_flap_47e9a8236bf1404d86d2b6cbe7a4db88",
+  "prompt": "Model Roof vent tower with hinged flap as an industrial safety-first variant for heavy duty cycles. Start from a vent tower with framed openings and a weather flap on a hinge line, then add guards, lockouts, over-travel stops, and reinforcement at high-stress joints. Favor visible fastener logic and plate/brace load paths over decorative surfacing. Flap opening must hinge from explicit barrels/plates with clear stops. All subparts must remain connected to a parent support; no unsupported fragments. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "vent tower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "vent tower"
+    },
+    {
+      "name": "weather flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "weather flap"
+    },
+    {
+      "name": "guards",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "guards"
+    },
+    {
+      "name": "lockouts",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lockouts"
+    },
+    {
+      "name": "over-travel stops",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "over-travel stops"
+    },
+    {
+      "name": "barrels/plates",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "barrels/plates"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "weather flap",
+      "parent": "vent tower",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "hinge line",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "weather flap on a hinge line"
+    }
+  ],
+  "notes": []
+}

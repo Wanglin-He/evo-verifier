@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_electrical_cabinet_door_5c93513f9fd14694ac2eca6a39c6a4fd",
+  "prompt": "A relay protection panel with a tall narrow steel cabinet and a hinged front door on the left edge on two revolute hinge knuckles, with an inner hinged instrument panel on a revolute hinge at its left edge for relay wiring access.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "steel cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "steel cabinet"
+    },
+    {
+      "name": "front door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged front door"
+    },
+    {
+      "name": "hinge knuckles",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two revolute hinge knuckles"
+    },
+    {
+      "name": "inner instrument panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner hinged instrument panel"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front door",
+      "parent": "steel cabinet",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "left edge",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged front door on the left edge on two revolute hinge knuckles"
+    },
+    {
+      "child": "inner instrument panel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at its left edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner hinged instrument panel on a revolute hinge at its left edge"
+    }
+  ],
+  "notes": []
+}

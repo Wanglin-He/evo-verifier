@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_desktop_hole_punch_with_articulated_components_f6f546bf3704454184bc3169d6ff48dd",
+  "prompt": "A long-reach office hole punch with an extended base, a tall lever handle, and a side locking latch near the rear hinge line. A removable chip drawer is housed beneath the punch head. The lever handle rotates on a rear horizontal hinge, the side latch rotates on a small pivot, and the chip drawer slides prismatically out from the body.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "extended base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "extended base"
+    },
+    {
+      "name": "lever handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lever handle"
+    },
+    {
+      "name": "side locking latch",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side locking latch"
+    },
+    {
+      "name": "chip drawer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "chip drawer"
+    },
+    {
+      "name": "punch head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "punch head"
+    },
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "body"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lever handle",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lever handle rotates on a rear horizontal hinge"
+    },
+    {
+      "child": "side latch",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "small pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side latch rotates on a small pivot"
+    },
+    {
+      "child": "chip drawer",
+      "parent": "body",
+      "kind": "prismatic",
+      "axis_hint": "out from the body",
+      "location_hint": "beneath the punch head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "chip drawer slides prismatically out from the body"
+    }
+  ],
+  "notes": []
+}

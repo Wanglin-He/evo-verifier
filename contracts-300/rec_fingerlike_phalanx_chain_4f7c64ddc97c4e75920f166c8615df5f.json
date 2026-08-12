@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_fingerlike_phalanx_chain_4f7c64ddc97c4e75920f166c8615df5f",
+  "prompt": "An industrial finger module with a thick root knuckle, a tapered middle link, a short distal link, and a broad pad tip. The links should feel rigid and mechanical, built from side plates and pin barrels rather than any soft organic shell treatment. Use realistic detail such as machined hinge bosses, pad inserts, chamfered link edges, and believable thickness around the base knuckle. The root, middle, and distal joints are serial revolute joints bending in one plane. Keep every part mechanically grounded with no floating members, and make sure the articulation paths stay clear so nothing clips through covers, stops, housings, rails, or neighboring links.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "root knuckle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "thick root knuckle"
+    },
+    {
+      "name": "middle link",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tapered middle link"
+    },
+    {
+      "name": "distal link",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short distal link"
+    },
+    {
+      "name": "pad tip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad pad tip"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "middle link",
+      "parent": "root knuckle",
+      "kind": "revolute",
+      "axis_hint": "bending in one plane",
+      "location_hint": "root",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The root, middle, and distal joints are serial revolute joints bending in one plane."
+    },
+    {
+      "child": "distal link",
+      "parent": "middle link",
+      "kind": "revolute",
+      "axis_hint": "bending in one plane",
+      "location_hint": "middle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The root, middle, and distal joints are serial revolute joints bending in one plane."
+    },
+    {
+      "child": "pad tip",
+      "parent": "distal link",
+      "kind": "revolute",
+      "axis_hint": "bending in one plane",
+      "location_hint": "distal",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The root, middle, and distal joints are serial revolute joints bending in one plane."
+    }
+  ],
+  "notes": []
+}

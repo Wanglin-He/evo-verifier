@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_linear_carriage_with_independent_rotary_endeffector_ac62f36bf0b04244a5c1aa38b4119472",
+  "prompt": "A box-rail carriage with rotary nose. A grounded box rail supports a sliding carriage with a short nose spindle mounted to the front face. The carriage is a prismatic joint along the rail, and the nose spindle rotates on its own revolute axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "grounded box rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded box rail"
+    },
+    {
+      "name": "carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "carriage"
+    },
+    {
+      "name": "nose spindle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "nose spindle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "carriage",
+      "parent": "grounded box rail",
+      "kind": "prismatic",
+      "axis_hint": "along the rail",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The carriage is a prismatic joint along the rail"
+    },
+    {
+      "child": "nose spindle",
+      "parent": "carriage",
+      "kind": "revolute",
+      "axis_hint": "on its own revolute axis",
+      "location_hint": "front face",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the nose spindle rotates on its own revolute axis"
+    }
+  ],
+  "notes": []
+}

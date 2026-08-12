@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_elevator_bece80938b3149e6b031a36089d43005",
+  "prompt": "A glass panoramic elevator with a rectangular car and a sliding door panel on a vertical rail system. The car slides prismatically along two vertical guide rail columns. The sliding door panel moves prismatically sideways on a horizontal guide at the car entrance.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular car",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular car"
+    },
+    {
+      "name": "sliding door panel",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "sliding door panel"
+    },
+    {
+      "name": "vertical guide rail columns",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two vertical guide rail columns"
+    },
+    {
+      "name": "horizontal guide",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "horizontal guide"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "car",
+      "parent": "vertical guide rail columns",
+      "kind": "prismatic",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The car slides prismatically along two vertical guide rail columns."
+    },
+    {
+      "child": "sliding door panel",
+      "parent": "horizontal guide",
+      "kind": "prismatic",
+      "axis_hint": "sideways",
+      "location_hint": "at the car entrance",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The sliding door panel moves prismatically sideways on a horizontal guide at the car entrance."
+    }
+  ],
+  "notes": []
+}

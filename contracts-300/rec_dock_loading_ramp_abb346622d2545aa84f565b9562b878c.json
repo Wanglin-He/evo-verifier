@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_dock_loading_ramp_abb346622d2545aa84f565b9562b878c",
+  "prompt": "A ground-mounted tilt-deck dock plate with a flat steel platform on a central horizontal revolute hinge at a ground frame, and two support leg columns below the platform each extending on a prismatic joint to set the tilt angle.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "flat steel platform",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat steel platform"
+    },
+    {
+      "name": "ground frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "ground frame"
+    },
+    {
+      "name": "support leg columns",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two support leg columns"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "flat steel platform",
+      "parent": "ground frame",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "central",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat steel platform on a central horizontal revolute hinge at a ground frame"
+    },
+    {
+      "child": "support leg columns",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "below the platform",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two support leg columns below the platform each extending on a prismatic joint"
+    }
+  ],
+  "notes": []
+}

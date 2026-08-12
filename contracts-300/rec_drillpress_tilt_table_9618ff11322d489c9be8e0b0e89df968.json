@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_drillpress_tilt_table_9618ff11322d489c9be8e0b0e89df968",
+  "prompt": "A floor-standing heavy drill press with a round column, a fixed base, a height-adjustable tilting table, and a quill-feed spindle head. The table slides prismatically up and down the column. The table tilts on a revolute hinge at the table mount bracket. The quill drops on a prismatic joint inside the head.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed base"
+    },
+    {
+      "name": "column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round column"
+    },
+    {
+      "name": "table",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "height-adjustable tilting table"
+    },
+    {
+      "name": "head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "quill-feed spindle head"
+    },
+    {
+      "name": "table mount bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "table mount bracket"
+    },
+    {
+      "name": "quill",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "quill"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "table",
+      "parent": "column",
+      "kind": "prismatic",
+      "axis_hint": "up and down",
+      "location_hint": "column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The table slides prismatically up and down the column."
+    },
+    {
+      "child": "table",
+      "parent": "table mount bracket",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the table mount bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The table tilts on a revolute hinge at the table mount bracket."
+    },
+    {
+      "child": "quill",
+      "parent": "head",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "inside the head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The quill drops on a prismatic joint inside the head."
+    }
+  ],
+  "notes": []
+}

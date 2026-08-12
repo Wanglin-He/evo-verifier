@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_hand_truck_dolly_0002",
+  "prompt": "A standard upright hand truck. A tubular frame rises from a flat toe plate, with two large wheels mounted on an axle at the lower rear corners and loop handles at the top. Each wheel spins continuously on the axle, while the frame itself stays rigid.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tubular frame",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tubular frame"
+    },
+    {
+      "name": "toe plate",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "toe plate"
+    },
+    {
+      "name": "wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two large wheels"
+    },
+    {
+      "name": "axle",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "axle"
+    },
+    {
+      "name": "loop handles",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "loop handles"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wheel",
+      "parent": "axle",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "at the lower rear corners",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each wheel spins continuously on the axle"
+    }
+  ],
+  "notes": []
+}

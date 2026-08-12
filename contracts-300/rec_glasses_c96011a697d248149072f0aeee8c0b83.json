@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_glasses_c96011a697d248149072f0aeee8c0b83",
+  "prompt": "A pair of aviator glasses with teardrop rims and a double bridge. The thin metal front carries two adjustable nose-pad arms and two slender temple arms attached at the outer corners by compact hinges. Each temple folds inward on its own revolute hinge axis, and each nose pad rotates slightly on its small support arm pivot. Keep each temple arm clipped into its hinge block at the outer frame corner so it folds without separating from the front.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "thin metal front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "thin metal front"
+    },
+    {
+      "name": "adjustable nose-pad arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two adjustable nose-pad arms"
+    },
+    {
+      "name": "slender temple arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two slender temple arms"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "temple",
+      "parent": "hinge block",
+      "kind": "revolute",
+      "axis_hint": "inward",
+      "location_hint": "at the outer frame corner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each temple folds inward on its own revolute hinge axis"
+    },
+    {
+      "child": "nose pad",
+      "parent": "support arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on its small support arm pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each nose pad rotates slightly on its small support arm pivot"
+    }
+  ],
+  "notes": []
+}

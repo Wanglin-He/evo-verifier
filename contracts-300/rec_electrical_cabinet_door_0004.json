@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_electrical_cabinet_door_0004",
+  "prompt": "A floor-standing MCC panel with a tall steel body and a pair of double-swing doors, each hinged on the outer edge on revolute joints and latched at the center stile.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tall steel body",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall steel body"
+    },
+    {
+      "name": "double-swing doors",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pair of double-swing doors"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "double-swing doors",
+      "parent": "tall steel body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "outer edge",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each hinged on the outer edge on revolute joints"
+    }
+  ],
+  "notes": []
+}

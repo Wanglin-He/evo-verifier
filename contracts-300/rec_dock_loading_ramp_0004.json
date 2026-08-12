@@ -1,0 +1,89 @@
+{
+  "version": "1",
+  "record_id": "rec_dock_loading_ramp_0004",
+  "prompt": "A freestanding portable yard ramp with an inclined steel drive surface, two continuous side rails with cross-brace rungs, a horizontal platform at the top, and two telescoping leg posts with locking pins and swivel caster feet supporting the top end. The bottom terminates in a lip hook plate that engages a dock edge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "inclined steel drive surface",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inclined steel drive surface"
+    },
+    {
+      "name": "side rails",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two continuous side rails"
+    },
+    {
+      "name": "cross-brace rungs",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cross-brace rungs"
+    },
+    {
+      "name": "horizontal platform",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "horizontal platform"
+    },
+    {
+      "name": "telescoping leg posts",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two telescoping leg posts"
+    },
+    {
+      "name": "locking pins",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "locking pins"
+    },
+    {
+      "name": "swivel caster feet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "swivel caster feet"
+    },
+    {
+      "name": "lip hook plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lip hook plate"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "telescoping leg posts",
+      "parent": "horizontal platform",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "supporting the top end",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two telescoping leg posts"
+    },
+    {
+      "child": "swivel caster feet",
+      "parent": "telescoping leg posts",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "swivel caster feet"
+    }
+  ],
+  "notes": []
+}

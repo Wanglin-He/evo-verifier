@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_fourjoint_revolute_chain_3694cd7dfa63427f943f702f663653c1",
+  "prompt": "A side-plate four-joint revolute chain. A fixed cheek supports a sequence of flat-sided links with compact pin bosses, ending in a compact end tab. The links are joined by four revolute joints on parallel supported axes.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "fixed cheek",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed cheek"
+    },
+    {
+      "name": "flat-sided links",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat-sided links"
+    },
+    {
+      "name": "compact end tab",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact end tab"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "flat-sided links",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "parallel supported axes",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four revolute joints on parallel supported axes"
+    }
+  ],
+  "notes": []
+}

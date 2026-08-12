@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_conventional_oven_with_dropdown_door_4cea6d5e07ec40ca9cbb7c01e00f658b",
+  "prompt": "An industrial tunnel oven with a long rectangular housing on legs and a wide front sliding door panel. The sliding door panel moves prismatically sideways on horizontal guide rails at the oven front. A product conveyor belt inside runs continuously on continuous rollers.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "long rectangular housing"
+    },
+    {
+      "name": "legs",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "legs"
+    },
+    {
+      "name": "sliding door panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "sliding door panel"
+    },
+    {
+      "name": "guide rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "horizontal guide rails"
+    },
+    {
+      "name": "product conveyor belt",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "product conveyor belt"
+    },
+    {
+      "name": "rollers",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "continuous rollers"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "sliding door panel",
+      "parent": "guide rails",
+      "kind": "prismatic",
+      "axis_hint": "sideways",
+      "location_hint": "at the oven front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The sliding door panel moves prismatically sideways on horizontal guide rails at the oven front."
+    },
+    {
+      "child": "product conveyor belt",
+      "parent": "rollers",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "inside",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A product conveyor belt inside runs continuously on continuous rollers."
+    },
+    {
+      "child": "rollers",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "inside",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "continuous rollers"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_dj_equipment_771e61c00b084274acd695df85f121bd",
+  "prompt": "A Roland-style drum machine with a rectangular housing, sixteen velocity-sensitive pads in a four-by-four grid, and a rotary data encoder knob. Each pad compresses prismatically on a short vertical travel. The data encoder knob rotates continuously.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular housing"
+    },
+    {
+      "name": "velocity-sensitive pads",
+      "count": 16,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "sixteen velocity-sensitive pads"
+    },
+    {
+      "name": "rotary data encoder knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotary data encoder knob"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "pad",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "vertical",
+      "location_hint": "",
+      "count": 16,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each pad compresses prismatically on a short vertical travel."
+    },
+    {
+      "child": "data encoder knob",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The data encoder knob rotates continuously."
+    }
+  ],
+  "notes": []
+}

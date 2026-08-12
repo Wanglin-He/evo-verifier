@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_turnstile_gates_8eaceeb4c6df41858cafad676d36acd9",
+  "prompt": "A three-arm turnstile gate. A central column supports a rotor hub with three radial arms inside a fixed frame. Joints: the arm hub rotates continuously about the vertical center axis. Use one central support under the rotating stage.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "central column",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central column"
+    },
+    {
+      "name": "rotor hub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotor hub"
+    },
+    {
+      "name": "radial arms",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three radial arms"
+    },
+    {
+      "name": "fixed frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed frame"
+    },
+    {
+      "name": "central support",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one central support"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "arm hub",
+      "parent": "central column",
+      "kind": "continuous",
+      "axis_hint": "vertical center axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "arm hub rotates continuously about the vertical center axis"
+    }
+  ],
+  "notes": []
+}

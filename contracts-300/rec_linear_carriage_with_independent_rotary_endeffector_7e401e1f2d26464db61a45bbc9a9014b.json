@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_linear_carriage_with_independent_rotary_endeffector_7e401e1f2d26464db61a45bbc9a9014b",
+  "prompt": "A bench transfer axis with a rotary tool nose. A fixed guide rail supports a moving saddle, while the saddle carries a short cylindrical output stage with clear local support. One prismatic joint positions the saddle, and one revolute joint spins the tool nose on the saddle.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "guide rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed guide rail"
+    },
+    {
+      "name": "saddle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "moving saddle"
+    },
+    {
+      "name": "output stage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short cylindrical output stage"
+    },
+    {
+      "name": "tool nose",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotary tool nose"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "saddle",
+      "parent": "guide rail",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "One prismatic joint positions the saddle"
+    },
+    {
+      "child": "tool nose",
+      "parent": "saddle",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one revolute joint spins the tool nose on the saddle"
+    }
+  ],
+  "notes": []
+}

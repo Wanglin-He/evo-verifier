@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_dualcolumn_lift_carriage_e5d39f09effb4d8fa5c740cbdc4b2779",
+  "prompt": "A compact dual-column lift carriage with twin round posts and a wide tooling plate. The columns are anchored to a heavy base and bridged at the top, while the moving carriage wraps both columns with separate bearing sleeves. The carriage slides prismatically up the column axis about 200 mm, with obvious hard stops at top and bottom.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "twin round posts",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "twin round posts"
+    },
+    {
+      "name": "wide tooling plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide tooling plate"
+    },
+    {
+      "name": "heavy base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "heavy base"
+    },
+    {
+      "name": "moving carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "moving carriage"
+    },
+    {
+      "name": "bearing sleeves",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bearing sleeves"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "carriage",
+      "parent": "columns",
+      "kind": "prismatic",
+      "axis_hint": "up the column axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The carriage slides prismatically up the column axis about 200 mm, with obvious hard stops at top and bottom."
+    }
+  ],
+  "notes": []
+}

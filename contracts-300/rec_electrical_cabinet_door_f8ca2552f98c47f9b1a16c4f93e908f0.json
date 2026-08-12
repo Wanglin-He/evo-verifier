@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_electrical_cabinet_door_f8ca2552f98c47f9b1a16c4f93e908f0",
+  "prompt": "A meter cubicle with a rectangular enclosure and a hinged transparent cover window over the meter bank. The cover panel hinges on revolute knuckles at the top edge of the meter window. A compression latch at the bottom holds the panel.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular enclosure",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular enclosure"
+    },
+    {
+      "name": "transparent cover window",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "transparent cover window"
+    },
+    {
+      "name": "meter bank",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "meter bank"
+    },
+    {
+      "name": "revolute knuckles",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "revolute knuckles"
+    },
+    {
+      "name": "compression latch",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compression latch"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "cover panel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "top edge of the meter window",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The cover panel hinges on revolute knuckles at the top edge of the meter window."
+    },
+    {
+      "child": "compression latch",
+      "parent": "cover panel",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "at the bottom",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A compression latch at the bottom holds the panel."
+    }
+  ],
+  "notes": []
+}

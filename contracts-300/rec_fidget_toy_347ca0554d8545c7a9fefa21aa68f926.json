@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_fidget_toy_347ca0554d8545c7a9fefa21aa68f926",
+  "prompt": "A realistic, highly detailed fidget spinner with a compact central bearing hub, multiple balanced lobes, and a believable consumer desk-toy appearance. The spinner rotates naturally about the center axis, and the object should feel like a real manufactured product with crisp geometry, refined finish, and recognizable handheld proportions.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "central bearing hub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central bearing hub"
+    },
+    {
+      "name": "lobes",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lobes"
+    },
+    {
+      "name": "spinner",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spinner"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "spinner",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "center axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spinner rotates naturally about the center axis"
+    }
+  ],
+  "notes": []
+}

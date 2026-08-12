@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_robotic_arms_b04b60f1f1cb48e1a9bf2fe03b9da825",
+  "prompt": "Create a cost-optimized mass-manufacturable Robotic arms. Base architecture: a base pedestal feeding a shoulder-elbow-wrist chain with clear joint cartridges. Reduce part count, simplify molds/extrusions/stampings, and keep assembly order obvious with realistic snap/bolt/clamp interfaces. Make axis order and joint offsets readable so motion paths are unambiguous. Every piece must have a believable attachment path; no floating or orphaned components. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base pedestal",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base pedestal"
+    },
+    {
+      "name": "shoulder",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shoulder"
+    },
+    {
+      "name": "elbow",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "elbow"
+    },
+    {
+      "name": "wrist",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wrist"
+    },
+    {
+      "name": "joint cartridges",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "joint cartridges"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "shoulder",
+      "parent": "base pedestal",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    },
+    {
+      "child": "elbow",
+      "parent": "shoulder",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    },
+    {
+      "child": "wrist",
+      "parent": "elbow",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "notes": []
+}

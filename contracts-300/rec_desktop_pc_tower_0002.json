@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_desktop_pc_tower_0002",
+  "prompt": "A realistic, highly detailed desktop PC tower with a rectangular chassis, side panel, front intake geometry, rear I/O area, and a believable enthusiast-computer appearance. The side panel and any standard front-access door articulate naturally, and the enclosure should feel like a real manufactured case with clean structure and grounded proportions.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular chassis",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular chassis"
+    },
+    {
+      "name": "side panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side panel"
+    },
+    {
+      "name": "front intake geometry",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front intake geometry"
+    },
+    {
+      "name": "rear I/O area",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear I/O area"
+    },
+    {
+      "name": "front-access door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front-access door"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "side panel",
+      "parent": "",
+      "kind": null,
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side panel and any standard front-access door articulate naturally"
+    },
+    {
+      "child": "front-access door",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side panel and any standard front-access door articulate naturally"
+    }
+  ],
+  "notes": []
+}

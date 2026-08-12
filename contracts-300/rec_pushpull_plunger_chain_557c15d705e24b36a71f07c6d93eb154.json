@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_pushpull_plunger_chain_557c15d705e24b36a71f07c6d93eb154",
+  "prompt": "A chained plunger mechanism using aligned prismatic elements, cylindrical sleeves, and rigid mounting brackets in a clean CAD assembly.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "plunger",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "plunger"
+    },
+    {
+      "name": "prismatic elements",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "prismatic elements"
+    },
+    {
+      "name": "cylindrical sleeves",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cylindrical sleeves"
+    },
+    {
+      "name": "mounting brackets",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "mounting brackets"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "prismatic elements",
+      "parent": "cylindrical sleeves",
+      "kind": "prismatic",
+      "axis_hint": "aligned",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "aligned prismatic elements"
+    }
+  ],
+  "notes": []
+}

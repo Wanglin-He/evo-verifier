@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_drone_6f0ab275499c4d118553b0376bc35588",
+  "prompt": "A folding-arm hexarotor with a hexagonal center plate and six radial arms each folding inward at the plate rim on a revolute hinge at the arm root, and a two-blade propeller on each arm tip on a revolute axle.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "hexagonal center plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hexagonal center plate"
+    },
+    {
+      "name": "radial arm",
+      "count": 6,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "six radial arms"
+    },
+    {
+      "name": "two-blade propeller",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two-blade propeller"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "radial arm",
+      "parent": "hexagonal center plate",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the plate rim",
+      "count": 6,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "six radial arms each folding inward at the plate rim on a revolute hinge at the arm root"
+    },
+    {
+      "child": "two-blade propeller",
+      "parent": "radial arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on each arm tip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two-blade propeller on each arm tip on a revolute axle"
+    }
+  ],
+  "notes": []
+}

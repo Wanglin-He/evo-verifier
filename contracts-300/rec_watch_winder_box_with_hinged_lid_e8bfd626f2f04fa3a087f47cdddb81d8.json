@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_watch_winder_box_with_hinged_lid_e8bfd626f2f04fa3a087f47cdddb81d8",
+  "prompt": "A watch winder presentation box. A box body supports a top lid and one internal cradle mounted on a small spindle. Joints: the lid is revolute about a horizontal rear hinge axis, and the cradle rotates continuously about its spindle. Favor thick side walls and a heavy frame around the moving panel.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "box body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "box body"
+    },
+    {
+      "name": "top lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top lid"
+    },
+    {
+      "name": "internal cradle",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one internal cradle"
+    },
+    {
+      "name": "small spindle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small spindle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "top lid",
+      "parent": "box body",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "rear hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the lid is revolute about a horizontal rear hinge axis"
+    },
+    {
+      "child": "cradle",
+      "parent": "spindle",
+      "kind": "continuous",
+      "axis_hint": "about its spindle",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the cradle rotates continuously about its spindle"
+    }
+  ],
+  "notes": []
+}

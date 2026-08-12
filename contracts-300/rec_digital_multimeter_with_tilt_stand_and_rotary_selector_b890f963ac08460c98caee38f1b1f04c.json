@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_digital_multimeter_with_tilt_stand_and_rotary_selector_b890f963ac08460c98caee38f1b1f04c",
+  "prompt": "A compact electronics multimeter with a rounded case, a central function dial, a rear stand, and a front control cluster made of two round buttons and two square buttons. The dial rotates continuously on the front panel, the stand rotates outward on a lower rear hinge, and each visible control button moves independently along its local prismatic press axis. Small desktop instrument scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rounded case",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rounded case"
+    },
+    {
+      "name": "central function dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central function dial"
+    },
+    {
+      "name": "rear stand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear stand"
+    },
+    {
+      "name": "round buttons",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two round buttons"
+    },
+    {
+      "name": "square buttons",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two square buttons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "central function dial",
+      "parent": "front panel",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "front panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The dial rotates continuously on the front panel"
+    },
+    {
+      "child": "rear stand",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "outward",
+      "location_hint": "lower rear hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the stand rotates outward on a lower rear hinge"
+    },
+    {
+      "child": "round buttons",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "local prismatic press axis",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each visible control button moves independently along its local prismatic press axis"
+    },
+    {
+      "child": "square buttons",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "local prismatic press axis",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each visible control button moves independently along its local prismatic press axis"
+    }
+  ],
+  "notes": []
+}

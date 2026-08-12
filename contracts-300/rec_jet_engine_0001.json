@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_jet_engine_0001",
+  "prompt": "A realistic, highly detailed jet engine with a convincing nacelle, intake, fan assembly, core, and exhaust structure. The fan and any standard exposed mechanical motion articulate naturally, and the engine should feel like a real aerospace object with strong material and structural realism.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "nacelle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "nacelle"
+    },
+    {
+      "name": "intake",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "intake"
+    },
+    {
+      "name": "fan assembly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fan assembly"
+    },
+    {
+      "name": "core",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "core"
+    },
+    {
+      "name": "exhaust structure",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "exhaust structure"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "fan",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The fan and any standard exposed mechanical motion articulate naturally"
+    }
+  ],
+  "notes": []
+}

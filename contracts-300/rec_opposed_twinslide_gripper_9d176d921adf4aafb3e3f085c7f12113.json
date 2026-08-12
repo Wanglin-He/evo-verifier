@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_opposed_twinslide_gripper_9d176d921adf4aafb3e3f085c7f12113",
+  "prompt": "An opposed twin-slide gripper. A grounded center body carries left and right guideways with mirrored jaw carriages and simple jaw fingers facing a common pickup zone. The left and right jaws are separate prismatic joints along the same closing axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "center body",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center body"
+    },
+    {
+      "name": "jaw carriages",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "jaw carriages"
+    },
+    {
+      "name": "jaw fingers",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "jaw fingers"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "left jaw",
+      "parent": "center body",
+      "kind": "prismatic",
+      "axis_hint": "along the same closing axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The left and right jaws are separate prismatic joints along the same closing axis."
+    },
+    {
+      "child": "right jaw",
+      "parent": "center body",
+      "kind": "prismatic",
+      "axis_hint": "along the same closing axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The left and right jaws are separate prismatic joints along the same closing axis."
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_yawpitch_module_24e621d7df2641ac9889e6a08c3bc421",
+  "prompt": "A pan-tilt surveillance head with a rotary base and tilting upper fork, using simple cast-like housings and flat equipment brackets.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rotary base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotary base"
+    },
+    {
+      "name": "tilting upper fork",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilting upper fork"
+    },
+    {
+      "name": "cast-like housings",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cast-like housings"
+    },
+    {
+      "name": "flat equipment brackets",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat equipment brackets"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rotary base",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotary base"
+    },
+    {
+      "child": "tilting upper fork",
+      "parent": "rotary base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "upper",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilting upper fork"
+    }
+  ],
+  "notes": []
+}

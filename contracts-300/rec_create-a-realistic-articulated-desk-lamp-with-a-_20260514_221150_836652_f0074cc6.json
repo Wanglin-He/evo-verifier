@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_create-a-realistic-articulated-desk-lamp-with-a-_20260514_221150_836652_f0074cc6",
+  "prompt": "Create a realistic articulated desk lamp with a weighted base, two hinged arms, and an adjustable lamp head.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "weighted base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "weighted base"
+    },
+    {
+      "name": "arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two hinged arms"
+    },
+    {
+      "name": "lamp head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "adjustable lamp head"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "arms",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two hinged arms"
+    },
+    {
+      "child": "lamp head",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "adjustable lamp head"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_pitchroll_module_29486c0109ee4731a8c5da571935dac6",
+  "prompt": "A compact wrist pitch-roll head. A grounded pitch yoke carries a short roll cartridge ending in a simple output flange. The module uses one pitch revolute joint about the side trunnions and one roll revolute joint about the flange axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "pitch yoke",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pitch yoke"
+    },
+    {
+      "name": "roll cartridge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "roll cartridge"
+    },
+    {
+      "name": "output flange",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "output flange"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "pitch yoke",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "about the side trunnions",
+      "location_hint": "side trunnions",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one pitch revolute joint about the side trunnions"
+    },
+    {
+      "child": "output flange",
+      "parent": "roll cartridge",
+      "kind": "revolute",
+      "axis_hint": "about the flange axis",
+      "location_hint": "",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one roll revolute joint about the flange axis"
+    }
+  ],
+  "notes": []
+}

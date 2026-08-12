@@ -1,0 +1,65 @@
+{
+  "version": "1",
+  "record_id": "rec_portable_speaker_with_articulated_controls_fe597177e08a44c085dcd62edc066e93",
+  "prompt": "A trolley-style portable speaker with a tall body, a telescoping pull handle, and a small control deck with separate buttons at the top front, plus three separate front buttons. the lower body keeps two transport wheels at the rear corners, and the buttons sit as distinct parts in the control face. The pull handle slides prismatically on twin rear rails and the transport wheels spin continuously on their axle, and the three buttons depress independently as small prismatic push controls. Portable event-speaker scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "telescoping pull handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "telescoping pull handle"
+    },
+    {
+      "name": "transport wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two transport wheels"
+    },
+    {
+      "name": "front buttons",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three separate front buttons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "pull handle",
+      "parent": "twin rear rails",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "twin rear rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The pull handle slides prismatically on twin rear rails"
+    },
+    {
+      "child": "transport wheels",
+      "parent": "axle",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "rear corners",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the transport wheels spin continuously on their axle"
+    },
+    {
+      "child": "three buttons",
+      "parent": "control face",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "control face",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the three buttons depress independently as small prismatic push controls"
+    }
+  ],
+  "notes": []
+}

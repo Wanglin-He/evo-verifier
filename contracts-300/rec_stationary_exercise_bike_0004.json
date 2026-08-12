@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_stationary_exercise_bike_0004",
+  "prompt": "A realistic, highly detailed Stationary Exercise Bike in a refined premium variant, with a stable frame, crank and flywheel housing, saddle support, and believable adjustment hardware. Add tighter seam management, cleaner interface breaks, restrained hardware, and a balanced mix of matte and satin material transitions. primary articulation should be obvious from the supporting pivots, axles, and linkage anchors. Keep the object polished, believable, and structurally clear.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "frame"
+    },
+    {
+      "name": "crank",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "crank"
+    },
+    {
+      "name": "flywheel housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flywheel housing"
+    },
+    {
+      "name": "saddle support",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "saddle support"
+    },
+    {
+      "name": "adjustment hardware",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "adjustment hardware"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "crank",
+      "parent": "frame",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    },
+    {
+      "child": "saddle support",
+      "parent": "frame",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "notes": []
+}

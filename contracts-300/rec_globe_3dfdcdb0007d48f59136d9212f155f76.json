@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_globe_3dfdcdb0007d48f59136d9212f155f76",
+  "prompt": "An antique desk globe with a tilted meridian and a four-foot pedestal base. The sphere is carried between polar pivots inside the meridian, and the meridian rises from a short central post above the base. The globe rotates continuously about its polar axis, and the meridian tilts on a horizontal revolute axis through the side supports.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "globe",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The globe rotates continuously about its polar axis"
+    },
+    {
+      "name": "meridian",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a tilted meridian"
+    },
+    {
+      "name": "pedestal base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a four-foot pedestal base"
+    },
+    {
+      "name": "central post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a short central post"
+    },
+    {
+      "name": "side supports",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "through the side supports"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "globe",
+      "parent": "meridian",
+      "kind": "continuous",
+      "axis_hint": "about its polar axis",
+      "location_hint": "inside the meridian",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The globe rotates continuously about its polar axis"
+    },
+    {
+      "child": "meridian",
+      "parent": "side supports",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "through the side supports",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the meridian tilts on a horizontal revolute axis through the side supports"
+    }
+  ],
+  "notes": []
+}

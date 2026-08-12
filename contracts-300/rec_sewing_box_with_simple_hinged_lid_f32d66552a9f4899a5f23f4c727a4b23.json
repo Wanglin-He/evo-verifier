@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_sewing_box_with_simple_hinged_lid_f32d66552a9f4899a5f23f4c727a4b23",
+  "prompt": "Create a cost-optimized mass-manufacturable Sewing box with simple hinged lid. Base architecture: a storage box body with a simple rear-hinged lid. Reduce part count, simplify molds/extrusions/stampings, and keep assembly order obvious with realistic snap/bolt/clamp interfaces. Lid rotation should be constrained by real hinge geometry. Every piece must have a believable attachment path; no floating or orphaned components. No floating parts.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "storage box body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "storage box body"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "storage box body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear-hinged lid"
+    }
+  ],
+  "notes": []
+}

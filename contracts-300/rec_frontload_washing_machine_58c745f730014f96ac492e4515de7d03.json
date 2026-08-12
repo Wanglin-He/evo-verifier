@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_frontload_washing_machine_58c745f730014f96ac492e4515de7d03",
+  "prompt": "A residential front-load washer with a white rectangular cabinet, a drum on a central revolute axle, and a porthole door with a rubber gasket hinged on the left edge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "white rectangular cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "white rectangular cabinet"
+    },
+    {
+      "name": "drum",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drum"
+    },
+    {
+      "name": "porthole door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "porthole door"
+    },
+    {
+      "name": "rubber gasket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rubber gasket"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "drum",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "central",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drum on a central revolute axle"
+    },
+    {
+      "child": "porthole door",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "left edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "porthole door with a rubber gasket hinged on the left edge"
+    }
+  ],
+  "notes": []
+}

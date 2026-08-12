@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_lighthouse_with_rotating_beacon_assembly_3e0948315a294f6db131d016f58749fd",
+  "prompt": "A cast-iron lighthouse lantern with a cylindrical glass room, a rotating beacon carriage, and a narrow side service door in the lantern wall. The beacon sits on a central vertical shaft inside the lantern room, and the service door is mounted in the outer wall frame. The beacon carriage rotates continuously about the vertical shaft axis, and the service door rotates on a small vertical hinge at the lantern wall.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "beacon carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "beacon carriage"
+    },
+    {
+      "name": "service door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "service door"
+    },
+    {
+      "name": "central vertical shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central vertical shaft"
+    },
+    {
+      "name": "lantern wall",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lantern wall"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "beacon carriage",
+      "parent": "central vertical shaft",
+      "kind": "continuous",
+      "axis_hint": "vertical shaft axis",
+      "location_hint": "inside the lantern room",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The beacon carriage rotates continuously about the vertical shaft axis"
+    },
+    {
+      "child": "service door",
+      "parent": "lantern wall",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at the lantern wall",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "service door rotates on a small vertical hinge at the lantern wall"
+    }
+  ],
+  "notes": []
+}
