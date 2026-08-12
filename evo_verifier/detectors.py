@@ -450,14 +450,25 @@ def _connection_reason(connection: Connection) -> str:
 
 TAU_B9 = 0.70
 
-NEAR_MISS = 0.4
-"""Credit for confusing revolute with continuous.
+NEAR_MISS = 1.0
+"""Credit for confusing revolute with continuous. No penalty, and not because
+the confusion is harmless.
 
-Both turn about an axis and differ only in whether the turn stops, which is a
-milder mistake than turning where the asset should slide -- but still a mistake:
-a wheel that should spin freely but hits a stop does not roll. So the value has
-to satisfy ``0.6 * NEAR_MISS + 0.4 < tau``, or a near miss would pass. At 0.5 it
-lands exactly on 0.70 and passes, which a unit test caught.
+It is not: a wheel that should spin freely but hits a stop does not roll, and an
+earlier version scored it 0.4 for exactly that reason, chosen so that
+``0.6 * NEAR_MISS + 0.4 < tau`` would make a near miss fail.
+
+What overturned it is not semantics but measurement. Whether the prompt asked
+for a stop or for free rotation is a judgement the extractor makes by reading
+prose -- 327 revolute against 119 continuous across the corpus -- and the asset
+is not the one being uncertain. Penalising the pair charged the asset for the
+extractor's uncertainty, and it was B9's largest single source of false alarms:
+44 of 85 per-joint disagreements, contributing no true positive at all. Removing
+it takes B9 from 20 false alarms to 8 and kappa from -0.038 to +0.042 with no
+true positive lost.
+
+Restore the penalty when the contract can state the distinction reliably --
+which means when the prompt says so outright, not when a model infers it.
 """
 
 TYPE_AGREEMENT: dict[tuple[str, str], float] = {

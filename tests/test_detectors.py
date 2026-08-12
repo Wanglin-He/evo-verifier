@@ -303,8 +303,9 @@ def test_b9_fails_a_slide_declared_where_a_hinge_was_asked():
     assert result.prediction is Prediction.FAIL
 
 
-def test_b9_gives_half_credit_between_revolute_and_continuous():
-    """Both turn about an axis; only the stop differs. Still a failure."""
+def test_b9_does_not_penalise_revolute_against_continuous():
+    """Whether the prompt asked for a stop is the extractor's judgement, not the
+    asset's doing. Charging the asset for it was B9's largest false-alarm source."""
     result = check_b9(
         asset(
             parts=[part("body"), part("knob")],
@@ -312,7 +313,19 @@ def test_b9_gives_half_credit_between_revolute_and_continuous():
         ),
         contract(ExpectedJoint(child="knob", kind="continuous", source=Source.PRIOR)),
     )
-    assert result.raw_measurements["declared_type_score"] == NEAR_MISS
+    assert result.raw_measurements["declared_type_score"] == NEAR_MISS == 1.0
+    assert result.prediction is Prediction.PASS
+
+
+def test_b9_still_fails_a_slide_where_a_turn_was_asked():
+    """Turning where the asset should slide stays a failure."""
+    result = check_b9(
+        asset(
+            parts=[part("body"), part("knob")],
+            joints=[joint("slide", "prismatic", "body", "knob")],
+        ),
+        contract(ExpectedJoint(child="knob", kind="continuous", source=Source.PRIOR)),
+    )
     assert result.prediction is Prediction.FAIL
 
 
