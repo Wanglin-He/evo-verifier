@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_car_axles_f303ccb4367242c08a6e75479f8bf8e8",
+  "prompt": "A full-floating rear axle shaft with a differential housing, two axle tubes, and removable hub-and-drum assemblies. The axle shaft spins continuously inside each tube. The drum hub rotates on a continuous bearing at each tube end.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rear axle shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear axle shaft"
+    },
+    {
+      "name": "differential housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "differential housing"
+    },
+    {
+      "name": "axle tubes",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two axle tubes"
+    },
+    {
+      "name": "hub-and-drum assemblies",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "removable hub-and-drum assemblies"
+    },
+    {
+      "name": "drum hub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "drum hub"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "axle shaft",
+      "parent": "tube",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "inside each tube",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The axle shaft spins continuously inside each tube."
+    },
+    {
+      "child": "drum hub",
+      "parent": "tube end",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "at each tube end",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The drum hub rotates on a continuous bearing at each tube end."
+    }
+  ],
+  "notes": []
+}

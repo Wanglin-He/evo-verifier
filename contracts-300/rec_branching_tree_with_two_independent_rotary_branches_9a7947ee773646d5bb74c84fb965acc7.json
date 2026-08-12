@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_branching_tree_with_two_independent_rotary_branches_9a7947ee773646d5bb74c84fb965acc7",
+  "prompt": "Design a realistic, highly detailed branching tree with two independent rotary branches as a standalone mechanical study assembly for the sdk_hybrid pipeline, with a central structural node feeding two independently rotating branch arms from a shared backbone. Both branches should rotate from visibly separate hubs, shafts, and side supports so the independent axes are unmistakable. Emphasize rigid brackets, exposed bearing hardware, removable access covers, and disciplined machined-or-fabricated hard-surface geometry, plus split bearing carriers, brace ribs, stop tabs, and rigid branch-end mounting pads. Keep it as a pure mechanical assembly with explicit joints, guides, bearings, brackets, and support structure. Avoid product styling, decorative housings, or recognizable household or device forms.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "branch arms",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two independently rotating branch arms"
+    },
+    {
+      "name": "shared backbone",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shared backbone"
+    },
+    {
+      "name": "central structural node",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central structural node"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "branch arms",
+      "parent": "shared backbone",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two independently rotating branch arms from a shared backbone"
+    }
+  ],
+  "notes": []
+}

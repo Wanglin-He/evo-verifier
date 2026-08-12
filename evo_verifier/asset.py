@@ -183,6 +183,13 @@ class Limits:
     upper: float | None = None
     effort: float | None = None
     velocity: float | None = None
+    declared_bounds: bool = False
+    """Whether ``lower``/``upper`` were written at all.
+
+    Without this, a bound that would not fold is indistinguishable from a bound
+    nobody wrote, and B9 calls the first one a revolute joint with no limits --
+    a confident failure whose stated reason the source contradicts.
+    """
 
     @property
     def travel(self) -> float | None:
@@ -190,6 +197,10 @@ class Limits:
         if self.lower is None or self.upper is None:
             return None
         return abs(self.upper - self.lower)
+
+    @property
+    def bounds_unreadable(self) -> bool:
+        return self.declared_bounds and self.travel is None
 
 
 @dataclass(frozen=True)
@@ -206,10 +217,21 @@ class Articulation:
     limits: Limits | None = None
     mimic: str | None = None
     """Raw source of a ``mimic=`` argument. The coupling contract B14 needs."""
+    unreadable: frozenset[str] = frozenset()
+    """Fields the source declares that this reader could not fold.
+
+    The difference between an absent parent and a parent written as a call we
+    will not evaluate. Both leave the field ``None``; only one of them is
+    something to hold the asset responsible for.
+    """
 
     @property
     def is_movable(self) -> bool:
         return self.kind is not None and self.kind != "fixed"
+
+    def readable(self, field_name: str) -> bool:
+        """False when the source declares this field and we could not read it."""
+        return field_name not in self.unreadable
 
 
 @dataclass
@@ -463,28 +485,46 @@ class _Reader:
         keywords = {keyword.arg: keyword.value for keyword in node.keywords if keyword.arg}
         name = self._maybe_str(node.args[0]) if node.args else None
         kind = self._kind(node.args[1]) if len(node.args) > 1 else self._kind(keywords.get("kind"))
+        limits = self._limits(keywords.get("motion_limits"))
+        values = {
+            "name": name,
+            "kind": kind,
+            "parent": self._part_name(keywords.get("parent")),
+            "child": self._part_name(keywords.get("child")),
+            "axis": self._maybe_vec3(keywords.get("axis")),
+        }
+        origin = self._origin(keywords.get("origin"))
+        written = {
+            "name": bool(node.args) or "name" in keywords,
+            "kind": len(node.args) > 1 or "kind" in keywords,
+            "parent": "parent" in keywords,
+            "child": "child" in keywords,
+            "axis": "axis" in keywords,
+            "origin": "origin" in keywords,
+        }
+        # A field the source declares and this reader could not fold is a gap in
+        # the reader. A field the source never declares is a fact about the
+        # asset. They leave the same None behind, so the difference is recorded
+        # here or it is lost.
+        unreadable = {field for field, value in values.items() if value is None and written[field]}
+        if origin.xyz is None and written["origin"]:
+            unreadable.add("origin")
+        if limits is not None and limits.bounds_unreadable:
+            unreadable.add("limits")
+
         joint = Articulation(
             name=name or "<unnamed>",
             kind=kind,
-            parent=self._part_name(keywords.get("parent")),
-            child=self._part_name(keywords.get("child")),
-            origin=self._origin(keywords.get("origin")),
-            axis=self._maybe_vec3(keywords.get("axis")),
-            limits=self._limits(keywords.get("motion_limits")),
+            parent=values["parent"],
+            child=values["child"],
+            origin=origin,
+            axis=values["axis"],
+            limits=limits,
             mimic=ast.unparse(keywords["mimic"]) if "mimic" in keywords else None,
+            unreadable=frozenset(unreadable),
         )
-        for field_name, value in (
-            ("name", name),
-            ("kind", joint.kind),
-            ("parent", joint.parent),
-            ("child", joint.child),
-        ):
-            if value is None:
-                self.asset.notes.append(f"joint {joint.name}: {field_name} unresolved")
-        if joint.origin.xyz is None:
-            self.asset.notes.append(f"joint {joint.name}: origin unresolved")
-        if joint.axis is None and joint.kind != "fixed":
-            self.asset.notes.append(f"joint {joint.name}: axis unresolved")
+        for gap in sorted(unreadable):
+            self.asset.notes.append(f"joint {joint.name}: {gap} unresolved")
         self.asset.articulations.append(joint)
 
     def _shape(self, node: ast.Call) -> None:
@@ -539,6 +579,7 @@ class _Reader:
             upper=self._maybe_float(keywords.get("upper")),
             effort=self._maybe_float(keywords.get("effort")),
             velocity=self._maybe_float(keywords.get("velocity")),
+            declared_bounds="lower" in keywords or "upper" in keywords,
         )
 
     def _origin(self, node: ast.expr | None) -> Origin:

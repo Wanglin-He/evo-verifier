@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_articulated_task_lamp_26b8afbe241c433fa325fbf23fe8edda",
+  "prompt": "A wall-mounted task lamp with a circular wall plate, a short lower arm, a longer upper arm, and a bell shade. The lower arm rotates on a hinge at the wall plate, the upper arm rotates on a hinge at the elbow joint, and the shade tilts on a hinge at the end bracket. Bedside reading-lamp scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "circular wall plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "circular wall plate"
+    },
+    {
+      "name": "short lower arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short lower arm"
+    },
+    {
+      "name": "longer upper arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "longer upper arm"
+    },
+    {
+      "name": "bell shade",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bell shade"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lower arm",
+      "parent": "wall plate",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the wall plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower arm rotates on a hinge at the wall plate"
+    },
+    {
+      "child": "upper arm",
+      "parent": "elbow joint",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the elbow joint",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper arm rotates on a hinge at the elbow joint"
+    },
+    {
+      "child": "shade",
+      "parent": "end bracket",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the end bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shade tilts on a hinge at the end bracket"
+    }
+  ],
+  "notes": []
+}

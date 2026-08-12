@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_blender_b30547af476f403486d7799ebadc290f",
+  "prompt": "A cold-press smoothie blender with a wide rectangular base, a wide-mouth polycarbonate jar on a bayonet lock at the base coupling, a six-blade cross assembly on a revolute joint at the jar base, and a screw-top fill cap that threads onto the jar opening on a revolute sealing joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wide rectangular base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular base"
+    },
+    {
+      "name": "wide-mouth polycarbonate jar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide-mouth polycarbonate jar"
+    },
+    {
+      "name": "six-blade cross assembly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "six-blade cross assembly"
+    },
+    {
+      "name": "screw-top fill cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "screw-top fill cap"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wide-mouth polycarbonate jar",
+      "parent": "base coupling",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the base coupling",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide-mouth polycarbonate jar on a bayonet lock at the base coupling"
+    },
+    {
+      "child": "six-blade cross assembly",
+      "parent": "jar base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the jar base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "six-blade cross assembly on a revolute joint at the jar base"
+    },
+    {
+      "child": "screw-top fill cap",
+      "parent": "jar opening",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "onto the jar opening",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "screw-top fill cap that threads onto the jar opening on a revolute sealing joint"
+    }
+  ],
+  "notes": []
+}

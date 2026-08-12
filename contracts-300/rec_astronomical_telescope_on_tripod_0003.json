@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_astronomical_telescope_on_tripod_0003",
+  "prompt": "A Newtonian reflector on a metal equatorial mount with a polar axis and a declination revolute axis, on a three-leg tripod.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "Newtonian reflector",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Newtonian reflector"
+    },
+    {
+      "name": "metal equatorial mount",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "metal equatorial mount"
+    },
+    {
+      "name": "tripod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three-leg tripod"
+    },
+    {
+      "name": "leg",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three-leg"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "metal equatorial mount",
+      "parent": "tripod",
+      "kind": null,
+      "axis_hint": "polar",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "polar axis"
+    },
+    {
+      "child": "Newtonian reflector",
+      "parent": "metal equatorial mount",
+      "kind": "revolute",
+      "axis_hint": "declination",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "declination revolute axis"
+    }
+  ],
+  "notes": []
+}

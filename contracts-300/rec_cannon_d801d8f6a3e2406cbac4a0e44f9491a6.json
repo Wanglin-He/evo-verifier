@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_cannon_d801d8f6a3e2406cbac4a0e44f9491a6",
+  "prompt": "A Civil War 3-inch ordnance rifle with a wrought-iron barrel on trunnion revolute joints in a two-wheel oak trail carriage, iron-spoked wheels on revolute axles at the carriage cheeks, and a limber pintle hook plate at the trail end.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wrought-iron barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wrought-iron barrel"
+    },
+    {
+      "name": "oak trail carriage",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "oak trail carriage"
+    },
+    {
+      "name": "iron-spoked wheels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "iron-spoked wheels"
+    },
+    {
+      "name": "carriage cheeks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "carriage cheeks"
+    },
+    {
+      "name": "limber pintle hook plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "limber pintle hook plate"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wrought-iron barrel",
+      "parent": "oak trail carriage",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "trunnion",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wrought-iron barrel on trunnion revolute joints in a two-wheel oak trail carriage"
+    },
+    {
+      "child": "iron-spoked wheels",
+      "parent": "carriage cheeks",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the carriage cheeks",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "iron-spoked wheels on revolute axles at the carriage cheeks"
+    }
+  ],
+  "notes": []
+}

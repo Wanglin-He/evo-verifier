@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_box_fan_with_control_knob_b579fec3589f4171a07baa3a8d000357",
+  "prompt": "A classic household box fan with a square plastic housing, a snap-on front grille, and a three-blade rotor inside. The rotor spins continuously on the motor shaft axis; the front grille panel rotates on a side-edge revolute hinge; the speed-control knob on the right side panel rotates continuously on its stub shaft.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "square plastic housing"
+    },
+    {
+      "name": "front grille",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "snap-on front grille"
+    },
+    {
+      "name": "rotor",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three-blade rotor"
+    },
+    {
+      "name": "speed-control knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "speed-control knob"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rotor",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "motor shaft axis",
+      "location_hint": "inside",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The rotor spins continuously on the motor shaft axis"
+    },
+    {
+      "child": "front grille panel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "side-edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the front grille panel rotates on a side-edge revolute hinge"
+    },
+    {
+      "child": "speed-control knob",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "stub shaft",
+      "location_hint": "right side panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the speed-control knob on the right side panel rotates continuously on its stub shaft"
+    }
+  ],
+  "notes": []
+}

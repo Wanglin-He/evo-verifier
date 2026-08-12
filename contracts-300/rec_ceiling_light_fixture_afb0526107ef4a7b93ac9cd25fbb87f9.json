@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_ceiling_light_fixture_afb0526107ef4a7b93ac9cd25fbb87f9",
+  "prompt": "A flush mount ceiling fixture with a square base and a pivoting inner light panel on a shallow gimbal. The inner light panel tilts on a horizontal hinge within the square base frame. Hallway flush-light scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "square base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "square base"
+    },
+    {
+      "name": "inner light panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner light panel"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "inner light panel",
+      "parent": "square base frame",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "within the square base frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The inner light panel tilts on a horizontal hinge within the square base frame."
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "record_id": "rec_ceiling_fan_0002",
+  "prompt": "A five-blade residential ceiling fan with a cylindrical motor housing, a downrod, five wooden blades rotating on a central revolute joint, and a bottom globe light kit.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "motor housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cylindrical motor housing"
+    },
+    {
+      "name": "downrod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "downrod"
+    },
+    {
+      "name": "wooden blades",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "five wooden blades"
+    },
+    {
+      "name": "bottom globe light kit",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bottom globe light kit"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wooden blades",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "central",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "five wooden blades rotating on a central revolute joint"
+    }
+  ],
+  "notes": []
+}

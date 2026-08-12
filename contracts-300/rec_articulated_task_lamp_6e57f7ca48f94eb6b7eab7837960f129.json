@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_articulated_task_lamp_6e57f7ca48f94eb6b7eab7837960f129",
+  "prompt": "A multi-segment studio painting floor lamp with a wide round base, a tall post, a three-link arm, and a flat lamp panel. Links connect through sequential revolute elbow joints. The lamp panel tilts on a revolute joint at the arm tip.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wide round base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide round base"
+    },
+    {
+      "name": "tall post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall post"
+    },
+    {
+      "name": "link",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three-link arm"
+    },
+    {
+      "name": "flat lamp panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat lamp panel"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "link",
+      "parent": "link",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "elbow joints",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Links connect through sequential revolute elbow joints."
+    },
+    {
+      "child": "lamp panel",
+      "parent": "arm",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the arm tip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The lamp panel tilts on a revolute joint at the arm tip."
+    }
+  ],
+  "notes": []
+}

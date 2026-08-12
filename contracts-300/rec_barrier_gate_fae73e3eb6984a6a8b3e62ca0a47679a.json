@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_barrier_gate_fae73e3eb6984a6a8b3e62ca0a47679a",
+  "prompt": "A realistic, highly detailed barrier gate with a solid base housing, long gate arm, and visible control hardware. The gate arm articulates naturally, and the assembly should feel like a real traffic-control product with convincing proportions and support.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base housing"
+    },
+    {
+      "name": "gate arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "gate arm"
+    },
+    {
+      "name": "control hardware",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control hardware"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "gate arm",
+      "parent": "base housing",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "gate arm articulates naturally"
+    }
+  ],
+  "notes": []
+}

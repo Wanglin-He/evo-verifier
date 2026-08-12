@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_camera_lens_656ecf97a6e04553b422dff30a4188e6",
+  "prompt": "A 2x teleconverter with two cylindrical bayonet mount halves joined by a short cylindrical body. The front bayonet interface ring rotates on a revolute joint for mounting. The rear bayonet interface ring is fixed. An alignment peg ring revolves on a revolute joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "cylindrical bayonet mount halves",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two cylindrical bayonet mount halves"
+    },
+    {
+      "name": "short cylindrical body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short cylindrical body"
+    },
+    {
+      "name": "front bayonet interface ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front bayonet interface ring"
+    },
+    {
+      "name": "rear bayonet interface ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear bayonet interface ring"
+    },
+    {
+      "name": "alignment peg ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "alignment peg ring"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front bayonet interface ring",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The front bayonet interface ring rotates on a revolute joint for mounting."
+    },
+    {
+      "child": "rear bayonet interface ring",
+      "parent": "",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The rear bayonet interface ring is fixed."
+    },
+    {
+      "child": "alignment peg ring",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "An alignment peg ring revolves on a revolute joint."
+    }
+  ],
+  "notes": []
+}

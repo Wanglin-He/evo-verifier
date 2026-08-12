@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_camcorder_with_flipout_screen_c0e525a2c15c48f2a7d03c53f846c765",
+  "prompt": "A home-video camcorder with a compact body, a hand strap, a flip-out side screen, and a front zoom lens, plus three small front-side buttons below the screen opening. the screen hinge remains visibly supported by the body sidewall, and the buttons are separate controls in the body wall. The side screen rotates outward on a vertical hinge and the front lens ring rotates continuously around the optical axis, and the three buttons each depress independently as small prismatic push controls. Small camcorder scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact body"
+    },
+    {
+      "name": "hand strap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hand strap"
+    },
+    {
+      "name": "side screen",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side screen"
+    },
+    {
+      "name": "front lens ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front lens ring"
+    },
+    {
+      "name": "buttons",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three small front-side buttons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "side screen",
+      "parent": "body sidewall",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "outward",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The side screen rotates outward on a vertical hinge"
+    },
+    {
+      "child": "front lens ring",
+      "parent": "body",
+      "kind": "continuous",
+      "axis_hint": "around the optical axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front lens ring rotates continuously around the optical axis"
+    },
+    {
+      "child": "buttons",
+      "parent": "body wall",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three buttons each depress independently as small prismatic push controls"
+    }
+  ],
+  "notes": []
+}

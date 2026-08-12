@@ -1,0 +1,118 @@
+{
+  "version": "1",
+  "record_id": "rec_blimp_629fe4fa0fa048f992e1b0ca36d4622f",
+  "prompt": "A utility blimp with a thick envelope, a compact gondola, twin engine pods, and a boxy tail cruciform, plus a small wheeled landing gear under the gondola. the gondola hangs from visible support struts below the hull centerline, and the gear remains a real supported undercarriage attached to the gondola structure. The propellers rotate continuously on their pod shafts, the rudder rotates on a vertical hinge line in the rear fin, and the elevators rotate on horizontal hinges in the tailplanes, and the landing wheels rotate continuously on their axle. Workhorse airship scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "envelope",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "thick envelope"
+    },
+    {
+      "name": "gondola",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact gondola"
+    },
+    {
+      "name": "engine pods",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "twin engine pods"
+    },
+    {
+      "name": "propellers",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "propellers"
+    },
+    {
+      "name": "rudder",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rudder"
+    },
+    {
+      "name": "rear fin",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear fin"
+    },
+    {
+      "name": "elevators",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "elevators"
+    },
+    {
+      "name": "tailplanes",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tailplanes"
+    },
+    {
+      "name": "landing wheels",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "landing wheels"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "propellers",
+      "parent": "pod shafts",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on their pod shafts",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The propellers rotate continuously on their pod shafts"
+    },
+    {
+      "child": "rudder",
+      "parent": "rear fin",
+      "kind": "revolute",
+      "axis_hint": "vertical hinge line",
+      "location_hint": "in the rear fin",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the rudder rotates on a vertical hinge line in the rear fin"
+    },
+    {
+      "child": "elevators",
+      "parent": "tailplanes",
+      "kind": "revolute",
+      "axis_hint": "horizontal hinges",
+      "location_hint": "in the tailplanes",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the elevators rotate on horizontal hinges in the tailplanes"
+    },
+    {
+      "child": "landing wheels",
+      "parent": "axle",
+      "kind": "continuous",
+      "axis_hint": "on their axle",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the landing wheels rotate continuously on their axle"
+    }
+  ],
+  "notes": []
+}

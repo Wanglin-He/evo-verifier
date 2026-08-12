@@ -60,14 +60,30 @@ SYNONYMS: tuple[frozenset[str], ...] = (
     frozenset({"arm", "boom", "lever"}),
     frozenset({"handle", "grip"}),
     frozenset({"drawer", "tray", "basket", "tub", "drum"}),
-    frozenset({"jaw", "clamp", "grip"}),
+    frozenset({"jaw", "clamp"}),
     frozenset({"wheel", "roller", "rotor", "disc", "flywheel"}),
     frozenset({"hinge", "pivot", "joint"}),
     frozenset({"leg", "foot", "stand"}),
     frozenset({"head", "top"}),
     frozenset({"rod", "pin", "axle", "spindle"}),
 )
-"""Words this dataset uses interchangeably. Small and hand-checked, not a thesaurus."""
+"""Words this dataset uses interchangeably. Small and hand-checked, not a thesaurus.
+
+The groups must stay disjoint, and that is asserted below rather than trusted. A
+word in two groups makes the relation transitive through it: ``grip`` sat in both
+the handle group and the jaw group, which quietly made a handle the same thing as
+a clamp across 26 assets in the corpus.
+"""
+
+_SEEN: dict[str, int] = {}
+for _index, _group in enumerate(SYNONYMS):
+    for _word in _group:
+        if _word in _SEEN:
+            raise ValueError(f"synonym {_word!r} is in two groups: {_SEEN[_word]} and {_index}")
+        _SEEN[_word] = _index
+
+KEEPS_ITS_S = frozenset({"lens", "gas", "bus", "truss", "brass", "glass", "iris", "canvas"})
+"""Singulars that end in s. Latin and Greek endings are handled by rule."""
 
 _WORD = re.compile(r"[a-z0-9]+")
 
@@ -91,11 +107,18 @@ def tokens(name: str) -> tuple[str, ...]:
 
 
 def _singular(word: str) -> str:
+    """Strip a plural s, but not the s that belongs to the word.
+
+    ``chassis`` is not a plural of ``chassi``, and the corpus is full of Latin
+    and Greek singulars: axis, chassis, focus, iris, status.
+    """
+    if word in KEEPS_ITS_S or word.endswith(("is", "us", "ss")):
+        return word
     if len(word) > 3 and word.endswith("ies"):
         return word[:-3] + "y"
     if len(word) > 3 and word.endswith("es") and word[-3] in "sxzh":
         return word[:-2]
-    if len(word) > 3 and word.endswith("s") and not word.endswith("ss"):
+    if len(word) > 3 and word.endswith("s"):
         return word[:-1]
     return word
 
@@ -167,3 +190,39 @@ def best(wanted: str, candidates: Iterable[str]) -> Match | None:
 def unmatched(wanted: Sequence[str], candidates: Iterable[str]) -> list[str]:
     candidates = list(candidates)
     return [name for name in wanted if best(name, candidates) is None]
+
+
+def assign(wanted: Sequence[str], candidates: Iterable[str]) -> dict[int, list[str]]:
+    """Give each candidate to the requirement it fits best, and only that one.
+
+    Without this, one part answers for several requirements at once. The head
+    noun alone scores 0.8, so ``tail rotor`` matches ``main_rotor``, and a
+    helicopter whose tail rotor has no joint at all passes B8 on the main
+    rotor's -- the exact fault the item exists to catch, reported as clean.
+    Exclusivity also stops two requirements being judged against one joint and
+    then blamed for each other's placement.
+
+    Keyed by position in ``wanted`` because two requirements can share a name.
+    Ties go to the earlier requirement and then to the earlier candidate, so the
+    same inputs always produce the same assignment.
+    """
+    owned: dict[int, list[str]] = {index: [] for index in range(len(wanted))}
+    for candidate in candidates:
+        scored = [
+            (score, index)
+            for index, name in enumerate(wanted)
+            if (score := similarity(name, candidate)) >= STRONG
+        ]
+        if not scored:
+            continue
+        best_score = max(score for score, _ in scored)
+        # Among requirements that fit equally well, the one holding the fewest.
+        # One requirement asking for four flaps should take all four; four
+        # requirements each asking for a flap should take one apiece, and the
+        # names alone cannot tell those apart.
+        index = min(
+            (index for score, index in scored if score == best_score),
+            key=lambda index: (len(owned[index]), index),
+        )
+        owned[index].append(candidate)
+    return owned

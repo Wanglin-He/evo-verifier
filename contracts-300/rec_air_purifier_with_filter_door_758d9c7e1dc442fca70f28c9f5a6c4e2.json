@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_air_purifier_with_filter_door_758d9c7e1dc442fca70f28c9f5a6c4e2",
+  "prompt": "An industrial floor-standing air scrubber with a tall rectangular cabinet on caster wheels, a large hinged front access door on two revolute hinge knuckles at the left edge, and a secondary hinged exhaust baffle at the cabinet top on a revolute hinge at the rear edge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tall rectangular cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall rectangular cabinet"
+    },
+    {
+      "name": "caster wheels",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "caster wheels"
+    },
+    {
+      "name": "front access door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large hinged front access door"
+    },
+    {
+      "name": "secondary hinged exhaust baffle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "secondary hinged exhaust baffle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front access door",
+      "parent": "tall rectangular cabinet",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the left edge",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "large hinged front access door on two revolute hinge knuckles at the left edge"
+    },
+    {
+      "child": "secondary hinged exhaust baffle",
+      "parent": "tall rectangular cabinet",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the cabinet top at the rear edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "secondary hinged exhaust baffle at the cabinet top on a revolute hinge at the rear edge"
+    },
+    {
+      "child": "caster wheels",
+      "parent": "tall rectangular cabinet",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_air_purifier_with_filter_door_c739afd5c89343b28eef9b2333094848",
+  "prompt": "A wall air purifier with a hinged front cover and an inner filter drawer on bottom rails. The front cover rotates on a vertical hinge at one side, and the inner filter drawer slides prismatically forward on bottom guide rails. Indoor appliance scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wall air purifier",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wall air purifier"
+    },
+    {
+      "name": "front cover",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front cover"
+    },
+    {
+      "name": "inner filter drawer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner filter drawer"
+    },
+    {
+      "name": "bottom guide rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "bottom guide rails"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "front cover",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at one side",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The front cover rotates on a vertical hinge at one side"
+    },
+    {
+      "child": "inner filter drawer",
+      "parent": "bottom guide rails",
+      "kind": "prismatic",
+      "axis_hint": "forward",
+      "location_hint": "on bottom guide rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the inner filter drawer slides prismatically forward on bottom guide rails"
+    }
+  ],
+  "notes": []
+}

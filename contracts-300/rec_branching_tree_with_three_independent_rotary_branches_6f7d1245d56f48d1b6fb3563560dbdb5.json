@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_branching_tree_with_three_independent_rotary_branches_6f7d1245d56f48d1b6fb3563560dbdb5",
+  "prompt": "A rack-style three-branch rotary tree. A grounded upright spine carries three branch modules on separate side saddles, with each branch ending in a different simple hard-face such as a pad, fork, or clamp tab. Each branch is an independent revolute joint about its own supported hub axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "spine",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "grounded upright spine"
+    },
+    {
+      "name": "branch module",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three branch modules"
+    },
+    {
+      "name": "side saddle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "separate side saddles"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "branch",
+      "parent": "side saddle",
+      "kind": "revolute",
+      "axis_hint": "about its own supported hub axis",
+      "location_hint": "on separate side saddles",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Each branch is an independent revolute joint about its own supported hub axis."
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_bicycle_dropper_seatpost_assembly_230ccd2e30b4468fbae4271423612cfd",
+  "prompt": "A hydraulic dropper seatpost with a lower body tube clamped by a quick-release binder ring, an inner telescoping post on a prismatic joint, and a two-bolt saddle rail clamp plate at the post tip with round-section rails.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "lower body tube",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower body tube"
+    },
+    {
+      "name": "quick-release binder ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "quick-release binder ring"
+    },
+    {
+      "name": "inner telescoping post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner telescoping post"
+    },
+    {
+      "name": "two-bolt saddle rail clamp plate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two-bolt saddle rail clamp plate"
+    },
+    {
+      "name": "round-section rails",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round-section rails"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "inner telescoping post",
+      "parent": "lower body tube",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner telescoping post on a prismatic joint"
+    }
+  ],
+  "notes": []
+}

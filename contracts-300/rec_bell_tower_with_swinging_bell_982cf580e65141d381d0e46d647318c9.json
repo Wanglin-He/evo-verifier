@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_bell_tower_with_swinging_bell_982cf580e65141d381d0e46d647318c9",
+  "prompt": "A seaside harbor bell tower with a round timber post, a conical shingled cap, and a single iron bell hung on a crossbeam near the top. The crossbeam is fixed across the post top. The bell hangs on a revolute hinge at the headstock cleat on the crossbeam. The bell swings about the horizontal axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "round timber post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round timber post"
+    },
+    {
+      "name": "conical shingled cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "conical shingled cap"
+    },
+    {
+      "name": "iron bell",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "single iron bell"
+    },
+    {
+      "name": "crossbeam",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "crossbeam"
+    },
+    {
+      "name": "headstock cleat",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "headstock cleat"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "crossbeam",
+      "parent": "post top",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "across the post top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The crossbeam is fixed across the post top."
+    },
+    {
+      "child": "bell",
+      "parent": "headstock cleat",
+      "kind": "revolute",
+      "axis_hint": "horizontal axis",
+      "location_hint": "at the headstock cleat on the crossbeam",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The bell hangs on a revolute hinge at the headstock cleat on the crossbeam."
+    }
+  ],
+  "notes": []
+}

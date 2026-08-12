@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_blender_505cbaf0d2fe46acb5569c11e86ab410",
+  "prompt": "A countertop soup blender with a wide round base, a wide-mouth glass jar on a bayonet twist-lock at the base coupling, a four-blade assembly on a revolute joint at the jar bottom, and a hinged steam-vent lid cap on a revolute hinge at the lid center for safe hot-liquid blending.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "wide round base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide round base"
+    },
+    {
+      "name": "wide-mouth glass jar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide-mouth glass jar"
+    },
+    {
+      "name": "four-blade assembly",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four-blade assembly"
+    },
+    {
+      "name": "hinged steam-vent lid cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged steam-vent lid cap"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wide-mouth glass jar",
+      "parent": "wide round base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the base coupling",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide-mouth glass jar on a bayonet twist-lock at the base coupling"
+    },
+    {
+      "child": "four-blade assembly",
+      "parent": "wide-mouth glass jar",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the jar bottom",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four-blade assembly on a revolute joint at the jar bottom"
+    },
+    {
+      "child": "hinged steam-vent lid cap",
+      "parent": "lid",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the lid center",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged steam-vent lid cap on a revolute hinge at the lid center"
+    }
+  ],
+  "notes": []
+}

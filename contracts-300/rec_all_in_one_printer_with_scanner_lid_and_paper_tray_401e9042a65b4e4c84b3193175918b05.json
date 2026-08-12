@@ -1,0 +1,126 @@
+{
+  "version": "1",
+  "record_id": "rec_all_in_one_printer_with_scanner_lid_and_paper_tray_401e9042a65b4e4c84b3193175918b05",
+  "prompt": "A tall all-in-one printer with an automatic document feeder lid, a front paper cassette, a side service door, and a tilting front touchscreen panel surrounded by four hard keys. The flatbed lid rotates upward on a rear hinge, the paper cassette slides prismatically from the lower body, the ADF lid rotates on a top hinge, and the control panel tilts on a short horizontal pivot. A selector dial at one side of the panel rotates continuously, and the four hard keys are separate prismatic push buttons. Keep the scanner bed, feeder throat, and tray path as hollow appliance geometry. Small-office printer scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "automatic document feeder lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "automatic document feeder lid"
+    },
+    {
+      "name": "front paper cassette",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front paper cassette"
+    },
+    {
+      "name": "side service door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side service door"
+    },
+    {
+      "name": "touchscreen panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilting front touchscreen panel"
+    },
+    {
+      "name": "hard keys",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four hard keys"
+    },
+    {
+      "name": "flatbed lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flatbed lid"
+    },
+    {
+      "name": "selector dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "selector dial"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "flatbed lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The flatbed lid rotates upward on a rear hinge"
+    },
+    {
+      "child": "paper cassette",
+      "parent": "lower body",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the paper cassette slides prismatically from the lower body"
+    },
+    {
+      "child": "ADF lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "top hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the ADF lid rotates on a top hinge"
+    },
+    {
+      "child": "control panel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal pivot",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control panel tilts on a short horizontal pivot"
+    },
+    {
+      "child": "selector dial",
+      "parent": "panel",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "one side of the panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "selector dial at one side of the panel rotates continuously"
+    },
+    {
+      "child": "hard keys",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 4,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "four hard keys are separate prismatic push buttons"
+    }
+  ],
+  "notes": []
+}

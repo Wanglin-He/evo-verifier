@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_camera_flash_5429b662e9ab4e3eae11495d646eb94d",
+  "prompt": "A full-size speedlight with a deep battery housing, a tall neck, and a wide flash head with rounded side cheeks, plus a rear control panel with several raised buttons around a small screen. the head cradle keeps the support geometry exposed instead of hiding it inside the shell, and the button bank remains clearly articulated in the back shell. The neck swivels continuously on a vertical axis above the body and the head rotates on a horizontal tilt hinge at the top of the neck, and each rear-panel button is an independent small prismatic push control. Professional speedlight scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "neck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a tall neck"
+    },
+    {
+      "name": "flash head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a wide flash head"
+    },
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "above the body"
+    },
+    {
+      "name": "rear-panel button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each rear-panel button is an independent small prismatic push control"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "neck",
+      "parent": "body",
+      "kind": "continuous",
+      "axis_hint": "vertical axis",
+      "location_hint": "above the body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The neck swivels continuously on a vertical axis above the body"
+    },
+    {
+      "child": "head",
+      "parent": "neck",
+      "kind": "revolute",
+      "axis_hint": "horizontal tilt hinge",
+      "location_hint": "at the top of the neck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the head rotates on a horizontal tilt hinge at the top of the neck"
+    },
+    {
+      "child": "rear-panel button",
+      "parent": "rear control panel",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "rear-panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each rear-panel button is an independent small prismatic push control"
+    }
+  ],
+  "notes": []
+}

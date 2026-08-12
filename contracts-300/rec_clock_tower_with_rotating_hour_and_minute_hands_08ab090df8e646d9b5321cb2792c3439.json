@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_clock_tower_with_rotating_hour_and_minute_hands_08ab090df8e646d9b5321cb2792c3439",
+  "prompt": "A campanile free-standing cylindrical clock tower with a round shaft, a belfry top, and a single clock face. The clock minute hand rotates continuously. The hour hand rotates continuously on a coaxial joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "round shaft",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round shaft"
+    },
+    {
+      "name": "belfry top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "belfry top"
+    },
+    {
+      "name": "clock face",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "single clock face"
+    },
+    {
+      "name": "clock minute hand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "clock minute hand"
+    },
+    {
+      "name": "hour hand",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hour hand"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "clock minute hand",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The clock minute hand rotates continuously."
+    },
+    {
+      "child": "hour hand",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "coaxial",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The hour hand rotates continuously on a coaxial joint."
+    }
+  ],
+  "notes": []
+}

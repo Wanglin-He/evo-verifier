@@ -514,7 +514,7 @@ def test_mean_lets_three_good_joints_hide_a_bad_one():
     built, asked = _one_of_four_broken()
     result = check_b9(built, asked, aggregate="mean")
     assert result.score > 0.70
-    assert result.prediction is Prediction.PASS
+    assert result.prediction is Prediction.PASS, "which is why mean is not used"
 
 
 def test_worst_lets_one_bad_joint_decide():
@@ -525,4 +525,4 @@ def test_worst_lets_one_bad_joint_decide():
 
 
 def test_each_item_has_an_aggregation_chosen_from_evidence():
-    assert AGGREGATE == {"B7": "mean", "B8": "worst", "B9": "mean", "B10": "mean"}
+    assert AGGREGATE == {"B7": "worst", "B8": "worst", "B9": "worst", "B10": "worst"}

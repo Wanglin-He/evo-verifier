@@ -1,0 +1,97 @@
+{
+  "version": "1",
+  "record_id": "rec_adjustable_weight_bench_with_hinged_backrest_e70294c2acff425e9256328eefb31c21",
+  "prompt": "An adjustable decline bench with a long back pad, an articulated seat, and a front leg-roller assembly, plus a front carry handle between the wheels. the frame has a low wheel set at one end for moving the bench around the room, and the handle projects from the front crossmember without floating. The back pad rotates on a central horizontal hinge, the seat rotates on its own hinge ahead of it, the paired leg rollers spin continuously on their support axle, and the transport wheels rotate continuously on the frame axle. Full home-workout bench scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "frame"
+    },
+    {
+      "name": "long back pad",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "long back pad"
+    },
+    {
+      "name": "articulated seat",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "articulated seat"
+    },
+    {
+      "name": "paired leg rollers",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "paired leg rollers"
+    },
+    {
+      "name": "front carry handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front carry handle"
+    },
+    {
+      "name": "transport wheels",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "transport wheels"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "back pad",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "central horizontal",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The back pad rotates on a central horizontal hinge"
+    },
+    {
+      "child": "seat",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "ahead of it",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the seat rotates on its own hinge ahead of it"
+    },
+    {
+      "child": "paired leg rollers",
+      "parent": "support axle",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on their support axle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the paired leg rollers spin continuously on their support axle"
+    },
+    {
+      "child": "transport wheels",
+      "parent": "frame axle",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on the frame axle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the transport wheels rotate continuously on the frame axle"
+    }
+  ],
+  "notes": []
+}

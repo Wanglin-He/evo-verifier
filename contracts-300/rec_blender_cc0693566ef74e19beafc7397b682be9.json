@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_blender_cc0693566ef74e19beafc7397b682be9",
+  "prompt": "A vacuum blender with a round base housing, a tall cylindrical jug that seats on a revolute twist lock, and a suction connector cap. The jug locks on the base with a revolute twist. A sealing cap on the jug top presses in on a short prismatic fit. The blade rotates continuously.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "round base housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round base housing"
+    },
+    {
+      "name": "tall cylindrical jug",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall cylindrical jug"
+    },
+    {
+      "name": "suction connector cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "suction connector cap"
+    },
+    {
+      "name": "sealing cap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "sealing cap"
+    },
+    {
+      "name": "blade",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "jug",
+      "parent": "base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on the base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The jug locks on the base with a revolute twist."
+    },
+    {
+      "child": "sealing cap",
+      "parent": "jug top",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "on the jug top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "A sealing cap on the jug top presses in on a short prismatic fit."
+    },
+    {
+      "child": "blade",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The blade rotates continuously."
+    }
+  ],
+  "notes": []
+}

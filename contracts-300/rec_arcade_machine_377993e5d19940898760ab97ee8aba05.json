@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_arcade_machine_377993e5d19940898760ab97ee8aba05",
+  "prompt": "A two-player upright arcade machine with a wide control panel, twin joystick positions, and a lower cashbox door beneath the screen, plus a small payout tray flap near the lower front. the lower cabinet remains tall and boxy enough for a believable coin-op silhouette, and the tray flap reads as a supported door in the lower cabinet face. The cashbox door rotates on a vertical hinge at one side of the lower cabinet, and the payout tray flap rotates on a small lower hinge. Commercial arcade scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "lower cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lower cabinet"
+    },
+    {
+      "name": "cashbox door",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cashbox door"
+    },
+    {
+      "name": "payout tray flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "payout tray flap"
+    },
+    {
+      "name": "control panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide control panel"
+    },
+    {
+      "name": "joystick positions",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "twin joystick positions"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "cashbox door",
+      "parent": "lower cabinet",
+      "kind": "revolute",
+      "axis_hint": "vertical",
+      "location_hint": "at one side of the lower cabinet",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cashbox door rotates on a vertical hinge at one side of the lower cabinet"
+    },
+    {
+      "child": "payout tray flap",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "small lower hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "payout tray flap rotates on a small lower hinge"
+    }
+  ],
+  "notes": []
+}

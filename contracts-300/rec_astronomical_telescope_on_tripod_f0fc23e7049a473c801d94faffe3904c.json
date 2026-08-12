@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_astronomical_telescope_on_tripod_f0fc23e7049a473c801d94faffe3904c",
+  "prompt": "A realistic, highly detailed astronomical telescope on a tripod with a long optical tube, a supporting mount head, adjustable tripod legs, and a believable amateur-observatory appearance. The mount articulation and any standard tube elevation articulate naturally, and the assembly should feel like a real observation instrument with stable support, crisp mechanical detailing, and refined proportions.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "tripod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tripod"
+    },
+    {
+      "name": "long optical tube",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "long optical tube"
+    },
+    {
+      "name": "supporting mount head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "supporting mount head"
+    },
+    {
+      "name": "adjustable tripod legs",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "adjustable tripod legs"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "long optical tube",
+      "parent": "supporting mount head",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "standard tube elevation"
+    },
+    {
+      "child": "supporting mount head",
+      "parent": "tripod",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "mount articulation"
+    },
+    {
+      "child": "adjustable tripod legs",
+      "parent": "tripod",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "adjustable tripod legs"
+    }
+  ],
+  "notes": []
+}

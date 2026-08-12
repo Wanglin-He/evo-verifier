@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_box_fan_with_control_knob_67eb0eb1c46d4fc4aec95eb8bdb5cfba",
+  "prompt": "A table tilt-stand box fan with a small square housing on a round tilt-stand base. The housing tilts on a revolute hinge at the stand arms about a horizontal axis. The fan blade rotates continuously. The control knob on the housing side rotates continuously.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small square housing"
+    },
+    {
+      "name": "round tilt-stand base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round tilt-stand base"
+    },
+    {
+      "name": "fan blade",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fan blade"
+    },
+    {
+      "name": "control knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control knob"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "housing",
+      "parent": "stand arms",
+      "kind": "revolute",
+      "axis_hint": "horizontal axis",
+      "location_hint": "at the stand arms",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "housing tilts on a revolute hinge at the stand arms about a horizontal axis"
+    },
+    {
+      "child": "fan blade",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fan blade rotates continuously"
+    },
+    {
+      "child": "control knob",
+      "parent": "housing",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "housing side",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control knob on the housing side rotates continuously"
+    }
+  ],
+  "notes": []
+}

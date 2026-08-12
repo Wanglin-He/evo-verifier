@@ -1,0 +1,129 @@
+{
+  "version": "1",
+  "record_id": "rec_bread_maker_with_hinged_lid_0040cadef29b4bba95f01db8a2373a5e",
+  "prompt": "A traditional white bread maker with a windowed lid, a front latch lip, and a control band with a program dial plus start and stop buttons. The lid rotates upward on a rear hinge, the kneading spindle rotates continuously within the baking chamber, and the program dial rotates continuously on the front control band. The start and stop buttons are independent prismatic push controls, and the front latch button slides prismatically into the shell. The chamber should stay clearly hollow and open under the lid instead of reading as a solid cap. Countertop kitchen scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "windowed lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "windowed lid"
+    },
+    {
+      "name": "front latch lip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front latch lip"
+    },
+    {
+      "name": "control band",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control band"
+    },
+    {
+      "name": "program dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "program dial"
+    },
+    {
+      "name": "start and stop buttons",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "start and stop buttons"
+    },
+    {
+      "name": "kneading spindle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "kneading spindle"
+    },
+    {
+      "name": "baking chamber",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "baking chamber"
+    },
+    {
+      "name": "front latch button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front latch button"
+    },
+    {
+      "name": "shell",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shell"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "upward",
+      "location_hint": "rear hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid rotates upward on a rear hinge"
+    },
+    {
+      "child": "kneading spindle",
+      "parent": "baking chamber",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "within the baking chamber",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "kneading spindle rotates continuously within the baking chamber"
+    },
+    {
+      "child": "program dial",
+      "parent": "front control band",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on the front control band",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "program dial rotates continuously on the front control band"
+    },
+    {
+      "child": "start and stop buttons",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "start and stop buttons are independent prismatic push controls"
+    },
+    {
+      "child": "front latch button",
+      "parent": "shell",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "into the shell",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front latch button slides prismatically into the shell"
+    }
+  ],
+  "notes": []
+}

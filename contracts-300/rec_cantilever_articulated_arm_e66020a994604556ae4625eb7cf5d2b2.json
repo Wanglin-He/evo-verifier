@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_cantilever_articulated_arm_e66020a994604556ae4625eb7cf5d2b2",
+  "prompt": "A compact service cantilever arm. A single column base carries an upper link, a forelink, and a small terminal tool bracket with visible pin bosses at each break in the chain. The arm is a three-joint revolute mechanism with shoulder, elbow, and wrist pivots.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "column base",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "single column base"
+    },
+    {
+      "name": "upper link",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper link"
+    },
+    {
+      "name": "forelink",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "forelink"
+    },
+    {
+      "name": "terminal tool bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "terminal tool bracket"
+    },
+    {
+      "name": "pin bosses",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pin bosses"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "upper link",
+      "parent": "column base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "shoulder",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shoulder, elbow, and wrist pivots"
+    },
+    {
+      "child": "forelink",
+      "parent": "upper link",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "elbow",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shoulder, elbow, and wrist pivots"
+    },
+    {
+      "child": "terminal tool bracket",
+      "parent": "forelink",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "wrist",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shoulder, elbow, and wrist pivots"
+    }
+  ],
+  "notes": []
+}

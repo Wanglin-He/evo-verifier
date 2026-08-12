@@ -1,0 +1,75 @@
+{
+  "version": "1",
+  "record_id": "rec_branching_tree_with_two_independent_rotary_branches_3b8476bde00749aaaa84928c35c21164",
+  "prompt": "A two-branch fixture tree built around a tall rectangular spine with one upper fork arm and one lower plate arm mounted on opposite sides. Each branch is carried by its own hub housing, with the upper branch on side cheeks near the spine top and the lower branch on a separate pedestal block below. The upper branch revolves about a horizontal cross-shaft and the lower branch revolves about an independent vertical stub axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "spine",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tall rectangular spine"
+    },
+    {
+      "name": "upper fork arm",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one upper fork arm"
+    },
+    {
+      "name": "lower plate arm",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "one lower plate arm"
+    },
+    {
+      "name": "hub housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hub housing"
+    },
+    {
+      "name": "side cheeks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side cheeks"
+    },
+    {
+      "name": "pedestal block",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a separate pedestal block"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "upper branch",
+      "parent": "side cheeks",
+      "kind": "revolute",
+      "axis_hint": "horizontal cross-shaft",
+      "location_hint": "near the spine top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The upper branch revolves about a horizontal cross-shaft"
+    },
+    {
+      "child": "lower branch",
+      "parent": "pedestal block",
+      "kind": "revolute",
+      "axis_hint": "independent vertical stub axis",
+      "location_hint": "below",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the lower branch revolves about an independent vertical stub axis"
+    }
+  ],
+  "notes": []
+}

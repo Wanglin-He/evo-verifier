@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_barrier_gate_8511b32d0c8e4b5d81f1159eaa410fb6",
+  "prompt": "A retractable post barrier with a round chrome post that telescopes into a flush ground socket. The post slides prismatically along the vertical axis into the cylindrical socket.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "round chrome post",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round chrome post"
+    },
+    {
+      "name": "flush ground socket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flush ground socket"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "post",
+      "parent": "cylindrical socket",
+      "kind": "prismatic",
+      "axis_hint": "vertical axis",
+      "location_hint": "into the cylindrical socket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The post slides prismatically along the vertical axis into the cylindrical socket."
+    }
+  ],
+  "notes": []
+}

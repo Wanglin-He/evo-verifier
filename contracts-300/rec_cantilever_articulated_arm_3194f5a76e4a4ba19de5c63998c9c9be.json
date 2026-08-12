@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "record_id": "rec_cantilever_articulated_arm_3194f5a76e4a4ba19de5c63998c9c9be",
+  "prompt": "An overhung mechanical arm with a fixed pedestal and multiple rotary joints reaching outward, using boxed beams and compact actuator housings.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "fixed pedestal",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed pedestal"
+    },
+    {
+      "name": "boxed beams",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "boxed beams"
+    },
+    {
+      "name": "compact actuator housings",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact actuator housings"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "boxed beams",
+      "parent": "fixed pedestal",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "reaching outward",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "multiple rotary joints reaching outward"
+    }
+  ],
+  "notes": []
+}

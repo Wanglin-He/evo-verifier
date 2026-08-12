@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_cash_register_8e630c61f7914cae976be2a58b68d610",
+  "prompt": "A pharmacy checkout register with a front cash drawer, a stepped keyboard tower, and a rear pole display on a short neck, plus a dense bank of raised department keys across the upper deck. The keyboard tower sits clearly on top of the drawer base and the keys remain distinct parts rather than one molded pad. The cash drawer slides prismatically out from the base, the rear display tilts on a small horizontal hinge at the top of its neck, and the keys articulate independently as small prismatic push controls. Countertop checkout scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "cash drawer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cash drawer"
+    },
+    {
+      "name": "base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "base"
+    },
+    {
+      "name": "keyboard tower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "keyboard tower"
+    },
+    {
+      "name": "rear pole display",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear pole display"
+    },
+    {
+      "name": "neck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "neck"
+    },
+    {
+      "name": "keys",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "keys"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "cash drawer",
+      "parent": "base",
+      "kind": "prismatic",
+      "axis_hint": "out",
+      "location_hint": "front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The cash drawer slides prismatically out from the base"
+    },
+    {
+      "child": "rear display",
+      "parent": "neck",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the top of its neck",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the rear display tilts on a small horizontal hinge at the top of its neck"
+    },
+    {
+      "child": "keys",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the keys articulate independently as small prismatic push controls"
+    }
+  ],
+  "notes": []
+}

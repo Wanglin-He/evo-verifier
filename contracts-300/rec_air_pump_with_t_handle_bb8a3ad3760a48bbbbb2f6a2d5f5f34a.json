@@ -1,0 +1,100 @@
+{
+  "version": "1",
+  "record_id": "rec_air_pump_with_t_handle_bb8a3ad3760a48bbbbb2f6a2d5f5f34a",
+  "prompt": "A bicycle track pump with a steel barrel, a broad T-handle, a round pressure gauge near the base, and a hose parked against the body, plus a small pressure-release button on the gauge housing. the handle sits over a visible piston rod aligned with the barrel centerline, and the button is clearly separate from the gauge body. The handle and rod translate prismatically along the barrel axis and the gauge needle rotates on its small central pivot, and the pressure-release button moves prismatically as a small push control. Workshop pump scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "steel barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "steel barrel"
+    },
+    {
+      "name": "broad T-handle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "broad T-handle"
+    },
+    {
+      "name": "round pressure gauge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round pressure gauge"
+    },
+    {
+      "name": "hose",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hose"
+    },
+    {
+      "name": "small pressure-release button",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "small pressure-release button"
+    },
+    {
+      "name": "gauge housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "gauge housing"
+    },
+    {
+      "name": "visible piston rod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "visible piston rod"
+    },
+    {
+      "name": "gauge needle",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "gauge needle"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "handle and rod",
+      "parent": "barrel",
+      "kind": "prismatic",
+      "axis_hint": "along the barrel axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The handle and rod translate prismatically along the barrel axis"
+    },
+    {
+      "child": "gauge needle",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on its small central pivot",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "gauge needle rotates on its small central pivot"
+    },
+    {
+      "child": "pressure-release button",
+      "parent": "gauge housing",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pressure-release button moves prismatically as a small push control"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "record_id": "rec_binoculars_76ae46d82be74c5eab5c476a1c62a625",
+  "prompt": "A rangefinder binocular with a wide rectangular body, two objective barrels on a central revolute interpupillary hinge, a center focus wheel on a revolute joint, and a ranging mode selector dial that rotates on a revolute joint at the right barrel top.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular body"
+    },
+    {
+      "name": "objective barrels",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two objective barrels"
+    },
+    {
+      "name": "center focus wheel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center focus wheel"
+    },
+    {
+      "name": "ranging mode selector dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "ranging mode selector dial"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "objective barrels",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "central",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two objective barrels on a central revolute interpupillary hinge"
+    },
+    {
+      "child": "center focus wheel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center focus wheel on a revolute joint"
+    },
+    {
+      "child": "ranging mode selector dial",
+      "parent": "right barrel",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the right barrel top",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "ranging mode selector dial that rotates on a revolute joint at the right barrel top"
+    }
+  ],
+  "notes": []
+}

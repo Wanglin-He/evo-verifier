@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "record_id": "rec_candy_vending_machine_997931472649405aa5f3ea207c9b1d54",
+  "prompt": "A narrow tower candy vending machine with stacked candy spirals behind a glass front, a control panel at mid height, and a cash drawer at the base. The cash drawer translates prismatically on straight runners, the retrieval flap rotates on a horizontal hinge at the pickup opening, and a selector dial on the control panel rotates continuously about its shaft.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "cash drawer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cash drawer at the base"
+    },
+    {
+      "name": "retrieval flap",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "retrieval flap"
+    },
+    {
+      "name": "selector dial",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "selector dial"
+    },
+    {
+      "name": "control panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control panel"
+    },
+    {
+      "name": "glass front",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "glass front"
+    },
+    {
+      "name": "candy spirals",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "candy spirals"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "cash drawer",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "at the base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The cash drawer translates prismatically on straight runners"
+    },
+    {
+      "child": "retrieval flap",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the pickup opening",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the retrieval flap rotates on a horizontal hinge at the pickup opening"
+    },
+    {
+      "child": "selector dial",
+      "parent": "control panel",
+      "kind": "continuous",
+      "axis_hint": "about its shaft",
+      "location_hint": "on the control panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a selector dial on the control panel rotates continuously about its shaft"
+    }
+  ],
+  "notes": []
+}

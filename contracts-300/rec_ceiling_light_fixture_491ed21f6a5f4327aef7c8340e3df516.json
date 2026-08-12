@@ -1,0 +1,65 @@
+{
+  "version": "1",
+  "record_id": "rec_ceiling_light_fixture_491ed21f6a5f4327aef7c8340e3df516",
+  "prompt": "A kitchen island multi-pendant track bar with a long rectangular ceiling rail and five adjustable pendant cords. The rail is fixed to the ceiling. Each pendant cord adjusts in length on a prismatic grip at its rail mount. Each shade rotates on a revolute joint at the cord end.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "ceiling rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "long rectangular ceiling rail"
+    },
+    {
+      "name": "pendant cords",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "five adjustable pendant cords"
+    },
+    {
+      "name": "shade",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shade"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "rail",
+      "parent": "ceiling",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rail is fixed to the ceiling"
+    },
+    {
+      "child": "pendant cord",
+      "parent": "rail mount",
+      "kind": "prismatic",
+      "axis_hint": "in length",
+      "location_hint": "at its rail mount",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pendant cord adjusts in length on a prismatic grip at its rail mount"
+    },
+    {
+      "child": "shade",
+      "parent": "pendant cord",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the cord end",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "shade rotates on a revolute joint at the cord end"
+    }
+  ],
+  "notes": []
+}

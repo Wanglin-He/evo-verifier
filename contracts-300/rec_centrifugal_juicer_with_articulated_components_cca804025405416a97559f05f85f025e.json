@@ -1,0 +1,97 @@
+{
+  "version": "1",
+  "record_id": "rec_centrifugal_juicer_with_articulated_components_cca804025405416a97559f05f85f025e",
+  "prompt": "A countertop centrifugal juicer with a rounded base housing, a clear upper lid, and a cylindrical feed pusher that slides vertically in the top chute. A rotary speed selector is mounted on the front of the base, and the spinning filter basket sits inside the chamber below the lid. The feed pusher moves prismatically along the chute axis, the lid rotates on a rear horizontal hinge, the speed selector rotates on its own short shaft, and the filter basket rotates continuously about the vertical central axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "base housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rounded base housing"
+    },
+    {
+      "name": "lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "clear upper lid"
+    },
+    {
+      "name": "feed pusher",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cylindrical feed pusher"
+    },
+    {
+      "name": "top chute",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "top chute"
+    },
+    {
+      "name": "speed selector",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotary speed selector"
+    },
+    {
+      "name": "filter basket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "spinning filter basket"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "feed pusher",
+      "parent": "top chute",
+      "kind": "prismatic",
+      "axis_hint": "along the chute axis",
+      "location_hint": "in the top chute",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "feed pusher moves prismatically along the chute axis"
+    },
+    {
+      "child": "lid",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "lid rotates on a rear horizontal hinge"
+    },
+    {
+      "child": "speed selector",
+      "parent": "base",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "front of the base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "speed selector rotates on its own short shaft"
+    },
+    {
+      "child": "filter basket",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "vertical central axis",
+      "location_hint": "inside the chamber below the lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "filter basket rotates continuously about the vertical central axis"
+    }
+  ],
+  "notes": []
+}

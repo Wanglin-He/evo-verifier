@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_ceiling_light_fixture_9750b79a4168470bb851ba575b04f46f",
+  "prompt": "An art deco sun-ray ceiling fixture with a wide round backplate, twelve fixed ray arms radiating outward, and a central dome. All ray arms are fixed to the backplate. The central dome attaches on a revolute rotation joint at the backplate center for orientation.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "backplate",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide round backplate"
+    },
+    {
+      "name": "ray arms",
+      "count": 12,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "twelve fixed ray arms"
+    },
+    {
+      "name": "central dome",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central dome"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "ray arms",
+      "parent": "backplate",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 12,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "All ray arms are fixed to the backplate."
+    },
+    {
+      "child": "central dome",
+      "parent": "backplate",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the backplate center",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The central dome attaches on a revolute rotation joint at the backplate center for orientation."
+    }
+  ],
+  "notes": []
+}

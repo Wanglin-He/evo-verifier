@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "record_id": "rec_ceiling_fan_ff5e6efbb30c43cbacd14523738d2f30",
+  "prompt": "A traditional five-blade wooden ceiling fan with a round canopy, a short downrod, a cylindrical motor housing, and five flat rectangular blades on blade irons. The downrod is fixed to the canopy. The motor housing and blade irons rotate continuously about the vertical axis.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "round canopy",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round canopy"
+    },
+    {
+      "name": "short downrod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short downrod"
+    },
+    {
+      "name": "cylindrical motor housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cylindrical motor housing"
+    },
+    {
+      "name": "flat rectangular blades",
+      "count": 5,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "five flat rectangular blades"
+    },
+    {
+      "name": "blade irons",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "blade irons"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "downrod",
+      "parent": "canopy",
+      "kind": "fixed",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The downrod is fixed to the canopy."
+    },
+    {
+      "child": "motor housing",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "about the vertical axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The motor housing and blade irons rotate continuously about the vertical axis."
+    },
+    {
+      "child": "blade irons",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "about the vertical axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The motor housing and blade irons rotate continuously about the vertical axis."
+    }
+  ],
+  "notes": []
+}

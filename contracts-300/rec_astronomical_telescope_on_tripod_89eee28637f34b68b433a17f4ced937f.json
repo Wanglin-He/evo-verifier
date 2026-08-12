@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_astronomical_telescope_on_tripod_89eee28637f34b68b433a17f4ced937f",
+  "prompt": "A refractor spotting scope on a ball-head alt-az tripod. A medium-length cylindrical refractor tube connects to the tripod head on a ball-head bracket. The head tilts on a revolute tilt joint and rotates on a continuous pan bearing on the tripod.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "cylindrical refractor tube",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cylindrical refractor tube"
+    },
+    {
+      "name": "tripod head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tripod head"
+    },
+    {
+      "name": "ball-head bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "ball-head bracket"
+    },
+    {
+      "name": "tripod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tripod"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "head",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The head tilts on a revolute tilt joint"
+    },
+    {
+      "child": "head",
+      "parent": "tripod",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "on the tripod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotates on a continuous pan bearing on the tripod"
+    }
+  ],
+  "notes": []
+}

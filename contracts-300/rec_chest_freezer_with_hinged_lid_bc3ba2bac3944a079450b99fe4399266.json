@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_chest_freezer_with_hinged_lid_bc3ba2bac3944a079450b99fe4399266",
+  "prompt": "A glass-top display chest freezer with a wide rectangular body, a heavy glass panel lid on two full-width piano-hinge revolute joints at the rear body edge, and a security lock hasp arm on a revolute hinge at the front lid face that drops into a padlock loop on the body.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rectangular body"
+    },
+    {
+      "name": "heavy glass panel lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "heavy glass panel lid"
+    },
+    {
+      "name": "security lock hasp arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "security lock hasp arm"
+    },
+    {
+      "name": "padlock loop",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "padlock loop"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "heavy glass panel lid",
+      "parent": "body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the rear body edge",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "heavy glass panel lid on two full-width piano-hinge revolute joints at the rear body edge"
+    },
+    {
+      "child": "security lock hasp arm",
+      "parent": "heavy glass panel lid",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the front lid face",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "security lock hasp arm on a revolute hinge at the front lid face"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "record_id": "rec_articulated_task_lamp_0011",
+  "prompt": "A wall-mounted task lamp with a folding arm on two revolute joints and a rotating cylindrical shade at the tip.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "folding arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "folding arm"
+    },
+    {
+      "name": "cylindrical shade",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "cylindrical shade"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "folding arm",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "folding arm on two revolute joints"
+    },
+    {
+      "child": "cylindrical shade",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "at the tip",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotating cylindrical shade at the tip"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_box_fan_with_control_knob_c6844a405bc34279abc1e3d01da6a947",
+  "prompt": "A square box fan with a flat plastic housing, a front wire grille, a multi-blade fan on a central revolute axle, and a rotary speed knob on the side panel.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "flat plastic housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat plastic housing"
+    },
+    {
+      "name": "front wire grille",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front wire grille"
+    },
+    {
+      "name": "multi-blade fan",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "multi-blade fan"
+    },
+    {
+      "name": "rotary speed knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotary speed knob"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "multi-blade fan",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "central",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "multi-blade fan on a central revolute axle"
+    },
+    {
+      "child": "rotary speed knob",
+      "parent": "side panel",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "on the side panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rotary speed knob on the side panel"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "record_id": "rec_bicycle_crankset_and_pedal_assembly_0004",
+  "prompt": "A folding-bike compact crankset with shortened crank arms on a sealed bottom bracket, a single small-diameter chainring, and folding pedals whose outer halves hinge inward on a knuckle joint at the crank arm boss. Each pedal outer body folds flat against the crank arm on a spring-tensioned hinge for compact storage.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "crank arms",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "crank arms"
+    },
+    {
+      "name": "sealed bottom bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "sealed bottom bracket"
+    },
+    {
+      "name": "single small-diameter chainring",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "single small-diameter chainring"
+    },
+    {
+      "name": "pedal outer body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pedal outer body"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "pedal outer body",
+      "parent": "crank arm",
+      "kind": "revolute",
+      "axis_hint": "inward",
+      "location_hint": "at the crank arm boss",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "folding pedals whose outer halves hinge inward on a knuckle joint at the crank arm boss"
+    },
+    {
+      "child": "crank arms",
+      "parent": "sealed bottom bracket",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "prior",
+      "confidence": 0.7,
+      "quote": ""
+    }
+  ],
+  "notes": []
+}

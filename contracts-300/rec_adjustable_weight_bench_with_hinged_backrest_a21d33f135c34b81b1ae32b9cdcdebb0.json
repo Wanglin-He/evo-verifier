@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_adjustable_weight_bench_with_hinged_backrest_a21d33f135c34b81b1ae32b9cdcdebb0",
+  "prompt": "A flat-incline utility bench with a rectangular base, a hinged backrest, a smaller seat pad, and a rear ladder support, plus a pop-pin angle selector under the backrest. the support ladder sits behind the backrest bracket rather than disappearing inside the frame, and the selector knob is visibly separate from the support arm. The backrest rotates upward on a horizontal hinge at the seat junction, the seat pivots on a separate front hinge, and the rear ladder support rotates on a lower pivot at the back of the frame, and the pop-pin knob translates prismatically along its short local axis. Garage-gym bench scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular base",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular base"
+    },
+    {
+      "name": "backrest",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "backrest"
+    },
+    {
+      "name": "seat pad",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "smaller seat pad"
+    },
+    {
+      "name": "rear ladder support",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear ladder support"
+    },
+    {
+      "name": "pop-pin knob",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pop-pin knob"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "backrest",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the seat junction",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The backrest rotates upward on a horizontal hinge at the seat junction"
+    },
+    {
+      "child": "seat",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "separate front hinge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the seat pivots on a separate front hinge"
+    },
+    {
+      "child": "rear ladder support",
+      "parent": "frame",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "lower pivot at the back of the frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the rear ladder support rotates on a lower pivot at the back of the frame"
+    },
+    {
+      "child": "pop-pin knob",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "along its short local axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the pop-pin knob translates prismatically along its short local axis"
+    }
+  ],
+  "notes": []
+}

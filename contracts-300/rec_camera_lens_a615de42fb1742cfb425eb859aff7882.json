@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_camera_lens_a615de42fb1742cfb425eb859aff7882",
+  "prompt": "A vintage screw-mount prime with a focusing helicoid that extends the front barrel. The focus ring rotates on a revolute joint about the optical axis. The front barrel translates prismatically along the optical axis as the helicoid turns.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "focusing helicoid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "focusing helicoid"
+    },
+    {
+      "name": "front barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front barrel"
+    },
+    {
+      "name": "focus ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "focus ring"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "focus ring",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "about the optical axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The focus ring rotates on a revolute joint about the optical axis."
+    },
+    {
+      "child": "front barrel",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "along the optical axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The front barrel translates prismatically along the optical axis as the helicoid turns."
+    }
+  ],
+  "notes": []
+}

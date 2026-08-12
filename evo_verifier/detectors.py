@@ -16,31 +16,39 @@ from dataclasses import dataclass
 
 from evo_verifier.asset import Articulation, Asset
 from evo_verifier.contract import Contract, ExpectedJoint, Source
-from evo_verifier.matching import STRONG, matches, similarity
+from evo_verifier.matching import STRONG, assign, matches, similarity
 from evo_verifier.report import Coverage, ItemResult
 
 TAU_B8 = 0.70
 """Protocol placeholder. Calibrate on the dev set, then freeze."""
 
-AGGREGATE: dict[str, str] = {"B7": "mean", "B8": "worst", "B9": "mean", "B10": "mean"}
+AGGREGATE: dict[str, str] = {"B7": "worst", "B8": "worst", "B9": "worst", "B10": "worst"}
 """How per-joint scores become one asset score, per item: ``worst`` or ``mean``.
 
 The protocol gives per-joint formulas and never says how to combine them, and
-the choice matters more than it looks: under ``mean`` with tau at 0.70 an asset
-has to break more than 30% of its joints before the average falls far enough, so
-one wrong hinge among four is a pass.
+the choice decides more than the formulas do. Under ``mean`` with tau at 0.70 an
+asset must break more than 30% of its joints before the average falls far
+enough, so one wrong hinge among four is a pass.
 
-Injected faults and human labels were measured under both. They agree on B8 --
-every stated motion needing its own joint means one missing joint decides it, and
-``worst`` raised injected-fault detection from 15% to 46% and real-label F1 from
-0.32 to 0.48. They disagree on B7 and B9: ``worst`` finds far more injected
-faults (9% to 59% on B9) but also turns three clean assets into false alarms and
-drives kappa negative. Those two rest on noisier per-joint measurements -- a
-parent name matched across the prose/identifier gap, a joint type read out of a
-prompt -- and taking the worst amplifies that noise faster than the signal.
+Measured both ways, against injected faults whose answer is known and against
+the human labels. Injection prefers ``worst`` on every item and not narrowly:
+B7 31% to 47%, B8 32% to 63%, B9 7% to 97%, B10 12% to 34%. Human labels agree
+on B8 (F1 0.40 to 0.56) and B10 (0 to 0.67); on B7 they cannot adjudicate, with
+six positives and kappa below chance either way.
 
-So the value is per item and set from evidence, not from one number. Revisit it
-on a real dev set: 31 records, all of them human-failed, is not one.
+B9 is the one that looks like a loss and is not. Under ``mean`` it scores kappa
+0.000 by never predicting failure at all -- silence, not agreement. Under
+``worst`` it answers, catches 97% of injected type errors, and disagrees with
+the human labels. That disagreement is a result rather than a defect: six
+records in the annotated set declare exactly the type the prompt asked for and
+were failed anyway, because the annotators were watching a mesh move rather than
+reading a type string. Tuning the detector to agree with a label that measures
+something else would only hide that.
+
+An earlier reading of this table said mean for B7 and B9. It was taken before
+the matcher was fixed, when a requirement could be answered by a sibling's part,
+and it did not survive the fix. Revisit it again on a dev set that is not 31
+already-failing records.
 """
 
 
@@ -74,6 +82,8 @@ class Requirement:
     weight: float = 1.0
     """1.0 for a quoted requirement, the prior's own confidence otherwise."""
     explicit: bool = True
+    uncertain: bool = False
+    """A shortfall this reader cannot attribute to the asset."""
 
     @property
     def satisfied(self) -> int:
@@ -81,8 +91,8 @@ class Requirement:
 
     @property
     def resolved(self) -> bool:
-        """The name found something in the asset, so the verdict is about the asset."""
-        return bool(self.parts)
+        """The name found something we can hold the asset responsible for."""
+        return bool(self.parts) and not self.uncertain
 
 
 def check_b8(
@@ -124,18 +134,31 @@ def check_b8(
         )
 
     moved = {joint.child for joint in asset.movable() if joint.child}
-    requirements = [_requirement(joint, asset, moved) for joint in wanted]
+    blind = any(not joint.readable("child") for joint in asset.movable())
+    owned = assign([joint.child for joint in wanted], asset.parts)
+    requirements = [
+        _requirement(joint, owned[index], moved, blind) for index, joint in enumerate(wanted)
+    ]
 
-    unresolved = [r for r in requirements if not r.resolved]
+    uncertain = [r for r in requirements if r.uncertain]
+    unresolved = [r for r in requirements if not r.parts]
     still = [r for r in requirements if r.resolved and r.satisfied < r.wanted]
-    scored = requirements if missing_is_failure else [r for r in requirements if r.resolved]
+    # An unattributable shortfall never reaches the score, whichever reading of
+    # the item is in force: it is doubt about the reader, not about the asset.
+    attributable = [r for r in requirements if not r.uncertain]
+    scored = attributable if missing_is_failure else [r for r in attributable if r.parts]
     if not scored:
         return ItemResult.unsupported(
-            "B8", "no expected part was found in the asset", tools=["contract", "matching"]
+            "B8",
+            "no expected part could be pinned on the asset",
+            tools=["contract", "matching"],
         )
     score = _weighted(scored, aggregate)
 
-    quality = 1.0 - len(unresolved) / len(requirements)
+    # Doubt from three sources: a name that found nothing (missing part, or a
+    # matcher failure -- indistinguishable), a shortfall we cannot attribute,
+    # and requirements resting on category priors rather than the prompt.
+    quality = (len(requirements) - len(unresolved) - len(uncertain)) / len(requirements)
     stated = sum(r.weight for r in requirements) / len(requirements)
 
     return ItemResult.scored(
@@ -143,7 +166,7 @@ def check_b8(
         round(score, 4),
         threshold=TAU_B8,
         confidence=round(quality * stated, 4),
-        coverage=Coverage.FULL if not unresolved else Coverage.PARTIAL,
+        coverage=Coverage.FULL if not (unresolved or uncertain) else Coverage.PARTIAL,
         tools=["contract", "parser", "matching"],
         raw_measurements={
             "expected": round(sum(r.weight * r.wanted for r in scored), 4),
@@ -166,6 +189,7 @@ def check_b8(
                 for r in requirements
             ],
             "unresolved_names": [r.child for r in unresolved],
+            "unattributable_names": [r.child for r in uncertain],
         },
         failure_reason=_reason(still, unresolved),
         repair_hint=_repair(still, unresolved, contract),
@@ -208,6 +232,14 @@ class Connection:
     """Whether the expected parent is modelled at all."""
     intruders: tuple[str, ...] = ()
     """Parts that ride on this joint but were declared to attach elsewhere."""
+    unreadable: bool = False
+    """The source declares this connection and the reader could not fold it.
+
+    Kept apart from "the part has no joint": both leave ``actual_parent`` empty,
+    and only one of them is the asset's doing. Collapsing them made the item
+    report that a part connects to nothing, at full confidence, about a joint
+    whose parent argument was simply an expression this reader will not
+    evaluate."""
 
 
 def check_b7(asset: Asset, contract: Contract, *, aggregate: str | None = None) -> ItemResult:
@@ -243,35 +275,49 @@ def check_b7(asset: Asset, contract: Contract, *, aggregate: str | None = None) 
         )
 
     by_child = {joint.child: joint for joint in asset.articulations if joint.child}
-    connections = [_connection(joint, asset, by_child, stated) for joint in usable]
+    blind = any(not joint.readable("child") for joint in asset.articulations)
+    owned = assign([joint.child for joint in stated], asset.parts)
+    mine = {id(joint): owned[index] for index, joint in enumerate(stated)}
+    connections = [
+        _connection(joint, mine[id(joint)], by_child, mine, stated, blind, asset)
+        for joint in usable
+    ]
 
-    child_scores = [1.0 if c.part and c.actual_parent is not None else 0.0 for c in connections]
-    parent_scores = [float(c.parent_ok) for c in connections if c.parent_ok is not None]
+    decided = [c for c in connections if not c.unreadable]
+    child_scores = [1.0 if c.actual_parent is not None else 0.0 for c in decided if c.part]
+    parent_scores = [float(c.parent_ok) for c in decided if c.parent_ok is not None]
     purity = [
-        1.0 if not c.intruders else 0.0
-        for c in connections
-        if c.part and c.actual_parent is not None
+        1.0 if not c.intruders else 0.0 for c in decided if c.part and c.actual_parent is not None
     ]
 
     terms = [(0.3, child_scores), (0.4, parent_scores), (0.3, purity)]
     live = [(weight, values) for weight, values in terms if values]
+    if not live:
+        return ItemResult.unsupported(
+            "B7",
+            "no connection could be read well enough to judge",
+            tools=["contract", "parser", "matching"],
+        )
     total = sum(weight for weight, _ in live)
     score = sum(weight * _combine(values, aggregate) for weight, values in live) / total
 
-    unresolved = [c.child for c in connections if not c.part]
-    unjointed = [c for c in connections if c.part and c.actual_parent is None]
-    wrong = [c for c in connections if c.parent_ok is False or c.intruders]
-    quality = 1.0 - len(unresolved) / len(connections)
+    unresolved = [c.child for c in connections if not c.part and not c.unreadable]
+    unreadable = [c.child for c in connections if c.unreadable]
+    unjointed = [c for c in decided if c.part and c.actual_parent is None]
+    wrong = [c for c in decided if c.parent_ok is False or c.intruders]
+    quality = len(decided) / len(connections)
 
     return ItemResult.scored(
         "B7",
         round(score, 4),
         threshold=TAU_B7,
         confidence=round(quality, 4),
-        coverage=Coverage.FULL if not unresolved else Coverage.PARTIAL,
+        coverage=Coverage.FULL if len(decided) == len(connections) else Coverage.PARTIAL,
         tools=["contract", "parser", "matching", "graph"],
         raw_measurements={
-            "child_score": round(sum(child_scores) / len(child_scores), 4),
+            "child_score": (
+                round(sum(child_scores) / len(child_scores), 4) if child_scores else None
+            ),
             "parent_score": (
                 round(sum(parent_scores) / len(parent_scores), 4) if parent_scores else None
             ),
@@ -289,6 +335,7 @@ def check_b7(asset: Asset, contract: Contract, *, aggregate: str | None = None) 
                 for c in connections
             ],
             "unresolved_names": unresolved,
+            "unreadable_names": unreadable,
             "margin": round(min(1.0, abs(score - TAU_B7) / MARGIN), 4),
         },
         failure_reason="; ".join(
@@ -307,16 +354,24 @@ def check_b7(asset: Asset, contract: Contract, *, aggregate: str | None = None) 
 
 def _connection(
     expected: ExpectedJoint,
-    asset: Asset,
+    owned: list[str],
     by_child: dict[str, Articulation],
+    mine: dict[int, list[str]],
     stated: list[ExpectedJoint],
+    blind: bool,
+    asset: Asset,
 ) -> Connection:
-    part = next(
-        (match.name for match in matches(expected.child, asset.parts) if match.name in by_child),
-        None,
-    ) or next((match.name for match in matches(expected.child, asset.parts)), None)
+    """One expected attachment, judged only against the parts assigned to it.
+
+    ``owned`` comes from the exclusive assignment, so a requirement can no
+    longer be answered by a sibling's part -- which is how a helicopter with no
+    tail-rotor joint used to certify that its tail rotor was attached to the
+    fuselage, by reading the main rotor's joint.
+    """
+    part = next((name for name in owned if name in by_child), None) or (owned[0] if owned else None)
     joint = by_child.get(part or "")
     actual_parent = joint.parent if joint else None
+    unreadable = bool(joint and not joint.readable("parent")) or (blind and part is None)
 
     external = tokens_are_external(expected.parent)
     parent_exists = bool(matches(expected.parent, asset.parts))
@@ -340,9 +395,10 @@ def _connection(
         expected_parent=expected.parent,
         part=part,
         actual_parent=actual_parent,
-        parent_ok=parent_ok,
+        parent_ok=None if unreadable else parent_ok,
         parent_exists=parent_exists or external,
-        intruders=_intruders(part, asset, stated, expected),
+        intruders=_intruders(part, asset, mine, stated, expected),
+        unreadable=unreadable,
     )
 
 
@@ -352,23 +408,33 @@ def tokens_are_external(name: str) -> bool:
 
 
 def _intruders(
-    part: str | None, asset: Asset, stated: list[ExpectedJoint], expected: ExpectedJoint
+    part: str | None,
+    asset: Asset,
+    mine: dict[int, list[str]],
+    stated: list[ExpectedJoint],
+    expected: ExpectedJoint,
 ) -> tuple[str, ...]:
-    """Other declared-independent parts that ride on this one's subtree."""
+    """Other declared-independent parts that ride on this one's subtree.
+
+    Read off the exclusive assignment rather than matched afresh: re-matching
+    every other requirement's name against the subtree let a correctly attached
+    part be reported as an alien rider, which on one record made a broken asset
+    score higher than the sound one.
+    """
     if not part:
         return ()
     riding = asset.descendants(part)
     if not riding:
         return ()
     found: list[str] = []
-    for other in stated:
+    for index, other in enumerate(stated):
         if other is expected or not other.parent:
             continue
         if similarity(other.parent, expected.child) >= STRONG:
             continue  # the prompt does attach it here
         if similarity(other.parent, part) >= STRONG:
             continue
-        found.extend(match.name for match in matches(other.child, riding))
+        found.extend(name for name in mine.get(id(stated[index]), ()) if name in riding)
     return tuple(dict.fromkeys(found))
 
 
@@ -441,14 +507,16 @@ def check_b9(asset: Asset, contract: Contract, *, aggregate: str | None = None) 
         return ItemResult.not_applicable("B9", "the prompt names no joint type", tools=["contract"])
 
     by_child = {joint.child: joint for joint in asset.articulations if joint.child}
+    owned = assign([joint.child for joint in wanted], asset.parts)
     checks, unresolved = [], []
-    for expected in wanted:
-        found = [m.name for m in matches(expected.child, asset.parts) if m.name in by_child]
+    for index, expected in enumerate(wanted):
+        found = [name for name in owned[index] if name in by_child]
         if not found:
             unresolved.append(expected.child)
             continue
-        # Every instance, not just the first: "four flaps rotate" is four joints,
-        # and checking one of them cannot see the fourth declared as a slide.
+        # Every instance assigned to this requirement, not just the first: "four
+        # flaps rotate" is four joints, and checking one cannot see the fourth
+        # declared as a slide. Assigned, so a sibling's joint cannot answer here.
         checks.extend(
             _type_check(expected.child, expected.kind or "", by_child[name]) for name in found
         )
@@ -487,12 +555,13 @@ def check_b9(asset: Asset, contract: Contract, *, aggregate: str | None = None) 
             "margin": round(min(1.0, abs(score - TAU_B9) / MARGIN), 4),
         },
         failure_reason="; ".join(
-            f"{check.child}: expected {check.expected}, declared {check.declared}"
+            f"{check.joint} ({check.child}): expected {check.expected}, "
+            f"declared {check.declared}"
             + (f" ({check.contradiction})" if check.contradiction else "")
             for check in wrong
         ),
         repair_hint="; ".join(
-            f"declare {check.child} as {check.expected} and revisit its axis, origin and limits"
+            f"declare {check.joint} as {check.expected} and revisit its axis, origin and limits"
             for check in wrong
             if check.agreement < 1.0
         ),
@@ -515,7 +584,14 @@ def _type_check(child: str, expected: str, declared: Articulation) -> TypeCheck:
 
 
 def _contradiction(joint: Articulation) -> str:
-    """Ways a declaration disagrees with itself. Empty when it holds together."""
+    """Ways a declaration disagrees with itself. Empty when it holds together.
+
+    A bound the source writes and this reader cannot fold is not a contradiction
+    -- saying "revolute with no limits" about a joint whose limits are right
+    there in the file is a confident claim the source refutes.
+    """
+    if joint.limits is not None and joint.limits.bounds_unreadable:
+        return ""
     travel = joint.limits.travel if joint.limits else None
     if joint.kind == "continuous" and travel is not None:
         return f"continuous but limited to {travel:.3f}"
@@ -610,9 +686,10 @@ def check_b10(asset: Asset, contract: Contract, *, aggregate: str | None = None)
         return ItemResult.not_applicable("B10", "the prompt names no joint", tools=["contract"])
 
     by_child = {joint.child: joint for joint in asset.articulations if joint.child}
+    owned = assign([joint.child for joint in wanted], asset.parts)
     placements, unresolved = [], []
-    for expected in wanted:
-        found = [m.name for m in matches(expected.child, asset.parts) if m.name in by_child]
+    for index, expected in enumerate(wanted):
+        found = [name for name in owned[index] if name in by_child]
         if not found:
             unresolved.append(expected.child)
             continue
@@ -758,16 +835,25 @@ def _weighted(requirements: list[Requirement], how: str = "mean") -> float:
     return sum(r.weight * r.satisfied for r in requirements) / expected
 
 
-def _requirement(joint: ExpectedJoint, asset: Asset, moved: set[str]) -> Requirement:
-    found = tuple(match.name for match in matches(joint.child, asset.parts))
+def _requirement(
+    joint: ExpectedJoint, found: list[str], moved: set[str], blind: bool
+) -> Requirement:
+    """One requirement against the parts assigned to it, and nobody else's.
+
+    ``blind`` when the asset has a movable joint whose child would not fold: a
+    part that looks jointless might be the one that joint moves, so the absence
+    cannot be pinned on the asset.
+    """
     explicit = joint.source is Source.EXPLICIT
+    moving = tuple(name for name in found if name in moved)
     return Requirement(
         child=joint.child,
         wanted=max(1, joint.count or 1),
-        parts=found,
-        moving=tuple(name for name in found if name in moved),
+        parts=tuple(found),
+        moving=moving,
         weight=1.0 if explicit else min(joint.confidence, 0.7),
         explicit=explicit,
+        uncertain=blind and len(moving) < max(1, joint.count or 1),
     )
 
 

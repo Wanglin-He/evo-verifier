@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_barrier_gate_fa1d028f5e4b44eabbe7ec74f19ea254",
+  "prompt": "A parking barrier gate with a rectangular control housing and a counterweighted horizontal boom arm that lifts on a revolute hinge.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "control housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "control housing"
+    },
+    {
+      "name": "counterweighted horizontal boom arm",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "counterweighted horizontal boom arm"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "counterweighted horizontal boom arm",
+      "parent": "control housing",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "counterweighted horizontal boom arm that lifts on a revolute hinge"
+    }
+  ],
+  "notes": []
+}

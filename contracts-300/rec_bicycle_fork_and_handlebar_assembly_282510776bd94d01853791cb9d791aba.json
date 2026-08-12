@@ -1,0 +1,71 @@
+{
+  "version": "1",
+  "record_id": "rec_bicycle_fork_and_handlebar_assembly_282510776bd94d01853791cb9d791aba",
+  "prompt": "A road track bike fork with a slim oval-section steel crown, two straight tensioned blades, and a threaded steerer clamped in a quill stem with a center expander bolt. Dropped pursuit handlebars clamp at the stem extension tip on a pinch-bolt collar. Articulate the steering motion in a realistic way.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "crown",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "slim oval-section steel crown"
+    },
+    {
+      "name": "blades",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two straight tensioned blades"
+    },
+    {
+      "name": "threaded steerer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "threaded steerer"
+    },
+    {
+      "name": "quill stem",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "quill stem"
+    },
+    {
+      "name": "center expander bolt",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "center expander bolt"
+    },
+    {
+      "name": "Dropped pursuit handlebars",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Dropped pursuit handlebars"
+    },
+    {
+      "name": "pinch-bolt collar",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pinch-bolt collar"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "threaded steerer",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Articulate the steering motion in a realistic way."
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "record_id": "rec_branching_tree_with_three_independent_rotary_branches_0002",
+  "prompt": "A three-branch rotary tree mechanism with a central hub and three independent hinged arms, designed as a clean CAD linkage assembly.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "central hub",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "central hub"
+    },
+    {
+      "name": "independent hinged arms",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three independent hinged arms"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "independent hinged arms",
+      "parent": "central hub",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three independent hinged arms"
+    }
+  ],
+  "notes": []
+}

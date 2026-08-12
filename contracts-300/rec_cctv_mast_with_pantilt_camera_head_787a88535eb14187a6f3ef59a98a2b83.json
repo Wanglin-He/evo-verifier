@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_cctv_mast_with_pantilt_camera_head_787a88535eb14187a6f3ef59a98a2b83",
+  "prompt": "A parking structure overhead CCTV mount with a horizontal beam bracket, a fixed drop-rod, and a pan-tilt dome housing. The dome housing pans on a continuous revolute bearing and tilts on a revolute tilt joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "horizontal beam bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "horizontal beam bracket"
+    },
+    {
+      "name": "fixed drop-rod",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "fixed drop-rod"
+    },
+    {
+      "name": "pan-tilt dome housing",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pan-tilt dome housing"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "dome housing",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "dome housing pans on a continuous revolute bearing"
+    },
+    {
+      "child": "dome housing",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilts on a revolute tilt joint"
+    }
+  ],
+  "notes": []
+}

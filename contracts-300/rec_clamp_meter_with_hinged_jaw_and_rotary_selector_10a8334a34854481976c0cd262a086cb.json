@@ -1,0 +1,90 @@
+{
+  "version": "1",
+  "record_id": "rec_clamp_meter_with_hinged_jaw_and_rotary_selector_10a8334a34854481976c0cd262a086cb",
+  "prompt": "A handheld clamp meter with a C-shaped measuring jaw at the top, a pistol-grip body, a central rotary selector, a rear tilt stand, and three front buttons below the display. The upper jaw rotates open on a hinge at the top of the head, the selector dial rotates continuously about its center axis, the rear stand folds out on a lower horizontal hinge, and each front button is a separate small prismatic push control. Handheld electrician-tool scale.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "upper jaw",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "upper jaw"
+    },
+    {
+      "name": "pistol-grip body",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a pistol-grip body"
+    },
+    {
+      "name": "central rotary selector",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a central rotary selector"
+    },
+    {
+      "name": "rear tilt stand",
+      "count": 1,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "a rear tilt stand"
+    },
+    {
+      "name": "front buttons",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "three front buttons below the display"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "upper jaw",
+      "parent": "head",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the top of the head",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The upper jaw rotates open on a hinge at the top of the head"
+    },
+    {
+      "child": "selector dial",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "about its center axis",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the selector dial rotates continuously about its center axis"
+    },
+    {
+      "child": "rear stand",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "lower",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "the rear stand folds out on a lower horizontal hinge"
+    },
+    {
+      "child": "front button",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": 3,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "each front button is a separate small prismatic push control"
+    }
+  ],
+  "notes": []
+}

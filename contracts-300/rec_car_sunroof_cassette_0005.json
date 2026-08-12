@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_car_sunroof_cassette_0005",
+  "prompt": "A pop-up sunroof cassette with a flat frame, a glass panel hinged at the front edge on a revolute joint that lifts, and a rear slide section on a prismatic joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "flat frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flat frame"
+    },
+    {
+      "name": "glass panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "glass panel"
+    },
+    {
+      "name": "rear slide section",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear slide section"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "glass panel",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "front edge",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "glass panel hinged at the front edge on a revolute joint"
+    },
+    {
+      "child": "rear slide section",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "rear",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rear slide section on a prismatic joint"
+    }
+  ],
+  "notes": []
+}

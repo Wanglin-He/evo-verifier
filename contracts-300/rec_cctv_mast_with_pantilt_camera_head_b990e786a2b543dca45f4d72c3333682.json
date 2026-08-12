@@ -1,0 +1,65 @@
+{
+  "version": "1",
+  "record_id": "rec_cctv_mast_with_pantilt_camera_head_b990e786a2b543dca45f4d72c3333682",
+  "prompt": "A street light pole CCTV mount with a round tapered pole and a side camera arm bracket at the pole top. The arm revolves on a revolute joint at the pole top band. The camera rotates on a continuous pan bearing and tilts on a revolute tilt joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "pole",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "round tapered pole"
+    },
+    {
+      "name": "side camera arm bracket",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "side camera arm bracket"
+    },
+    {
+      "name": "camera",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "camera"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "arm",
+      "parent": "pole top band",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "at the pole top band",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The arm revolves on a revolute joint at the pole top band."
+    },
+    {
+      "child": "camera",
+      "parent": "",
+      "kind": "continuous",
+      "axis_hint": "pan",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "The camera rotates on a continuous pan bearing"
+    },
+    {
+      "child": "camera",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "tilt",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "tilts on a revolute tilt joint"
+    }
+  ],
+  "notes": []
+}

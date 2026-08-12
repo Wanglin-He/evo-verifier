@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "record_id": "rec_bicycle_fork_and_handlebar_assembly_0009",
+  "prompt": "A BMX fork with a Cr-Mo steel crown, a 1-inch steerer on a revolute joint in a short head tube, and wide riser bars clamped in a short alloy stem.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "Cr-Mo steel crown",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "Cr-Mo steel crown"
+    },
+    {
+      "name": "1-inch steerer",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "1-inch steerer"
+    },
+    {
+      "name": "short head tube",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short head tube"
+    },
+    {
+      "name": "wide riser bars",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide riser bars"
+    },
+    {
+      "name": "short alloy stem",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "short alloy stem"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "1-inch steerer",
+      "parent": "short head tube",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "1-inch steerer on a revolute joint in a short head tube"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "record_id": "rec_camera_lens_0006",
+  "prompt": "A macro lens with a compact cylindrical body, a wide rubberized focus ring on a revolute joint, and an inner extension barrel on a prismatic joint.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "compact cylindrical body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "compact cylindrical body"
+    },
+    {
+      "name": "wide rubberized focus ring",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rubberized focus ring"
+    },
+    {
+      "name": "inner extension barrel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner extension barrel"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "wide rubberized focus ring",
+      "parent": "",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "wide rubberized focus ring on a revolute joint"
+    },
+    {
+      "child": "inner extension barrel",
+      "parent": "",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "inner extension barrel on a prismatic joint"
+    }
+  ],
+  "notes": []
+}

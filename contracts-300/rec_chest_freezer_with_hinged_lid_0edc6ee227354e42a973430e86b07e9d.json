@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_chest_freezer_with_hinged_lid_0edc6ee227354e42a973430e86b07e9d",
+  "prompt": "A countertop bar chest cooler with a compact rectangular body and a hinged lid with a chrome rail frame, pivoting on two rear knuckle revolute hinges and secured by a flip latch at the front center.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular body",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular body"
+    },
+    {
+      "name": "hinged lid",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "hinged lid"
+    },
+    {
+      "name": "chrome rail frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "chrome rail frame"
+    },
+    {
+      "name": "knuckle revolute hinges",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two rear knuckle revolute hinges"
+    },
+    {
+      "name": "flip latch",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "flip latch"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "hinged lid",
+      "parent": "rectangular body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "rear",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "pivoting on two rear knuckle revolute hinges"
+    },
+    {
+      "child": "flip latch",
+      "parent": "rectangular body",
+      "kind": "revolute",
+      "axis_hint": "",
+      "location_hint": "front center",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "secured by a flip latch at the front center"
+    }
+  ],
+  "notes": []
+}

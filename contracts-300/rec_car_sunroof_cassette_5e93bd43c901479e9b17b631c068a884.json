@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "record_id": "rec_car_sunroof_cassette_5e93bd43c901479e9b17b631c068a884",
+  "prompt": "A pop-up ventilation sunroof cassette with a rectangular aluminium frame and a glass panel that tilts upward at the rear edge on a horizontal revolute hinge at the front frame rail, with two side guide shoe blocks riding in channel tracks at the panel sides.",
+  "extractor": "gemini-3.6-flash",
+  "expected_parts": [
+    {
+      "name": "rectangular aluminium frame",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "rectangular aluminium frame"
+    },
+    {
+      "name": "glass panel",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "glass panel"
+    },
+    {
+      "name": "front frame rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "front frame rail"
+    },
+    {
+      "name": "side guide shoe blocks",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side guide shoe blocks"
+    },
+    {
+      "name": "channel tracks",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "channel tracks"
+    }
+  ],
+  "expected_joints": [
+    {
+      "child": "glass panel",
+      "parent": "front frame rail",
+      "kind": "revolute",
+      "axis_hint": "horizontal",
+      "location_hint": "at the front frame rail",
+      "count": null,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "glass panel that tilts upward at the rear edge on a horizontal revolute hinge at the front frame rail"
+    },
+    {
+      "child": "side guide shoe blocks",
+      "parent": "channel tracks",
+      "kind": "prismatic",
+      "axis_hint": "",
+      "location_hint": "at the panel sides",
+      "count": 2,
+      "source": "explicit",
+      "confidence": 1.0,
+      "quote": "two side guide shoe blocks riding in channel tracks at the panel sides"
+    }
+  ],
+  "notes": []
+}
